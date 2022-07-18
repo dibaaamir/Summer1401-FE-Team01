@@ -1,10 +1,10 @@
-<div class="stack">
-  <img id="bg" class="item" [src]="game.imageData.background()" [alt]="game.title" />
-  <img id="overlay" class="item" [src]="game.imageData.overlay()" alt="">
-  <div id="details" class="item">
-    <img id="titleImg" [src]="game.imageData.title()" alt="">
-    <h1 id="title">{{game.title}}</h1>
-    <h2 id="description">{{game.description}}</h2>
+<div [id]="game.shortTitle" [style]="game.imageData.style">
+  <img id="bg" [src]="game.imageData.background()" [alt]="game.title" />
+  <img id="overlay" [src]="game.imageData.overlay()" alt="">
+  <img id="titleImg" [src]="game.imageData.title()" alt="">
+  <div id="details">
+    <h4 id="title">{{game.title}}</h4>
+    <p id="description">{{game.description}}</p>
   </div>
-  <div class="item" id="rating">{{game.avgRating().toFixed(1)}}</div>
+  <div id="rating">{{game.avgRating().toFixed(1)}}</div>
 </div>

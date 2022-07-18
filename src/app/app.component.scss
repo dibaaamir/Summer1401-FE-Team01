@@ -9,9 +9,9 @@
 }
 
 .stack {
-  position: relative;
+  position: relative !important;
 }
 
 .stack > .item {
-  position: absolute;
+  position: absolute !important;
 }

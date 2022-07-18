@@ -19,9 +19,11 @@ function generateRatings(count: number, avg: number): Map<string, number> {
     }
     return map;
 }
+
 function generateSuggestionGames(): Array<Game> {
     const game = new Game(
         'UNCHARTED™: Legacy of Thieves Collection',
+        'uncharted',
         'در مجموعه UNCHARTED: Legacy of Thieves به دنبال میراث خود باشید و نشان خود را روی نقشه بگذارید. داستان‌سرایی هیجان‌انگیز و سینمایی Naughty Dog و بزرگترین مجموعه‌های اکشن بلاک‌باستر این مجموعه نمادین را تجربه کنید.',
         generateRatings(100, 8.7),
         new GameImageData(

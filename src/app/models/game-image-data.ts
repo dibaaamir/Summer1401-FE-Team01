@@ -6,7 +6,8 @@ export class GameImageData {
         public overlayIndex: number,
         public titleIndex: number,
         public backgroundIndex: number,
-        public thumbnailIndex: number
+        public thumbnailIndex: number,
+        public style: string = ''
     ) {
         this.normalIndexes = Array(images.length).filter(
             (_, i, __) => ![overlayIndex, titleIndex, backgroundIndex].includes(i)
