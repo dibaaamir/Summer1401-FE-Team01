@@ -51,16 +51,18 @@
     }
   }
 
-  &:hover #overlay {
-    filter: drop-shadow(5px 5px 5px #484848);
-    height: 120%;
-  }
+  &:hover {
+    #overlay {
+      filter: drop-shadow(5px 5px 5px #484848);
+      height: 120%;
+    }
 
-  &:hover #titleImg {
-    width: 65%;
-  }
+    #titleImg {
+      width: 65%;
+    }
 
-  &:hover #details {
-    opacity: 100%;
+    #details {
+      opacity: 100%;
+    }
   }
 }
