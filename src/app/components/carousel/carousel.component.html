@@ -1,4 +1,10 @@
-<button (click)="nextButtonClicked()">
-  next!
-</button>
-<br>
+<div class="row">
+  <div id="thumbnails" *ngFor="let game of thumbnails()">
+    <img class="thumbnail" [src]="game[1]" [alt]="game[0]" [width]="100" />
+  </div>
+  <div id="slides" class="row" *ngFor="let game of games; index as i">
+    <div [id]="i" [class.current]="i == currentIndex">
+      <app-carousel-item [game]="game"></app-carousel-item>
+    </div>
+  </div>
+</div>

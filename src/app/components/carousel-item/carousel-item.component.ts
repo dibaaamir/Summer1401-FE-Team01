@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Game} from '../../models/game';
 
 @Component({
-  selector: 'app-carousel-item',
-  templateUrl: './carousel-item.component.html',
-  styleUrls: ['./carousel-item.component.scss']
+    selector: 'app-carousel-item',
+    templateUrl: './carousel-item.component.html',
+    styleUrls: ['./carousel-item.component.scss'],
 })
-export class CarouselItemComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class CarouselItemComponent {
+    @Input() public game!: Game;
 }

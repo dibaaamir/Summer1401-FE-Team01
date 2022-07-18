@@ -29,4 +29,8 @@ export class CarouselComponent implements OnInit {
     private nextSlide() {
         this.currentIndex = (this.currentIndex + 1) % this.games.length;
     }
+
+    public thumbnails(): Array<Array<string>> {
+        return this.games.map((g) => [g.title, g.imageData.thumbnail()]);
+    }
 }

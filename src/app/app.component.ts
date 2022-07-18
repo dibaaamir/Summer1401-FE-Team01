@@ -25,10 +25,11 @@ function generateSuggestionGames(): Array<Game> {
         'در مجموعه UNCHARTED: Legacy of Thieves به دنبال میراث خود باشید و نشان خود را روی نقشه بگذارید. داستان‌سرایی هیجان‌انگیز و سینمایی Naughty Dog و بزرگترین مجموعه‌های اکشن بلاک‌باستر این مجموعه نمادین را تجربه کنید.',
         generateRatings(100, 8.7),
         new GameImageData(
-            ['0.webp', '1.png', '2.png', '3.jpeg'].map((v) => `src/assets/images/games/uncharted/${v}`),
+            ['0.webp', '1.png', '2.png', '3.jpeg'].map((v) => `assets/images/games/uncharted/${v}`),
             0,
             1,
-            2
+            2,
+            3
         )
     );
     return Array(5).fill(game);

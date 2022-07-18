@@ -1,0 +1,10 @@
+<div class="stack">
+  <img id="bg" class="item" [src]="game.imageData.background()" [alt]="game.title" />
+  <img id="overlay" class="item" [src]="game.imageData.overlay()" alt="">
+  <div id="details" class="item">
+    <img id="titleImg" [src]="game.imageData.title()" alt="">
+    <h1 id="title">{{game.title}}</h1>
+    <h2 id="description">{{game.description}}</h2>
+  </div>
+  <div class="item" id="rating">{{game.avgRating().toFixed(1)}}</div>
+</div>
