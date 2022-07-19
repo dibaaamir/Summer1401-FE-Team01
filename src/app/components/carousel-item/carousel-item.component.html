@@ -16,6 +16,22 @@
   <img id="titleImg" [src]="game.imageData.title()" alt="">
   <div id="details">
     <p id="description">{{game.description}}</p>
+    <div class="button-bar">
+<!--      <button class="shiny-button" id="addToWish" (click)="addToWatchlist()">-->
+<!--        <span>-->
+<!--          <i class="fa-heart" -->
+<!--             [class.fa-solid]="game.isInWatchlist()" -->
+<!--             [class.fa-regular]="!game.isInWatchlist()">-->
+<!--          </i>-->
+<!--        </span>-->
+<!--      </button>-->
+      <button class="shiny-button" id="cart">
+        <span>
+          اضافه به سبد خرید
+          <i class="fa-solid fa-cart-circle-plus"></i>
+        </span>
+      </button>
+    </div>
   </div>
   <div id="rating">{{game.avgRating().toFixed(1)}}</div>
 </div>

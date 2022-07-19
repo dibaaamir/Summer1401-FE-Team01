@@ -1,7 +1,9 @@
 import {GameImageData} from './game-image-data';
+import {currentUser} from '../app.component';
 
 export class Game {
     constructor(
+        public id: number,
         public title: string,
         public shortTitle: string,
         public description: string,
@@ -11,5 +13,9 @@ export class Game {
 
     public avgRating(): number {
         return Array.from(this.ratings.values()).reduce((a, b) => a + b, 0) / this.ratings.size;
+    }
+
+    public isInWatchlist(): boolean {
+        return currentUser.watchlist.includes(this.id);
     }
 }

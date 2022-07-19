@@ -1,6 +1,9 @@
 import {Component} from '@angular/core';
 import {Game} from './models/game';
 import {GameImageData} from './models/game-image-data';
+import {User} from './models/user';
+
+export const currentUser = new User('user123', '');
 
 @Component({
     selector: 'app-root',
@@ -21,18 +24,21 @@ function generateRatings(count: number, avg: number): Map<string, number> {
 }
 
 function generateSuggestionGames(): Array<Game> {
-    const game = new Game(
-        'UNCHARTED™: Legacy of Thieves Collection',
-        'uncharted',
-        'در مجموعه UNCHARTED: Legacy of Thieves به دنبال میراث خود باشید و نشان خود را روی نقشه بگذارید. داستان‌سرایی هیجان‌انگیز و سینمایی Naughty Dog و بزرگترین مجموعه‌های اکشن بلاک‌باستر این مجموعه نمادین را تجربه کنید.',
-        generateRatings(100, 8.7),
-        new GameImageData(
-            ['0.webp', '1.png', '2.png', '3.jpeg'].map((v) => `assets/images/games/uncharted/${v}`),
-            0,
-            1,
-            2,
-            3
-        )
+    return new Array(5).fill(0).map(
+        (_, id) =>
+            new Game(
+                id,
+                'UNCHARTED™: Legacy of Thieves Collection',
+                'uncharted',
+                'در مجموعه UNCHARTED: Legacy of Thieves به دنبال میراث خود باشید و نشان خود را روی نقشه بگذارید. داستان‌سرایی هیجان‌انگیز و سینمایی Naughty Dog و بزرگترین مجموعه‌های اکشن بلاک‌باستر این مجموعه نمادین را تجربه کنید.',
+                generateRatings(100, 8.7),
+                new GameImageData(
+                    ['0.webp', '1.png', '2.png', '3.jpeg'].map((v) => `assets/images/games/uncharted/${v}`),
+                    0,
+                    1,
+                    2,
+                    3
+                )
+            )
     );
-    return Array(5).fill(game);
 }

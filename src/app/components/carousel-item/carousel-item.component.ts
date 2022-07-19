@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Game} from '../../models/game';
+import {currentUser} from '../../app.component';
 
 @Component({
     selector: 'app-carousel-item',
@@ -8,4 +9,8 @@ import {Game} from '../../models/game';
 })
 export class CarouselItemComponent {
     @Input() public game!: Game;
+
+    public addToWatchlist() {
+        currentUser.watchlist.push(this.game.id);
+    }
 }
