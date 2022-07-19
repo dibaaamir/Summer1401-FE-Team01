@@ -138,6 +138,7 @@
     display: block;
     overflow: hidden;
     z-index: -2;
+    box-shadow: 0 0 10px 5px var(--gradient-color-1);
   }
 
   &:after {
