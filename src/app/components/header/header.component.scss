@@ -1,0 +1,45 @@
+header {
+    #groups {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #a6a1a1;
+        display: block;
+        transition: 0.3s;
+    }
+    a:hover {
+        color: rgb(222, 107, 73);
+    }
+    .group {
+        display: flex;
+        flex-direction: row;
+        gap: 9rem;
+        //align-items: flex-end;
+        align-items: center;
+        a:hover {
+            color: #150b6e;
+        }
+
+        a {
+            font-size: 2rem;
+            margin-left: 2rem;
+            color: #571ca2;
+        }
+    }
+
+    .discover{
+        &:nth-child(1n){
+            margin-bottom: 0.5rem;
+        }
+        font-family: Noto sans Arabic;
+        align-items: flex-start;
+        margin-right: 6rem;
+        //padding-bottom: 1rem;
+        display: flex;
+        gap: 4rem;
+    }
+}
