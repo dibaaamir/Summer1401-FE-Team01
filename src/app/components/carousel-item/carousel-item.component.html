@@ -25,5 +25,8 @@
       </button>
     </div>
   </div>
-  <app-rating id="rating" [rating]="game.avgRating()"></app-rating>
+  <div id="rating">
+    {{game.avgRating().toFixed(1).persianNums()}}
+<!--    <i class="fa-solid fa-star"></i>-->
+  </div>
 </div>
