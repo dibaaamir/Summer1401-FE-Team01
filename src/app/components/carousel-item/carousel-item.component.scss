@@ -1,6 +1,6 @@
 #uncharted {
   position: relative;
-  width: 80vw;
+  width: 75vw;
   aspect-ratio: calc(5 / 3);
 
   #bg {
@@ -65,17 +65,18 @@
     top: 0;
     left: 0;
     transform: translate(-30%, -30%);
-    width: 25vw;
-    height: 25vw;
+    width: 17vw;
+    height: 17vw;
     box-sizing: border-box;
     padding-bottom: 2.5%;
     border-radius: 50%;
     background-color: #171930;
     color: white;
-    font-size: 800%;
+    font-size: 10vw;
     font-family: 'Cinema';
     display: grid;
     place-items: center;
+    z-index: 1;
   }
 
   &:hover {
