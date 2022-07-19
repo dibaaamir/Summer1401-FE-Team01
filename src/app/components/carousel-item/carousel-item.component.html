@@ -17,14 +17,6 @@
   <div id="details">
     <p id="description">{{game.description}}</p>
     <div class="button-bar">
-<!--      <button class="shiny-button" id="addToWish" (click)="addToWatchlist()">-->
-<!--        <span>-->
-<!--          <i class="fa-heart" -->
-<!--             [class.fa-solid]="game.isInWatchlist()" -->
-<!--             [class.fa-regular]="!game.isInWatchlist()">-->
-<!--          </i>-->
-<!--        </span>-->
-<!--      </button>-->
       <button class="shiny-button" id="cart">
         <span>
           اضافه به سبد خرید
@@ -33,5 +25,5 @@
       </button>
     </div>
   </div>
-  <div id="rating">{{game.avgRating().toFixed(1)}}</div>
+  <app-rating id="rating" [rating]="game.avgRating()"></app-rating>
 </div>

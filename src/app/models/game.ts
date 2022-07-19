@@ -12,7 +12,7 @@ export class Game {
     ) {}
 
     public avgRating(): number {
-        return Array.from(this.ratings.values()).reduce((a, b) => a + b, 0) / this.ratings.size;
+        return Math.floor((Array.from(this.ratings.values()).reduce((a, b) => a + b, 0) / this.ratings.size) * 10) / 10;
     }
 
     public isInWatchlist(): boolean {

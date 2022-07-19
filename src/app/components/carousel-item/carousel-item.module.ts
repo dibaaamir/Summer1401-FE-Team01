@@ -2,9 +2,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CarouselItemComponent} from './carousel-item.component';
 import {FormsModule} from '@angular/forms';
+import {RatingComponent} from './rating/rating.component';
 
 @NgModule({
-    declarations: [CarouselItemComponent],
+    declarations: [CarouselItemComponent, RatingComponent],
     exports: [CarouselItemComponent],
     imports: [CommonModule, FormsModule],
 })
