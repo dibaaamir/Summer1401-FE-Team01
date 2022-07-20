@@ -7,11 +7,11 @@
     background-color: #070731;
     color: #de6b49;
     padding-bottom: 2rem;
-    .top-row{
+    .top-row {
         margin-right: auto;
         margin-left: 1rem;
         margin-top: 1rem;
-        button{
+        button {
             background-color: #de6b49;
             border-radius: 0.25rem;
             color: black;
@@ -25,7 +25,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .bold{
+        .bold {
             font-size: 3rem;
         }
         .social-medias {
@@ -38,16 +38,16 @@
             list-style: none;
 
             font-size: 3.2rem;
-            i{
+            i {
                 color: #be49de;
                 transition: 0.3s;
             }
-            i:hover{
+            i:hover {
                 color: #ba7ed2;
             }
         }
     }
-    .copyright{
+    .copyright {
         align-items: center;
     }
 }
