@@ -2,11 +2,13 @@
     --current-index: 0;
 
     position: relative;
-    width: 75vw;
+    width: 65vw;
     aspect-ratio: calc(5 / 3);
 
-    transform: translateX(calc(var(--current-index) * (75vw + 6vw)));
+    transform: translateX(calc(var(--current-index) * (65vw + 6vw)));
     transition: transform ease-in 300ms;
+
+    font-family: Yekan;
 
     #bg {
         position: absolute;
@@ -50,16 +52,18 @@
         transition-property: height, opacity;
         transition-duration: 400ms;
         transition-delay: 50ms;
+        justify-content: space-evenly;
 
         #description {
+            font-size: 1.25vw;
             padding: 0.5% 2% 0 2%; // TRBL
 
-            line-clamp: 2;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            //line-clamp: 2;
+            //-webkit-line-clamp: 2;
+            //-webkit-box-orient: vertical;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
+            //white-space: nowrap;
         }
     }
 
