@@ -1,7 +1,7 @@
 export class GameImageData {
     public normalIndexes: Array<number>;
 
-    constructor(
+    public constructor(
         public images: Array<string>,
         public overlayIndex: number,
         public titleIndex: number,

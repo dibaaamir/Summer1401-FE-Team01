@@ -11,7 +11,7 @@ export class CarouselItemComponent {
     @Input() public game!: Game;
     @Input() public currentIndex!: number;
 
-    public addToWatchlist() {
+    public addToWatchlist(): void {
         currentUser.watchlist.push(this.game.id);
     }
 }

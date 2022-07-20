@@ -3,7 +3,7 @@ import {currentUser} from '../app.component';
 import '../extensions/string';
 
 export class Game {
-    constructor(
+    public constructor(
         public id: number,
         public title: string,
         public shortTitle: string,

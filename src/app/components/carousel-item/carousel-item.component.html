@@ -1,27 +1,27 @@
 <svg width="0" height="0">
-  <defs>
-    <clipPath id="scoop" clipPathUnits="objectBoundingBox">
-      <path d="M0.2,0 A0.2,0.33 0 0,1 0,0.33 L0,1 L1,1 L1,0" />
-    </clipPath>
-  </defs>
+    <defs>
+        <clipPath id="scoop" clipPathUnits="objectBoundingBox">
+            <path d="M0.2,0 A0.2,0.33 0 0,1 0,0.33 L0,1 L1,1 L1,0" />
+        </clipPath>
+    </defs>
 </svg>
 
 <div [id]="game.shortTitle" [style]="game.imageData.style" [style.--current-index]="currentIndex">
-  <img id="bg" [src]="game.imageData.background()" [alt]="game.title" />
-  <img id="overlay" [src]="game.imageData.overlay()" alt="">
-  <img id="titleImg" [src]="game.imageData.title()" alt="">
-  <div id="details">
-    <p id="description">{{game.description}}</p>
-    <div class="button-bar">
-      <button class="shiny-button" id="cart">
-        <span>
-          اضافه به سبد خرید
-          <i class="fa-solid fa-cart-circle-plus"></i>
-        </span>
-      </button>
+    <img id="bg" [src]="game.imageData.background()" [alt]="game.title" />
+    <img id="overlay" [src]="game.imageData.overlay()" alt="" />
+    <img id="titleImg" [src]="game.imageData.title()" alt="" />
+    <div id="details">
+        <p id="description">{{ game.description }}</p>
+        <div class="button-bar">
+            <button class="shiny-button" id="cart">
+                <span>
+                    اضافه به سبد خرید
+                    <i class="fa-solid fa-cart-circle-plus"></i>
+                </span>
+            </button>
+        </div>
     </div>
-  </div>
-  <div id="rating">
-    {{game.avgRating().toFixed(1).persianNums()}}
-  </div>
+    <div id="rating">
+        {{ game.avgRating().toFixed(1).persianNums() }}
+    </div>
 </div>
