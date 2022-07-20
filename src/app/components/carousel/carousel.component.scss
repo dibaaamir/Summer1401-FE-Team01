@@ -1,0 +1,30 @@
+#slides {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: hidden;
+    gap: 6vw;
+}
+
+#bullets {
+    display: flex;
+    gap: 1rem;
+    padding: 1%;
+
+    i {
+        background-color: #2a2a2a;
+        box-shadow: 0 0 4px 2px #cecece;
+        display: block;
+        width: 1em;
+        height: 1em;
+        border-radius: 1em;
+        font-size: 0.6rem;
+        transition: background-color, width ease-in 300ms;
+        cursor: pointer;
+
+        &.current {
+            background-color: #cecece;
+            width: 2em;
+        }
+    }
+}

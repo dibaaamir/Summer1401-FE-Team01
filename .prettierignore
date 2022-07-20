@@ -12,6 +12,7 @@ app/**/*.js.map
 # dependencies
 node_modules/
 bower_components/
+package-lock.json
 
 # IDEs and editors
 .idea/
@@ -145,7 +146,3 @@ modules.xml
 # End of https://www.toptal.com/developers/gitignore/api/webstorm+all,visualstudiocode,angular
 
 .angular/
-.idea/
-node_modules/
-package-lock.json
-*.min.*
