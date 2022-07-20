@@ -1,110 +1,110 @@
 .column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .stack {
-  position: relative !important;
+    position: relative !important;
 }
 
 .stack > .item {
-  position: absolute !important;
+    position: absolute !important;
 }
 
 * {
-  font-family: 'Yekan', fantasy;
+    font-family: "Yekan", fantasy;
 }
 
 :root {
-  --color-gray-98: hsl(0, 0%, 98%);
-  --color-gray-95: hsl(0, 0%, 95%);
-  --color-gray-92: hsl(0, 0%, 92%);
-  --color-gray-90: hsl(0, 0%, 90%);
-  --color-gray-80: hsl(0, 0%, 80%);
-  --color-gray-70: hsl(0, 0%, 70%);
-  --color-gray-50: hsl(0, 0%, 50%);
-  --color-gray-40: hsl(0, 0%, 40%);
-  --color-gray-30: hsl(0, 0%, 30%);
-  --color-gray-20: hsl(0, 0%, 20%);
-  --color-gray-10: hsl(0, 0%, 10%);
+    --color-gray-98: hsl(0, 0%, 98%);
+    --color-gray-95: hsl(0, 0%, 95%);
+    --color-gray-92: hsl(0, 0%, 92%);
+    --color-gray-90: hsl(0, 0%, 90%);
+    --color-gray-80: hsl(0, 0%, 80%);
+    --color-gray-70: hsl(0, 0%, 70%);
+    --color-gray-50: hsl(0, 0%, 50%);
+    --color-gray-40: hsl(0, 0%, 40%);
+    --color-gray-30: hsl(0, 0%, 30%);
+    --color-gray-20: hsl(0, 0%, 20%);
+    --color-gray-10: hsl(0, 0%, 10%);
 
-  --color--primary: hsl(353, 84%, 58%);
-  --color--primary-opposite: var(--color-gray-98);
+    --color--primary: hsl(353, 84%, 58%);
+    --color--primary-opposite: var(--color-gray-98);
 
-  --color-fade: var(--color-gray-50);
-  --color-fader: var(--color-gray-70);
+    --color-fade: var(--color-gray-50);
+    --color-fader: var(--color-gray-70);
 
-  --color--default-background: var(--color-gray-98);
-  --color--default-foreground: var(--color-gray-10);
+    --color--default-background: var(--color-gray-98);
+    --color--default-foreground: var(--color-gray-10);
 
-  --color--body-background: var(--color--default-background);
-  --color--body-foreground: var(--color--default-foreground);
+    --color--body-background: var(--color--default-background);
+    --color--body-foreground: var(--color--default-foreground);
 
-  --color--box-shadow--subtle: hsla(0, 90%, 10%, 12%);
-  --box-shadow--subtle: 0 0.2rem 1rem 0 var(--color--box-shadow--subtle);
+    --color--box-shadow--subtle: hsla(0, 90%, 10%, 12%);
+    --box-shadow--subtle: 0 0.2rem 1rem 0 var(--color--box-shadow--subtle);
 
-  --minimum-inline-padding: 4rem;
+    --minimum-inline-padding: 4rem;
 
-  --border-radius: 0.5rem;
+    --border-radius: 0.5rem;
 
-  --animation--duration--fast: 0.2s;
-  --animation--duration--normal: 0.5s;
-  --animation--duration--slow: 1s;
+    --animation--duration--fast: 0.2s;
+    --animation--duration--normal: 0.5s;
+    --animation--duration--slow: 1s;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  font-family: "Vazirmatn", sans-serif;
-  font-size: 62.5%;
+    font-family: "Vazirmatn", sans-serif;
+    font-size: 62.5%;
 
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color--body-background);
-  color: var(--color--body-foreground);
+    background-color: var(--color--body-background);
+    color: var(--color--body-foreground);
 
-  font-size: 1.6rem;
+    font-size: 1.6rem;
 
-  popper-content {
-    .ngxp__container {
-      background-color: var(--color--body-background);
-      color: var(--color--body-foreground);
-      box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1), 0 5px 8px 0 rgba(0, 0, 0, 0.04),
-      0 1px 14px 0 rgba(0, 0, 0, 0.02);
+    popper-content {
+        .ngxp__container {
+            background-color: var(--color--body-background);
+            color: var(--color--body-foreground);
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1), 0 5px 8px 0 rgba(0, 0, 0, 0.04),
+                0 1px 14px 0 rgba(0, 0, 0, 0.02);
 
-      z-index: 1;
+            z-index: 1;
 
-      padding: 0;
+            padding: 0;
 
-      border: 0;
+            border: 0;
 
-      > .ngxp__arrow {
-        &:before {
-          background-color: var(--color--body-background);
+            > .ngxp__arrow {
+                &:before {
+                    background-color: var(--color--body-background);
+                }
+            }
         }
-      }
-    }
 
-    &.no-arrow {
-      .ngxp__container > .ngxp__arrow {
-        display: none;
-      }
+        &.no-arrow {
+            .ngxp__container > .ngxp__arrow {
+                display: none;
+            }
+        }
     }
-  }
 }
 
 input,
@@ -118,101 +118,101 @@ datalist,
 output,
 option,
 optgroup {
-  font-family: inherit;
+    font-family: inherit;
 }
 
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  color: inherit;
+    color: inherit;
 
-  display: block;
+    display: block;
 
-  text-decoration: none;
+    text-decoration: none;
 }
 
 button,
 .button {
-  background-color: transparent;
-
-  border: none;
-
-  font: inherit;
-  text-align: start;
-
-  cursor: pointer;
-
-  &:not(.reset) {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    width: fit-content;
-
-    padding: 1rem;
-
-    border-radius: var(--border-radius);
-
-    text-align: center;
-    line-height: 1;
-
-    &:hover {
-      background-color: var(--color-gray-95);
-    }
-  }
-}
-
-img {
-  display: block;
-}
-
-svg {
-  fill: currentColor;
-
-  display: block;
-
-  width: 1em;
-  height: 1em;
-}
-
-.content-wrapper {
-  --full-width: 160rem;
-  --full-width-padding-inline: max((100% - var(--full-width)) / 2, var(--minimum-inline-padding));
-
-  padding-inline: var(--full-width-padding-inline);
-}
-
-.input-box {
-  background-color: var(--color-gray-95);
-
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-  padding: 1rem 2rem;
-
-  border-radius: var(--border-radius);
-
-  cursor: text;
-
-  input {
     background-color: transparent;
 
     border: none;
 
-    &:focus {
-      outline: none;
+    font: inherit;
+    text-align: start;
+
+    cursor: pointer;
+
+    &:not(.reset) {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        width: fit-content;
+
+        padding: 1rem;
+
+        border-radius: var(--border-radius);
+
+        text-align: center;
+        line-height: 1;
+
+        &:hover {
+            background-color: var(--color-gray-95);
+        }
     }
-  }
+}
+
+img {
+    display: block;
+}
+
+svg {
+    fill: currentColor;
+
+    display: block;
+
+    width: 1em;
+    height: 1em;
+}
+
+.content-wrapper {
+    --full-width: 160rem;
+    --full-width-padding-inline: max((100% - var(--full-width)) / 2, var(--minimum-inline-padding));
+
+    padding-inline: var(--full-width-padding-inline);
+}
+
+.input-box {
+    background-color: var(--color-gray-95);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 1rem 2rem;
+
+    border-radius: var(--border-radius);
+
+    cursor: text;
+
+    input {
+        background-color: transparent;
+
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
 .bold {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .fade {
-  color: var(--color-fade);
+    color: var(--color-fade);
 }
