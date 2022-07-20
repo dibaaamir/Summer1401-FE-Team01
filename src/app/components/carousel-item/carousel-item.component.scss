@@ -10,7 +10,7 @@
     transform: translateX(calc(var(--current-index) * (var(--width) + 6vw)));
     transition: transform ease-in 300ms;
 
-    font-family: Yekan;
+    font-family: Yekan, serif;
 
     #bg {
         position: absolute;
@@ -75,7 +75,7 @@
         background-color: hsl(235, 35%, 14%);
         color: white;
         font-size: 10vw;
-        font-family: "Cinema";
+        font-family: "Cinema", serif;
         display: grid;
         place-items: center;
         z-index: 1;
