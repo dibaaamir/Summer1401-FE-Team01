@@ -12,7 +12,7 @@ export class Game {
         public imageData: GameImageData
     ) {}
 
-    public avgRating(): number {
+    public get avgRating(): number {
         return Array.from(this.ratings.values()).reduce((a, b) => a + b, 0) / this.ratings.size;
     }
 

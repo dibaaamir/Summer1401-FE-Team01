@@ -1,7 +1,7 @@
 <div [id]="game.shortTitle" [style]="game.imageData.style" [style.--current-index]="currentIndex">
-    <img id="bg" [src]="game.imageData.background()" [alt]="game.title" />
-    <img id="overlay" [src]="game.imageData.overlay()" alt="" />
-    <img id="titleImg" [src]="game.imageData.title()" alt="" />
+    <img id="bg" [src]="game.imageData.background" [alt]="game.title" />
+    <img id="overlay" [src]="game.imageData.overlay" alt="" />
+    <img id="titleImg" [src]="game.imageData.title" alt="" />
     <div id="details">
         <p id="description">{{ game.description }}</p>
         <div class="button-bar">
@@ -14,6 +14,6 @@
         </div>
     </div>
     <div id="rating">
-        {{ game.avgRating().toFixed(1).persianNums() }}
+        {{ game.avgRating.toFixed(1).persianNums() }}
     </div>
 </div>

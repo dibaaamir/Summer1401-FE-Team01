@@ -14,19 +14,19 @@ export class GameImageData {
         );
     }
 
-    public thumbnail(): string {
+    public get thumbnail(): string {
         return this.images[this.thumbnailIndex];
     }
 
-    public background(): string {
+    public get background(): string {
         return this.images[this.backgroundIndex];
     }
 
-    public overlay(): string {
+    public get overlay(): string {
         return this.images[this.overlayIndex];
     }
 
-    public title(): string {
+    public get title(): string {
         return this.images[this.titleIndex];
     }
 }
