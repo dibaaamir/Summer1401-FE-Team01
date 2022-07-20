@@ -21,33 +21,7 @@
             cursor: pointer;
         }
     }
-    .column {
-        justify-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .bold {
-            font-size: 3rem;
-        }
-        .social-medias {
-            display: flex;
 
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 3rem;
-
-            list-style: none;
-
-            font-size: 3.2rem;
-            i {
-                color: 	hsl(287, 69%, 58%);
-                transition: 0.3s;
-            }
-            i:hover {
-                color: 	hsl(283, 48%, 66%);
-            }
-        }
-    }
     .copyright {
         align-items: center;
     }
