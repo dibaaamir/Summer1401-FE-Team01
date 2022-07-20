@@ -33,7 +33,6 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
 
     private nextSlide(): void {
         this.setIndex(this.currentIndex + 1);
-        console.log(`nextSlide ${this.currentIndex}`);
     }
 
     private setIndex(newI: number): void {
@@ -44,6 +43,5 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         } else {
             this.currentIndex = newI;
         }
-        console.log(`setIndex ${this.currentIndex}`);
     }
 }
