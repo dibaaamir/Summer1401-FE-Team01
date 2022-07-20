@@ -8,7 +8,7 @@ import {Game} from '../../models/game';
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {
     @Input() public games!: Array<Game>;
-    @Input() public slideTimeout: number = 3000;
+    public slideTimeout: number = 4000;
     public currentIndex = 0;
     private autoNextInterval!: number;
 

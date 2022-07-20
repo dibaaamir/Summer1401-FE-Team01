@@ -1,11 +1,13 @@
 #uncharted {
     --current-index: 0;
 
+    --width: 65vw;
+
     position: relative;
-    width: 65vw;
+    width: var(--width);
     aspect-ratio: calc(5 / 3);
 
-    transform: translateX(calc(var(--current-index) * (65vw + 6vw)));
+    transform: translateX(calc(var(--current-index) * (var(--width) + 6vw)));
     transition: transform ease-in 300ms;
 
     font-family: Yekan;
@@ -84,6 +86,9 @@
         display: grid;
         place-items: center;
         z-index: 1;
+        transition-property: filter;
+        transition-duration: 400ms;
+        transition-delay: 50ms;
     }
 
     &:hover {
@@ -101,7 +106,7 @@
         }
 
         #rating {
-            box-shadow: -4px -4px 5px 1px #171930;
+            filter: drop-shadow(5px 5px 5px #5f6499);
         }
     }
 }
