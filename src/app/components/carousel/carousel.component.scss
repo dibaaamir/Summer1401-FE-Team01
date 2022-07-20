@@ -16,8 +16,8 @@
     margin-right: 100px;
 
     i {
-        background-color: hsl(0, 0%, 16%);
-        box-shadow: 0 0 4px 2px hsl(0, 0%, 81%);
+        background-color: var(--color-gray-16);
+        box-shadow: 0 0 4px 2px var(--color-gray-81);
         display: block;
         width: 1em;
         height: 1em;
@@ -27,7 +27,7 @@
         cursor: pointer;
 
         &.current {
-            background-color: hsl(0, 0%, 81%);
+            background-color: var(--color-gray-81);
             width: 2em;
         }
     }
