@@ -10,10 +10,10 @@
 
 .stack {
     position: relative !important;
-}
 
-.stack > .item {
-    position: absolute !important;
+    & > .item {
+        position: absolute !important;
+    }
 }
 
 * {
