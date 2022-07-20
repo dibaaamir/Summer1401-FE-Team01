@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Summer1401-FE-Team01": {
+    "boilera": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,16 +20,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Summer1401-FE-Team01",
+            "outputPath": "dist/boilera",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
               "src/assets/fonts/Yekan/Yekan.css",
@@ -40,18 +37,6 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -75,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Summer1401-FE-Team01:build:production"
+              "browserTarget": "boilera:build:production"
             },
             "development": {
-              "browserTarget": "Summer1401-FE-Team01:build:development"
+              "browserTarget": "boilera:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Summer1401-FE-Team01:build"
+            "browserTarget": "boilera:build"
           }
         },
         "test": {
@@ -97,30 +82,21 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss",
-              "src/assets/fonts/Yekan/Yekan.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss", "src/assets/fonts/Yekan/Yekan.css"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }
     }
   },
-  "defaultProject": "Summer1401-FE-Team01",
+  "defaultProject": "boilera",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }
