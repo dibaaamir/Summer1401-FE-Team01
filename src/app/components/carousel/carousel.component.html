@@ -5,10 +5,12 @@
 <div id="slides">
   <!--  <div class="slide" *ngFor="let game of games; index as i" [class.current]="i == currentIndex">-->
   <app-carousel-item *ngFor="let game of games; index as i"
-                     [class.current]="i == currentIndex"
                      [game]="game"
                      [currentIndex]="currentIndex">
   </app-carousel-item>
   <!--  </div>-->
+</div>
+<div id="bullets">
+  <i *ngFor="let game of games; index as i" [class.current]="i == currentIndex"></i>
 </div>
 <!--</div>-->
