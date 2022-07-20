@@ -6,6 +6,10 @@ input {
     font-family: Noto sans Arabic, serif;
     font-weight: bold;
     padding: 1rem 0.5rem;
+    border: none;
+}
+input:focus{
+    outline: none;
 }
 .input-box {
     display: flex;
