@@ -45,8 +45,4 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         }
         console.log(`setIndex ${this.currentIndex}`);
     }
-
-    // public thumbnails(): Array<Array<string>> {
-    //     return this.games.map((g) => [g.title, g.imageData.thumbnail()]);
-    // }
 }

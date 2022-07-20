@@ -1,18 +1,11 @@
-<!--<div class="row">-->
-<!--  <div id="thumbnails">-->
-<!--    <img class="thumbnail" *ngFor="let game of thumbnails()" [src]="game[1]" [alt]="game[0]" />-->
-<!--  </div>-->
 <div id="slides">
-  <!--  <div class="slide" *ngFor="let game of games; index as i" [class.current]="i == currentIndex">-->
   <app-carousel-item *ngFor="let game of games; index as i"
                      [game]="game"
                      [currentIndex]="currentIndex">
   </app-carousel-item>
-  <!--  </div>-->
 </div>
 <div id="bullets">
   <i *ngFor="let game of games; index as i"
      [class.current]="i == currentIndex"
      (click)="setIndexByClick(i)"></i>
 </div>
-<!--</div>-->
