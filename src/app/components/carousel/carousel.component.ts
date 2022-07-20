@@ -24,8 +24,8 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         this.autoNextInterval = setInterval(() => this.nextSlide(), this.slideTimeout);
     }
 
-    nextButtonClicked() {
-        this.nextSlide();
+    public setIndexByClick(newI: number) {
+        this.setIndex(newI);
         clearInterval(this.autoNextInterval);
         this.setupAutoNext();
     }
@@ -35,7 +35,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         console.log(`nextSlide ${this.currentIndex}`);
     }
 
-    public setIndex(newI: number) {
+    private setIndex(newI: number) {
         if (newI < 0) {
             this.currentIndex = this.games.length;
         } else if (newI >= this.games.length) {

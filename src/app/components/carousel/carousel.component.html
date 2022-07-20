@@ -11,6 +11,8 @@
   <!--  </div>-->
 </div>
 <div id="bullets">
-  <i *ngFor="let game of games; index as i" [class.current]="i == currentIndex"></i>
+  <i *ngFor="let game of games; index as i"
+     [class.current]="i == currentIndex"
+     (click)="setIndexByClick(i)"></i>
 </div>
 <!--</div>-->

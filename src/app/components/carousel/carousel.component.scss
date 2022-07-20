@@ -20,6 +20,7 @@
     border-radius: 1em;
     font-size: 0.6rem;
     transition: background-color, width ease-in 300ms;
+    cursor: pointer;
 
     &.current {
       background-color: #cecece;
