@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {AfterViewInit, Component, Input, OnDestroy} from '@angular/core';
 import {Game} from '../../models/game';
 
 @Component({
@@ -6,7 +6,7 @@ import {Game} from '../../models/game';
     templateUrl: './carousel.component.html',
     styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements AfterViewInit {
+export class CarouselComponent implements AfterViewInit, OnDestroy {
     @Input() public games!: Array<Game>;
     @Input() public slideTimeout: number = 3000;
     public currentIndex = 0;
@@ -14,6 +14,10 @@ export class CarouselComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         this.setupAutoNext();
+    }
+
+    ngOnDestroy() {
+        clearInterval(this.autoNextInterval);
     }
 
     private setupAutoNext() {
@@ -27,17 +31,22 @@ export class CarouselComponent implements AfterViewInit {
     }
 
     private nextSlide() {
-        this.currentIndex = (this.currentIndex + 1) % this.games.length;
+        this.setIndex(this.currentIndex + 1);
         console.log(`nextSlide ${this.currentIndex}`);
     }
 
-    private prevSlide() {
-        if (this.currentIndex == 0) this.currentIndex = this.games.length - 1;
-        else this.currentIndex = this.currentIndex - 1;
-        console.log(`prevSlide ${this.currentIndex}`);
+    public setIndex(newI: number) {
+        if (newI < 0) {
+            this.currentIndex = this.games.length;
+        } else if (newI >= this.games.length) {
+            this.currentIndex = newI % this.games.length;
+        } else {
+            this.currentIndex = newI;
+        }
+        console.log(`setIndex ${this.currentIndex}`);
     }
 
-    public thumbnails(): Array<Array<string>> {
-        return this.games.map((g) => [g.title, g.imageData.thumbnail()]);
-    }
+    // public thumbnails(): Array<Array<string>> {
+    //     return this.games.map((g) => [g.title, g.imageData.thumbnail()]);
+    // }
 }

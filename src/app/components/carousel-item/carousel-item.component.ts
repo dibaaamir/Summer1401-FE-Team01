@@ -9,6 +9,7 @@ import {currentUser} from '../../app.component';
 })
 export class CarouselItemComponent {
     @Input() public game!: Game;
+    @Input() public currentIndex!: number;
 
     public addToWatchlist() {
         currentUser.watchlist.push(this.game.id);

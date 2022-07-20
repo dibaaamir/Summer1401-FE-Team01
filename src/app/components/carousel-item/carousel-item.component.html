@@ -10,7 +10,7 @@
   </defs>
 </svg>
 
-<div [id]="game.shortTitle" [style]="game.imageData.style">
+<div [id]="game.shortTitle" [style]="game.imageData.style" [style.--current-index]="currentIndex">
   <img id="bg" [src]="game.imageData.background()" [alt]="game.title" />
   <img id="overlay" [src]="game.imageData.overlay()" alt="">
   <img id="titleImg" [src]="game.imageData.title()" alt="">
@@ -27,6 +27,14 @@
   </div>
   <div id="rating">
     {{game.avgRating().toFixed(1).persianNums()}}
-<!--    <i class="fa-solid fa-star"></i>-->
+    <!--    <i class="fa-solid fa-star"></i>-->
   </div>
+<!--  <div id="slide-overlay">-->
+<!--    <div [(ngModel)]="currentIndex" (ngModelChange)="currentIndexChange.emit($event)"-->
+<!--         (click)="nextButtonClick()">-->
+<!--      <i class="fa-solid fa-angle-left"></i>-->
+<!--    </div>-->
+<!--  </div>-->
 </div>
+
+<!--item: {{currentIndex}}-->
