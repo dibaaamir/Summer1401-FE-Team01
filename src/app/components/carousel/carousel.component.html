@@ -5,7 +5,7 @@
   </app-carousel-item>
 </div>
 <div id="bullets">
-  <i *ngFor="let game of games; index as i"
+  <i *ngFor="let _ of games; index as i"
      [class.current]="i == currentIndex"
      (click)="setIndexByClick(i)"></i>
 </div>
