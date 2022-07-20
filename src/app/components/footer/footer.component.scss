@@ -4,15 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #070731;
-    color: #de6b49;
+    background-color: hsl(240, 75%, 11%);
+    color: hsl(14, 69%, 58%);
     padding-bottom: 2rem;
     .top-row {
         margin-right: auto;
         margin-left: 1rem;
         margin-top: 1rem;
         button {
-            background-color: #de6b49;
+            background-color: hsl(14, 69%, 58%);
             border-radius: 0.25rem;
             color: black;
             padding: 0.25rem;
@@ -40,11 +40,11 @@
 
             font-size: 3.2rem;
             i {
-                color: #be49de;
+                color: 	hsl(287, 69%, 58%);
                 transition: 0.3s;
             }
             i:hover {
-                color: #ba7ed2;
+                color: 	hsl(283, 48%, 66%);
             }
         }
     }

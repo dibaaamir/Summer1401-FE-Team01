@@ -2,7 +2,7 @@ a {
     text-decoration: none;
     transition: 0.3s;
     font-size: 2rem;
-    color: #818181;
+    color: hsl(0, 0%, 51%);
     display: block;
     text-align: center;
     padding: 1rem;
@@ -27,7 +27,7 @@ a:hover {
     .all {
     }
     .nav:hover {
-        color: #ad3941ff;
+        color: hsl(356, 50%, 45%);
     }
     .person {
         a {

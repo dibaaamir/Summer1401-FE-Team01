@@ -7,7 +7,7 @@ header {
     a {
         text-decoration: none;
         font-size: 1.5rem;
-        color: #a6a1a1;
+        color: 	hsl(0, 3%, 64%);
         display: block;
         transition: 0.3s;
     }
@@ -18,16 +18,15 @@ header {
         display: flex;
         flex-direction: row;
         gap: 9rem;
-        //align-items: flex-end;
         align-items: center;
         a:hover {
-            color: #150b6e;
+            color: 	hsl(246, 82%, 24%);
         }
 
         a {
             font-size: 2rem;
             margin-left: 2rem;
-            color: #571ca2;
+            color: hsl(266, 71%, 37%);
         }
     }
 
@@ -38,7 +37,6 @@ header {
         font-family: Noto sans Arabic;
         align-items: flex-start;
         margin-right: 6rem;
-        //padding-bottom: 1rem;
         display: flex;
         gap: 4rem;
     }
