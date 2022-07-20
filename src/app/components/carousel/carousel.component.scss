@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     width: calc(100% - var(--margin-right));
-    overflow-x: hidden;
+    overflow: hidden;
     gap: 6vw;
     padding-top: 75px;
     margin-right: var(--margin-right);
