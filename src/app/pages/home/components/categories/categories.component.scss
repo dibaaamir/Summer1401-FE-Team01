@@ -16,7 +16,6 @@
     ul {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: masonry;
         align-content: start;
         margin-right: 3.5rem;
         li {
