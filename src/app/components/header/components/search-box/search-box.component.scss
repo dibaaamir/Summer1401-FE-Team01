@@ -8,15 +8,17 @@ input {
     padding: 1rem 0.5rem;
     border: none;
 }
-input:focus{
+input:focus {
     outline: none;
 }
 .input-box {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: text;
+
     i {
-        color: coral;
+        color: hsl(16, 100%, 66%);
         margin-left: 0.5rem;
         font-size: 1.5rem;
     }

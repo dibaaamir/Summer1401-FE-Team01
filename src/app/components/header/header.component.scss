@@ -7,12 +7,12 @@ header {
     a {
         text-decoration: none;
         font-size: 1.5rem;
-        color: 	hsl(0, 3%, 64%);
+        color: hsl(0, 3%, 64%);
         display: block;
         transition: 0.3s;
     }
     a:hover {
-        color: rgb(222, 107, 73);
+        color: hsl(14, 69%, 58%);
     }
     .group {
         display: flex;
@@ -20,7 +20,7 @@ header {
         gap: 9rem;
         align-items: center;
         a:hover {
-            color: 	hsl(246, 82%, 24%);
+            color: hsl(246, 82%, 24%);
         }
 
         a {

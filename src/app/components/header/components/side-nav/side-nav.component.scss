@@ -8,7 +8,7 @@ a {
     padding: 1rem;
 }
 a:hover {
-    color: rgb(222, 107, 73);
+    color: hsl(14, 69%, 58%);
 }
 .sidenav {
     height: 100%;
@@ -20,7 +20,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-left: rgb(60, 53, 156, 0.5) solid;
+    border-left: hsla(244, 49%, 41%, 0.5) solid;
     width: fit-content;
     .nav {
     }
