@@ -5,7 +5,7 @@ export class Game {
     public constructor(
         public id: number,
         public title: string,
-        public shortTitle: string,
+        public subtitle: string,
         public description: string,
         public avgRating: number,
         public imageData: GameImageData
