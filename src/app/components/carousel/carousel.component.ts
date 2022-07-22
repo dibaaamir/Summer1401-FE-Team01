@@ -36,12 +36,8 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     }
 
     private setIndex(newI: number): void {
-        if (newI < 0) {
-            this.currentIndex = this.games.length;
-        } else if (newI >= this.games.length) {
-            this.currentIndex = newI % this.games.length;
-        } else {
-            this.currentIndex = newI;
-        }
+        if (newI < 0) this.currentIndex = this.games.length;
+        else if (newI >= this.games.length) this.currentIndex = newI % this.games.length;
+        else this.currentIndex = newI;
     }
 }
