@@ -16,10 +16,10 @@ html {
     background-attachment: fixed;
 }
 .stack {
-    position: relative !important;
+    position: relative;
 
     > .item {
-        position: absolute !important;
+        position: absolute;
     }
 }
 
