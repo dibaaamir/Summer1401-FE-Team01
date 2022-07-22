@@ -5,7 +5,7 @@
 
     position: relative;
     width: var(--width);
-    aspect-ratio: calc(5 / 3);
+    aspect-ratio: 16 / 9;
 
     transform: translateX(calc(var(--current-index) * (var(--width) + 6vw)));
     transition: transform ease-in 300ms;
