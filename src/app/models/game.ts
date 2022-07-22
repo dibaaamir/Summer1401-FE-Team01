@@ -1,6 +1,5 @@
 import {GameImageData} from './game-image-data';
 import {currentUser} from '../app.component';
-import '../extensions/string';
 
 export class Game {
     public constructor(
