@@ -24,7 +24,7 @@
         height: 110%;
         bottom: -5%;
         right: 0;
-        transition-property: height, width, filter;
+        transition-property: height, filter;
         transition-duration: 400ms;
         transition-delay: 50ms;
     }
@@ -35,7 +35,7 @@
         top: 52%;
         left: 1%;
         transform: translate(0, -50%);
-        transition-property: height, width, filter;
+        transition-property: width, filter;
         transition-duration: 400ms;
         transition-delay: 50ms;
     }
