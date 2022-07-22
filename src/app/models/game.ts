@@ -7,13 +7,9 @@ export class Game {
         public title: string,
         public shortTitle: string,
         public description: string,
-        public ratings: Map<string, number>,
+        public avgRating: number,
         public imageData: GameImageData
     ) {}
-
-    public get avgRating(): number {
-        return Array.from(this.ratings.values()).reduce((a, b) => a + b, 0) / this.ratings.size;
-    }
 
     public isInWatchlist(): boolean {
         return currentUser.watchlist.includes(this.id);
