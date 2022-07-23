@@ -52,13 +52,12 @@
 
     #bullets {
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
 
         padding: 1%;
 
         i {
-            background-color: var(--color-gray-16);
-            box-shadow: 0 0 4px 2px var(--color-gray-81);
+            background-color: var(--color-gray-81);
 
             display: block;
 
@@ -73,8 +72,6 @@
             cursor: pointer;
 
             &.current {
-                background-color: var(--color-gray-81);
-
                 inline-size: 2em;
             }
         }
