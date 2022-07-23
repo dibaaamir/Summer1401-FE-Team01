@@ -123,7 +123,6 @@ svg {
         inset: 4px;
         position: absolute;
         z-index: -1;
-        transition: all 100ms ease-out;
     }
 
     &:hover:not(:disabled) {
@@ -133,7 +132,6 @@ svg {
 
         &:after {
             inset: 0;
-            transition-timing-function: ease-in;
             opacity: 0;
         }
     }
