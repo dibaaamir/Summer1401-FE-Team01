@@ -10,7 +10,7 @@
 }
 
 html {
-    background-color: hsl(238deg 59% 30%);
+    background-color: var(--color-background);
 
     scroll-behavior: smooth;
 

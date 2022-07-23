@@ -1,4 +1,6 @@
 #slides-wrapper {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -16,6 +18,36 @@
         inline-size: 100%;
 
         padding-block-start: 75px;
+    }
+
+    .fade-overlay {
+        background: linear-gradient(90deg, var(--color-background), transparent);
+
+        position: absolute;
+        inset-inline-end: 0;
+
+        block-size: 100%;
+
+        inline-size: 20%;
+    }
+
+    #next-slide-button {
+        color: var(--color-gray-98);
+        opacity: 0.5;
+
+        position: absolute;
+        inset-block-start: 52.5%;
+        inset-inline-end: 2rem;
+
+        transform: translateY(-50%);
+
+        font-size: 5rem;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     #bullets {
