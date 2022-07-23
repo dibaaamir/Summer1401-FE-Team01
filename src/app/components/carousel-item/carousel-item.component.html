@@ -2,14 +2,12 @@
     <img id="image" [src]="game.sliderImageAddress" [alt]="game.title" />
     <div id="details">
         <p id="description">{{ game.description }}</p>
-        <div class="button-bar">
-            <button class="shiny-button" id="cart">
-                <span>
-                    اضافه به سبد خرید
-                    <i class="fa-solid fa-cart-circle-plus"></i>
-                </span>
-            </button>
-        </div>
+        <button class="shiny-button">
+            <span>
+                اضافه به سبد خرید
+                <i class="fa-solid fa-cart-circle-plus"></i>
+            </span>
+        </button>
     </div>
     <div id="rating">
         {{ game.avgRating.toFixed(1) }}

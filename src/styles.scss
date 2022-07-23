@@ -104,11 +104,13 @@ svg {
 
     position: relative;
 
-    padding: 19px 26px;
+    width: fit-content;
+
+    padding: 1em 1.5em;
 
     border-style: none;
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 
     cursor: pointer;
