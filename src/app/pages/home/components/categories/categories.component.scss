@@ -6,7 +6,7 @@
     flex-direction: column;
     gap: var(--spacing);
 
-    padding-block-end: calc(var(--padding-left) / 2);
+    padding-block: calc(var(--padding-left) / 2);
 
     padding-inline-start: calc(4.25rem + var(--padding-left));
     padding-inline-end: var(--padding-left);
