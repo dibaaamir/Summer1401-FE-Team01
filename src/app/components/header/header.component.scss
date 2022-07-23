@@ -1,45 +1,27 @@
 header {
-    #groups {
+    .topbar {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-block-start: .75rem;
-    }
-    a {
-        text-decoration: none;
-        font-size: 1.5rem;
-        color: hsl(0, 0%, 100%);
-        display: block;
-        transition: 0.3s;
-    }
-    a:hover {
-        color: hsl(14, 69%, 58%);
-    }
-    .group {
-        display: flex;
-        flex-direction: row;
-        gap: 9rem;
         align-items: center;
-        a:hover {
-            color: hsl(246, 82%, 24%);
-        }
+        padding-block-start: 0.5rem;
+        padding-inline-end: 2rem;
+        padding-inline-start: 4.5rem;
+        gap: 2rem;
 
         a {
-            font-size: 2rem;
-            margin-left: 2rem;
             color: hsl(0, 0%, 100%);
-        }
-    }
+            text-decoration: none;
+            font-size: 1.5rem;
 
-    .discover {
-        &:nth-child(1n) {
-            margin-bottom: 0.5rem;
+            &:hover {
+                color: hsl(14, 69%, 58%);
+            }
         }
 
-        align-items: flex-start;
-        margin-right: 6rem;
-        display: flex;
-        gap: 4rem;
+        #search {
+            margin-right: auto;
+        }
 
         .logo {
             width: 6rem;
