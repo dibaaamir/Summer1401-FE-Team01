@@ -1,5 +1,3 @@
-import {currentUser} from '../app.component';
-
 export class Game {
     public constructor(
         public id: number,
@@ -11,9 +9,5 @@ export class Game {
 
     public get sliderImageAddress(): string {
         return `assets/images/games/${this.subtitle}/horizontal.jpg`;
-    }
-
-    public isInWatchlist(): boolean {
-        return currentUser.watchlist.includes(this.id);
     }
 }
