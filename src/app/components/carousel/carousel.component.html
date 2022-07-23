@@ -1,13 +1,15 @@
-<div id="slides">
-    <app-carousel-item
-        *ngFor="let game of games"
-        [game]="game"
-        [currentIndex]="currentIndex"
-        (mouseenter)="clearInterval()"
-        (mouseleave)="setupInterval()"
-    >
-    </app-carousel-item>
-</div>
-<div id="bullets">
-    <i *ngFor="let _ of games; index as i" (click)="setIndexByClick(i)"></i>
+<div id="slides-wrapper">
+    <div id="slides">
+        <app-carousel-item
+            *ngFor="let game of games"
+            [game]="game"
+            [currentIndex]="currentIndex"
+            (mouseenter)="clearInterval()"
+            (mouseleave)="setupInterval()"
+        >
+        </app-carousel-item>
+    </div>
+    <div id="bullets">
+        <i *ngFor="let _ of games; index as i" (click)="setIndexByClick(i)"></i>
+    </div>
 </div>
