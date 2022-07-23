@@ -3,6 +3,7 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding-block-start: .75rem;
     }
     a {
         text-decoration: none;
@@ -39,5 +40,9 @@ header {
         margin-right: 6rem;
         display: flex;
         gap: 4rem;
+
+        .logo {
+            width: 6rem;
+        }
     }
 }
