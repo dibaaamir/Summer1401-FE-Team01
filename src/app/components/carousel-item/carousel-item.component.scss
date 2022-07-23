@@ -41,9 +41,7 @@
 
         border-radius: 0 0 3em 3em;
 
-        transition-delay: 50ms;
-        transition-duration: 400ms;
-        transition-property: height, opacity;
+        transition: opacity 400ms 50ms;
 
         #description {
             padding: 0.5% 2% 0; // TRBL
