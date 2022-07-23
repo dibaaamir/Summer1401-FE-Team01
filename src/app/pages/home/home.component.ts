@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {Game} from '../../models/game';
-import {GameImageData} from '../../models/game-image-data';
 
 @Component({
     selector: 'app-home',
@@ -11,22 +10,42 @@ export class HomeComponent {
     public suggestionGames = this.generateSuggestionGames();
 
     public generateSuggestionGames(): Array<Game> {
-        return new Array(5).fill(0).map(
-            (_, id) =>
-                new Game(
-                    id,
-                    'UNCHARTED™: Legacy of Thieves Collection',
-                    'uncharted',
-                    'در مجموعه UNCHARTED: Legacy of Thieves به دنبال میراث خود باشید و نشان خود را روی نقشه بگذارید. داستان‌سرایی هیجان‌انگیز و سینمایی Naughty Dog و بزرگترین مجموعه‌های اکشن بلاک‌باستر این مجموعه نمادین را تجربه کنید.',
-                    8.7,
-                    new GameImageData(
-                        ['0.webp', '1.png', '2.png', '3.jpeg'].map((v) => `assets/images/games/uncharted/${v}`),
-                        0,
-                        1,
-                        2,
-                        3
-                    )
-                )
-        );
+        return [
+            new Game(
+                0,
+                'Forspoken',
+                'forspoken',
+                'Forspoken یک بازی RPG اکشن است که سفر فری، یک جوان نیویورکی را دنبال می‌کند که به سرزمین زیبا و بی‌رحمانه آتیا منتقل می‌شود.',
+                9.6
+            ),
+            new Game(
+                1,
+                'God of War Ragnarök',
+                'god-of-war',
+                'از استودیوی سانتا مونیکا، دنباله‌ای بر بازی تحسین‌شده God of War (2018) می‌آید. Fimbulwinter به خوبی در حال انجام است. کریتوس و آترئوس باید در جستجوی پاسخ به هر یک از نه قلمرو سفر کنند، زیرا نیروهای آسگاردی برای نبرد پیشگویی شده ای آماده می شوند که به جهان پایان می دهد. در طول مسیر آنها مناظر خیره کننده و افسانه ای را کشف خواهند کرد و با دشمنان ترسناکی به شکل خدایان و هیولاهای نورس روبرو خواهند شد. تهدید راگناروک روز به روز نزدیکتر می شود. کریتوس و آترئوس باید بین امنیت خود و امنیت قلمروها یکی را انتخاب کنند',
+                9.3
+            ),
+            new Game(
+                2,
+                'Gotham Knights',
+                'gotham-knights',
+                'Gotham Knights یک بازی RPG جهان باز و اکشن است که در پویاترین و تعاملی ترین شهر گاتهام تا به حال اتفاق می افتد. پنج منطقه متمایز گاتهام را در بازی انفرادی یا با یک قهرمان دیگر گشت‌زنی کنید و هر جا که آن را پیدا کردید به فعالیت‌های مجرمانه بپردازید.',
+                8.7
+            ),
+            new Game(
+                3,
+                'Horizon Forbidden West',
+                'horizon',
+                'سرزمین‌های دور را کاوش کنید، با ماشین‌های بزرگ‌تر و الهام‌بخش‌تر مبارزه کنید، و با قبایل جدید شگفت‌انگیزی روبرو شوید که به دنیای آینده‌ای دور و پسا آخرالزمانی Horizon برمی‌گردید.',
+                9.1
+            ),
+            new Game(
+                4,
+                'Stray',
+                'stray',
+                'Stray یک بازی ماجراجویی گربه سوم شخص است که در میان کوچه‌های پرنور نئون یک شهر سایبری در حال پوسیدگی و محیط‌های تیره زیر شکم آن قرار دارد.',
+                9.3
+            ),
+        ];
     }
 }
