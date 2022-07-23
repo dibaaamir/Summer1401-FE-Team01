@@ -1,7 +1,5 @@
-<div [id]="game.subtitle" [style.--current-index]="currentIndex">
-    <img id="bg" [src]="game.imageData.background" [alt]="game.title" />
-    <img id="overlay" [src]="game.imageData.overlay" alt="" />
-    <img id="title-img" [src]="game.imageData.title" alt="" />
+<div class="slide" [style.--current-index]="currentIndex">
+    <img id="image" [src]="game.sliderImageAddress" [alt]="game.title" />
     <div id="details">
         <p id="description">{{ game.description }}</p>
         <div class="button-bar">
