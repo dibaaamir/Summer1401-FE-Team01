@@ -2,7 +2,7 @@ a {
     text-decoration: none;
     transition: 0.3s;
     font-size: 2rem;
-    color: hsl(0, 0%, 51%);
+    color: hsl(0, 0%, 100%);
     display: block;
     text-align: center;
     padding: 1rem;
@@ -20,7 +20,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-left: hsla(244, 49%, 41%, 0.5) solid;
+    border-left: hsla(212, 43%, 50%, .7) solid;
     width: fit-content;
     .nav {
     }
