@@ -9,5 +9,5 @@
     </app-carousel-item>
 </div>
 <div id="bullets">
-    <i *ngFor="let _ of games; index as i" [class.current]="i === currentIndex" (click)="setIndexByClick(i)"></i>
+    <i *ngFor="let _ of games; index as i" (click)="setIndexByClick(i)"></i>
 </div>
