@@ -11,10 +11,10 @@
 
 html {
     scroll-behavior: smooth;
-    //background-image: url("assets/images/background-pic.png");
     background-color: hsl(238, 59%, 30%);
     background-size: cover;
     background-attachment: fixed;
+    font-family: Vazirmatn, sans-serif;
 }
 
 .stack {
@@ -44,7 +44,6 @@ input {
     height: 1.5rem;
     background-color: hsl(0, 2%, 80%);
     border-radius: 0.5rem;
-    font-family: Noto sans Arabic, serif;
     font-weight: bold;
     padding: 1rem 0.5rem;
     border: none;

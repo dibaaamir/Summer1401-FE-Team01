@@ -1,5 +1,4 @@
 .content-wrapper {
-    font-family: Noto sans Arabic, serif;
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -16,14 +15,12 @@
             border-radius: 0.25rem;
             color: black;
             padding: 0.25rem;
-            font-family: Noto sans Arabic, serif;
             font-weight: bolder;
             cursor: pointer;
         }
     }
 
     .copyright {
-        font-family: "Edu VIC WA NT Beginner";
         align-items: center;
     }
 }
