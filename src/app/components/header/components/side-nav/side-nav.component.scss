@@ -1,7 +1,7 @@
 .sidenav {
     position: fixed;
-    top: 0;
-    right: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     overflow-x: hidden;
     z-index: 1;
 
@@ -9,8 +9,9 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: fit-content;
-    height: 100%;
+    block-size: 100%;
+
+    inline-size: fit-content;
 
     border-left: hsl(212deg 43% 50% / 70%) solid;
 
