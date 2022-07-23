@@ -63,12 +63,12 @@ input:focus {
     flex-direction: row;
     align-items: center;
 
+    gap: 0.5rem;
+
     cursor: text;
 
     i {
         color: hsl(16deg 100% 66%);
-
-        margin-left: 0.5rem;
 
         font-size: 1.5rem;
     }
