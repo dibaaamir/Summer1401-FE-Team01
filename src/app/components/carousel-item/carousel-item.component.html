@@ -1,7 +1,9 @@
 <div class="slide" [style.--current-index]="currentIndex">
     <img id="image" [src]="game.sliderImageAddress" [alt]="game.title" />
     <div id="details">
-        <p id="description">{{ game.description }}</p>
+        <div id="description">
+            <span>{{ game.description }}</span>
+        </div>
         <button class="shiny-button">
             <span>
                 اضافه به سبد خرید
