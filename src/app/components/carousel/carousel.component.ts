@@ -11,24 +11,31 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
 
     public slideTimeout: number = 4000;
     public currentIndex = 0;
-    private autoNextInterval!: number;
+    private autoNextInterval!: number | null;
 
     public ngAfterViewInit(): void {
-        this.setupAutoNext();
+        this.setupInterval();
     }
 
     public ngOnDestroy(): void {
-        clearInterval(this.autoNextInterval);
+        this.clearInterval();
     }
 
-    private setupAutoNext(): void {
+    public setupInterval(): void {
         this.autoNextInterval = setInterval(() => this.nextSlide(), this.slideTimeout);
+    }
+
+    public clearInterval(): void {
+        if (this.autoNextInterval !== null) {
+            clearInterval(this.autoNextInterval);
+            this.autoNextInterval = null;
+        }
     }
 
     public setIndexByClick(newI: number): void {
         this.setIndex(newI);
-        clearInterval(this.autoNextInterval);
-        this.setupAutoNext();
+        clearInterval(this.autoNextInterval!);
+        this.setupInterval();
     }
 
     private nextSlide(): void {

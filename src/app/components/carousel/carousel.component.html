@@ -1,5 +1,12 @@
 <div id="slides">
-    <app-carousel-item *ngFor="let game of games" [game]="game" [currentIndex]="currentIndex"> </app-carousel-item>
+    <app-carousel-item
+        *ngFor="let game of games"
+        [game]="game"
+        [currentIndex]="currentIndex"
+        (mouseenter)="clearInterval()"
+        (mouseleave)="setupInterval()"
+    >
+    </app-carousel-item>
 </div>
 <div id="bullets">
     <i *ngFor="let _ of games; index as i" [class.current]="i === currentIndex" (click)="setIndexByClick(i)"></i>
