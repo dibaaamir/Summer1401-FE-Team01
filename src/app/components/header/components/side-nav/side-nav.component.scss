@@ -1,20 +1,3 @@
-a {
-    color: hsl(0deg 0% 100%);
-
-    display: block;
-
-    padding: 1rem;
-
-    font-size: 2rem;
-
-    text-align: center;
-    text-decoration: none;
-}
-
-a:hover {
-    color: hsl(14deg 69% 58%);
-}
-
 .sidenav {
     position: fixed;
     top: 0;
@@ -30,6 +13,23 @@ a:hover {
     height: 100%;
 
     border-left: hsl(212deg 43% 50% / 70%) solid;
+
+    a {
+        color: hsl(0deg 0% 100%);
+
+        display: block;
+
+        padding: 1rem;
+
+        font-size: 2rem;
+
+        text-align: center;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: hsl(14deg 69% 58%);
+    }
 
     .nav:hover {
         color: hsl(356deg 50% 45%);
