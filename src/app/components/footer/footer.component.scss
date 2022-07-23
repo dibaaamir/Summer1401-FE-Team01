@@ -1,21 +1,30 @@
 .content-wrapper {
-    font-weight: bold;
+    background-color: hsl(240deg 75% 11%);
+    color: hsl(14deg 69% 58%);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(240, 75%, 11%);
-    color: hsl(14, 69%, 58%);
+
     padding-bottom: 2rem;
+
+    font-weight: bold;
+
     .top-row {
+        margin-top: 1rem;
         margin-right: auto;
         margin-left: 1rem;
-        margin-top: 1rem;
+
         button {
-            background-color: hsl(14, 69%, 58%);
-            border-radius: 0.25rem;
-            color: black;
+            background-color: hsl(14deg 69% 58%);
+            color: hsl(0deg 0% 0%);
+
             padding: 0.25rem;
+
+            border-radius: 0.25rem;
+
             font-weight: bolder;
+
             cursor: pointer;
         }
     }

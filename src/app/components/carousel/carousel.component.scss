@@ -1,33 +1,44 @@
 #slides {
     --margin-right: 100px;
+    overflow: hidden;
+
     display: flex;
     flex-direction: row;
-    width: calc(100% - var(--margin-right));
-    overflow: hidden;
     gap: 6vw;
-    padding-top: 75px;
+
+    width: calc(100% - var(--margin-right));
+
     margin-right: var(--margin-right);
+    padding-top: 75px;
 }
 
 #bullets {
     display: flex;
     gap: 1rem;
-    padding: 1%;
+
     margin-right: 100px;
+    padding: 1%;
 
     i {
         background-color: var(--color-gray-16);
         box-shadow: 0 0 4px 2px var(--color-gray-81);
+
         display: block;
+
         width: 1em;
         height: 1em;
+
         border-radius: 1em;
+
         font-size: 0.6rem;
+
         transition: background-color, width ease-in 300ms;
+
         cursor: pointer;
 
         &.current {
             background-color: var(--color-gray-81);
+
             width: 2em;
         }
     }

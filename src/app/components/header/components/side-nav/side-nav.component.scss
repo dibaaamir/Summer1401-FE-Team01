@@ -1,27 +1,37 @@
 a {
-    text-decoration: none;
-    font-size: 2rem;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0deg 0% 100%);
+
     display: block;
-    text-align: center;
+
     padding: 1rem;
+
+    font-size: 2rem;
+
+    text-align: center;
+    text-decoration: none;
 }
+
 a:hover {
-    color: hsl(14, 69%, 58%);
+    color: hsl(14deg 69% 58%);
 }
+
 .sidenav {
-    height: 100%;
     position: fixed;
-    z-index: 1;
     top: 0;
     right: 0;
     overflow-x: hidden;
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-left: hsla(212, 43%, 50%, .7) solid;
+
     width: fit-content;
+    height: 100%;
+
+    border-left: hsl(212deg 43% 50% / 70%) solid;
+
     .nav:hover {
-        color: hsl(356, 50%, 45%);
+        color: hsl(356deg 50% 45%);
     }
 }
