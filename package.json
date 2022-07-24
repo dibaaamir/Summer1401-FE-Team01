@@ -1,5 +1,5 @@
 {
-    "name": "D&D",
+    "name": "d-and-d",
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
@@ -8,11 +8,12 @@
         "build:prod": "ng build --base-href=/Summer1401-FE-Team01/",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "lint": "ng lint",
-        "lint:fix": "ng lint --fix",
-        "prettier": "prettier .",
+        "test:ci": "ng test --browsers=ChromeHeadless --watch=false",
+        "eslint:check": "ng lint",
+        "eslint:fix": "ng lint --fix",
+        "prettier:check": "prettier .",
         "prettier:fix": "prettier . --write",
-        "stylelint": "npx stylelint \"**/*.scss\"",
+        "stylelint:check": "npx stylelint \"**/*.scss\"",
         "stylelint:fix": "npx stylelint \"**/*.scss\" --fix"
     },
     "private": true,
