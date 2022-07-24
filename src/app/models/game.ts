@@ -8,6 +8,6 @@ export class Game {
     ) {}
 
     public get sliderImageAddress(): string {
-        return `assets/images/games/${this.subtitle}/horizontal.jpg`;
+        return `assets/images/games/${this.subtitle}/horizontal.webp`;
     }
 }
