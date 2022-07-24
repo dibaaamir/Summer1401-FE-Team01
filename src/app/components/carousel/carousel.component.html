@@ -13,8 +13,8 @@
     <i
         id="next-slide-button"
         class="far fa-angle-left"
-        (click)="setIndexByClick(currentIndex + 1)"
         title="اسلاید بعد"
+        (click)="setIndexByClick(currentIndex + 1)"
     ></i>
     <div id="bullets">
         <i *ngFor="let _ of games; index as i" (click)="setIndexByClick(i)" [title]="'انتخاب اسلاید ' + i"></i>

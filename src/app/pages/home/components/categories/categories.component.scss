@@ -61,10 +61,10 @@
                     border-radius: 1.5rem;
                 }
             }
-        }
 
-        li:hover {
-            transform: scale(105%);
+            &:hover {
+                transform: scale(105%);
+            }
         }
     }
 }
