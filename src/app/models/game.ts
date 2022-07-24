@@ -4,10 +4,7 @@ export class Game {
         public title: string,
         public subtitle: string,
         public description: string,
+        public sliderCoverImage: string,
         public averageRating: number
     ) {}
-
-    public get sliderCoverImage(): string {
-        return `assets/images/games/${this.subtitle}/horizontal.webp`;
-    }
 }
