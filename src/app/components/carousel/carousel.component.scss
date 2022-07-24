@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
 
-    gap: 0.5rem;
+    gap: 1rem;
 
     padding-inline-start: 8.5rem;
 
@@ -53,8 +53,6 @@
     .bullets {
         display: flex;
         gap: 0.5rem;
-
-        padding: 1%;
 
         i {
             background-color: var(--color-gray-80);
