@@ -5,10 +5,11 @@
 
     position: relative;
 
-    block-size: calc(9 / 16 * var(--width));
     max-block-size: 55vh;
 
     inline-size: var(--width);
+
+    aspect-ratio: 16 / 9;
 
     transform: translateX(calc(var(--current-index) * (var(--width) + 6vw)));
 
