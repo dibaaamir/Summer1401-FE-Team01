@@ -4,10 +4,9 @@ import {CommonModule} from '@angular/common';
 import {FooterComponent} from './footer.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from '../../app-routing.module';
-import {SocialMediaComponent} from './components/social-media/social-media.component';
 
 @NgModule({
-    declarations: [FooterComponent, SocialMediaComponent],
+    declarations: [FooterComponent],
     exports: [FooterComponent],
     imports: [CommonModule, RouterModule, AppRoutingModule],
 })
