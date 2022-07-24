@@ -29,9 +29,9 @@ jobs:
               if: success()
               run: npm run prettier:check
 
-            #            - name: Run Tests
-            #              if: success()
-            #              run: npm run test:ci
+            - name: Run Tests
+              if: success()
+              run: npm run test:ci
 
             - name: Build
               run: npm run build:prod
