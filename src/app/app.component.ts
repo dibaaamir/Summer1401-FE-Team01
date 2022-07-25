@@ -15,15 +15,22 @@ export class AppComponent {
                 username: 'BijanProgrammer7',
                 email: 'bijaneisapour7@gmail.com',
                 password: '1234',
-                firstName: 'بیژن',
-                lastName: 'عیسی پور',
             })
             .then();
     }
 
-    public testLogin(): void {}
+    public testLogin(): void {
+        this.authService
+            .login({
+                username: 'BijanProgrammer7',
+                password: '1234',
+            })
+            .then();
+    }
 
-    public testLogout(): void {}
+    public testLogout(): void {
+        this.authService.logout();
+    }
 
     public testIsLoggedIn(): void {}
 }
