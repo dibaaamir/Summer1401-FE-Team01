@@ -11,7 +11,7 @@ export class AuthService {
     public constructor(private apiService: ApiService) {}
 
     public async signup(user: Partial<User>): Promise<boolean> {
-        const response = await this.apiService.post<TokenObject>(API_USER_REGISTER, user, 201);
+        const response = await this.apiService.post<TokenObject>(API_USER_REGISTER, user);
 
         if (response != null) {
             localStorage.setItem('token', response.token);

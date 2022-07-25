@@ -7,16 +7,11 @@ import {POST_REQUEST_INIT} from '../utils/api.utils';
 export class ApiService {
     public constructor() {}
 
-    public async post<T>(
-        url: string,
-        body: any = '',
-        successStatusCode: number = 200,
-        init: Partial<RequestInit> = {}
-    ): Promise<T | null> {
+    public async post<T>(url: string, body: any = '', init: Partial<RequestInit> = {}): Promise<T | null> {
         const response = await fetch(url, {...POST_REQUEST_INIT, body: JSON.stringify(body), ...init});
         const data = await response.json();
 
-        if (response.status === successStatusCode) return data as T;
+        if (response.ok) return data as T;
 
         // this.snackbarService.show((data as ApiError).message);
         return null;
