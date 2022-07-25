@@ -1,16 +1,21 @@
-import {Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {AuthService} from './services/auth.service';
 import {SnackbarComponent} from './components/snackbar/snackbar.component';
+import {SnackbarService} from './services/snackbar.service';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
     @ViewChild('snackbar') public snackbarRef!: SnackbarComponent;
 
-    public constructor(private authService: AuthService) {}
+    public constructor(private authService: AuthService, private snackbarService: SnackbarService) {}
+
+    public ngAfterViewInit(): void {
+        this.snackbarService.initComponent(this.snackbarRef);
+    }
 
     public async testSignup(): Promise<void> {
         console.log(
