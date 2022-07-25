@@ -8,14 +8,16 @@ import {Component} from '@angular/core';
 export class SnackbarComponent {
     public text: string = '';
     public borderColor: string | null = null;
+    public shown: boolean = false;
 
     public show(text: string, color: string | null = null): void {
         this.text = text;
         this.borderColor = color;
-        setTimeout(() => this.close(), 3000);
+        this.shown = true;
+        setTimeout(() => this.close(), 2000);
     }
 
     public close(): void {
-        this.text = '';
+        this.shown = false;
     }
 }
