@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, Input, OnDestroy} from '@angular/core';
-import {Game} from '../../models/game';
+import {Game} from '../../models/game.model';
 
 @Component({
     selector: 'app-carousel',
