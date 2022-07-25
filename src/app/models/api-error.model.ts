@@ -1,3 +1,4 @@
-class ApiErrorModel {
-    public constructor(public message: string, public trace: string) {}
+export interface ApiError {
+    message: string;
+    trace: string;
 }

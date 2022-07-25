@@ -28,7 +28,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     }
 
     public clearInterval(): void {
-        if (this.autoNextInterval !== null) {
+        if (!!this.autoNextInterval) {
             clearInterval(this.autoNextInterval);
             this.autoNextInterval = null;
         }

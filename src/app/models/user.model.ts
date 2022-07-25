@@ -1,6 +1,9 @@
 export class User {
-    public purchasedGames: Array<number> = [];
-    public watchlist: Array<number> = [];
-    public cart: Array<number> = [];
-    public constructor(public username: string, public password: string) {}
+    public constructor(
+        public username: string,
+        public password: string,
+        public email: string,
+        public firstName: string,
+        public lastName: string
+    ) {}
 }
