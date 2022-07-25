@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {AuthService} from './services/auth.service';
+import {SnackbarComponent} from './components/snackbar/snackbar.component';
 
 @Component({
     selector: 'app-root',
@@ -7,6 +8,8 @@ import {AuthService} from './services/auth.service';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+    @ViewChild('snackbar') public snackbarRef!: SnackbarComponent;
+
     public constructor(private authService: AuthService) {}
 
     public async testSignup(): Promise<void> {

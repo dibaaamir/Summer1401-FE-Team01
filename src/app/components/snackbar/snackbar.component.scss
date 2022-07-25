@@ -1,0 +1,48 @@
+@mixin orientation($top, $right, $margin) {
+    @if $top {
+        inset-block: $margin auto;
+    } @else {
+        inset-block: auto $margin;
+    }
+    @if $right {
+        inset-inline: $margin + 4.25rem auto;
+    } @else {
+        inset-inline: auto $margin;
+    }
+}
+
+.wrapper {
+    background: hsl(0deg 0% 100%);
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 0.5rem;
+
+    transition: transform;
+
+    @include orientation(true, false, 1rem);
+
+    i {
+        color: hsl(0deg 73% 41%);
+
+        font-size: 2rem;
+        font-weight: 800;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}

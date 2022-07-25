@@ -8,9 +8,10 @@ import {CarouselModule} from './components/carousel/carousel.module';
 import {HeaderModule} from './components/header/header.module';
 
 import {HomeModule} from './pages/home/home.module';
+import {SnackbarComponent} from './components/snackbar/snackbar.component';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, SnackbarComponent],
     imports: [BrowserModule, CarouselModule, AppRoutingModule, HeaderModule, HomeModule],
     providers: [],
     bootstrap: [AppComponent],
