@@ -1,13 +1,13 @@
 @mixin orientation($top, $right, $margin) {
     @if $top {
-        inset-block: $margin auto;
+        inset-block-start: $margin;
     } @else {
-        inset-block: auto $margin;
+        inset-block-end: $margin;
     }
     @if $right {
-        inset-inline: $margin + 4.25rem auto;
+        inset-inline-start: $margin + 4.25rem;
     } @else {
-        inset-inline: auto $margin;
+        inset-inline-end: $margin;
     }
 }
 
