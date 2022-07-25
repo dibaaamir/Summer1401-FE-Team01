@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {User} from '../models/user.model';
 import {ApiService} from './api.service';
-import {API_USER_LOGIN, API_USER_REGISTER} from '../utils/api.utils';
+import {API_USER_AUTH, API_USER_LOGIN, API_USER_REGISTER} from '../utils/api.utils';
 import {TokenObject} from '../models/token-object.model';
 
 @Injectable({
@@ -35,5 +35,13 @@ export class AuthService {
 
     public logout(): void {
         localStorage.removeItem('token');
+    }
+
+    public async isLoggedIn(): Promise<boolean> {
+        const response = await this.apiService.post<TokenObject>(API_USER_AUTH, {
+            token: localStorage.getItem('token'),
+        });
+
+        return !!response;
     }
 }

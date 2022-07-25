@@ -9,28 +9,34 @@ import {AuthService} from './services/auth.service';
 export class AppComponent {
     public constructor(private authService: AuthService) {}
 
-    public testSignup(): void {
-        this.authService
-            .signup({
+    public async testSignup(): Promise<void> {
+        console.log(
+            'testSignup',
+            await this.authService.signup({
                 username: 'BijanProgrammer7',
                 email: 'bijaneisapour7@gmail.com',
                 password: '1234',
             })
-            .then();
+        );
     }
 
-    public testLogin(): void {
-        this.authService
-            .login({
+    public async testLogin(): Promise<void> {
+        console.log(
+            'testLogin',
+            await this.authService.login({
                 username: 'BijanProgrammer7',
                 password: '1234',
             })
-            .then();
+        );
     }
 
-    public testLogout(): void {
+    public async testLogout(): Promise<void> {
         this.authService.logout();
+        // noinspection JSVoidFunctionReturnValueUsed
+        console.log('testLogout', await this.authService.logout());
     }
 
-    public testIsLoggedIn(): void {}
+    public async testIsLoggedIn(): Promise<void> {
+        console.log('testIsLoggedIn', await this.authService.isLoggedIn());
+    }
 }
