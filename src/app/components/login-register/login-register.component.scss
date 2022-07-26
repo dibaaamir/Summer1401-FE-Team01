@@ -10,22 +10,27 @@
     .auth {
         background-color: var(--color-background-lighter);
 
+        overflow: hidden;
+
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
 
         width: 70%;
         height: fit-content;
 
+        border-radius: 2rem;
+
         form {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1rem;
 
             width: 40%;
 
             margin-inline: auto;
+            padding: 1rem;
 
             input {
                 background-color: var(--color-gray-90);
@@ -40,6 +45,12 @@
                 outline: none;
             }
 
+            .first-last {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+
             app-shiny-button {
                 margin-inline: auto;
             }
@@ -52,9 +63,11 @@
 
         img {
             width: 50%;
-            aspect-ratio: 4/3;
+            aspect-ratio: 4/3.25;
             object-fit: cover;
             object-position: 75% 100%;
+
+            transform: scaleX(-1);
         }
     }
 }

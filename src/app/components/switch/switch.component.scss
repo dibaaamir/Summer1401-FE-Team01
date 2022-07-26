@@ -1,5 +1,6 @@
 .wrapper {
     background-color: var(--color-background-lightest);
+    color: hsl(16deg 100% 61%);
 
     display: flex;
     flex-direction: row;
@@ -9,6 +10,8 @@
     padding: 0.4rem;
 
     border-radius: 2rem;
+
+    font-weight: bolder;
 
     div {
         width: 50%;
@@ -24,6 +27,7 @@
     }
 
     .current {
-        background-color: hsl(0deg 100% 50%);
+        background-color: hsl(16deg 100% 61%);
+        color: hsl(0deg 0% 93%);
     }
 }
