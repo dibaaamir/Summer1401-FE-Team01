@@ -24,7 +24,9 @@
     --color-body-background: var(--color-default-background);
     --color-body-foreground: var(--color-default-foreground);
 
-    --color-background: hsl(238deg 59% 30%);
+    --color-background: hsl(238deg 59% 40%);
+    --color-background-lighter: hsl(238deg 59% 60%);
+    --color-background-lightest: hsl(238deg 59% 85%);
 
     --color-box-shadow-subtle: hsl(0deg 90% 10% / 12%);
     --box-shadow-subtle: 0 0.2rem 1rem 0 var(--color-box-shadow-subtle);

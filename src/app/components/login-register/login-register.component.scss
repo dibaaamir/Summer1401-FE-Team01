@@ -1,0 +1,45 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: hsl(16deg 100% 61%);
+
+    .auth {
+        background-color: var(--color-background-lighter);
+        width: 70%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-inline: auto;
+            width: 40%;
+
+            input {
+                width: 100%;
+            }
+
+            app-shiny-button {
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .button-bar {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        img {
+            width: 50%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            object-position: 75% 100%;
+        }
+    }
+}

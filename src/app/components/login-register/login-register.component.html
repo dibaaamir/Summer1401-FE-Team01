@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <div class="auth">
+        <form (submit)="formSubmitHandler()">
+            <app-switch [options]="['ورود', 'ثبت‌نام']" [(selectedIndex)]="selectedIndex"></app-switch>
+            <!--            <h1>-->
+            <!--                {{ isInLoginView ? 'ورود' : 'ثبت‌نام' }}-->
+            <!--            </h1>-->
+
+            <label *ngIf="!loginWithEmail">
+                <!--                نام کاربری:-->
+                <input type="text" name="username" placeholder="نام کاربری" required />
+            </label>
+            <label *ngIf="loginWithEmail">
+                <!--                ایمیل:-->
+                <input type="email" name="email" placeholder="ایمیل" required />
+            </label>
+            <label>
+                <!--                کلمه عبور:-->
+                <input type="password" name="password" placeholder="کلمه عبور" required />
+            </label>
+            <div class="button-bar">
+                <app-shiny-button [text]="isInLoginView ? 'ورود' : 'ثبت‌نام'"> </app-shiny-button>
+                <app-shiny-button
+                    *ngIf="isInLoginView"
+                    [text]="secondaryLoginButtonText"
+                    (click)="loginWithEmail = !loginWithEmail"
+                >
+                </app-shiny-button>
+            </div>
+        </form>
+        <img src="assets/images/auth-bg.webp" alt="تصویر کنار فرم ورود ثبت نام" />
+    </div>
+</div>
