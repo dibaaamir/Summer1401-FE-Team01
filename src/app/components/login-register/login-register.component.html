@@ -2,22 +2,10 @@
     <div class="auth">
         <form (submit)="formSubmitHandler()">
             <app-switch [options]="['ورود', 'ثبت‌نام']" [(selectedIndex)]="selectedIndex"></app-switch>
-            <!--            <h1>-->
-            <!--                {{ isInLoginView ? 'ورود' : 'ثبت‌نام' }}-->
-            <!--            </h1>-->
+            <input *ngIf="!loginWithEmail" type="text" name="username" placeholder="نام کاربری" required />
+            <input *ngIf="loginWithEmail" type="email" name="email" placeholder="ایمیل" required />
+            <input type="password" name="password" placeholder="کلمه عبور" required />
 
-            <label *ngIf="!loginWithEmail">
-                <!--                نام کاربری:-->
-                <input type="text" name="username" placeholder="نام کاربری" required />
-            </label>
-            <label *ngIf="loginWithEmail">
-                <!--                ایمیل:-->
-                <input type="email" name="email" placeholder="ایمیل" required />
-            </label>
-            <label>
-                <!--                کلمه عبور:-->
-                <input type="password" name="password" placeholder="کلمه عبور" required />
-            </label>
             <div class="button-bar">
                 <app-shiny-button [text]="isInLoginView ? 'ورود' : 'ثبت‌نام'"> </app-shiny-button>
                 <app-shiny-button

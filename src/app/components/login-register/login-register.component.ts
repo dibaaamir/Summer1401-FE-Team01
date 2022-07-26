@@ -27,7 +27,11 @@ export class LoginRegisterComponent {
         return this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل';
     }
     public async formSubmitHandler(): Promise<void> {
-        if (this.isInLoginView) await this.authService.login(this.user);
-        else await this.authService.signup(this.user);
+        if (this.isInLoginView) {
+            if (this.loginWithEmail) this.user.username = '';
+            else this.user.email = '';
+
+            await this.authService.login(this.user);
+        } else await this.authService.signup(this.user);
     }
 }
