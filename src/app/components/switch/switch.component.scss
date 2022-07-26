@@ -24,6 +24,10 @@
         text-align: center;
 
         cursor: pointer;
+
+        &:not(.current):hover {
+            background-color: hsl(16deg 100% 80%);
+        }
     }
 
     .current {
