@@ -1,7 +1,11 @@
 <div class="wrapper">
     <div class="auth">
         <form (submit)="formSubmitHandler()">
-            <app-switch [options]="['ورود', 'ثبت‌نام']" [(selectedIndex)]="selectedIndex"></app-switch>
+            <app-switch
+                [options]="['ورود', 'ثبت‌نام']"
+                [(selectedIndex)]="selectedIndex"
+                (selectedIndexChange)="resetFields()"
+            ></app-switch>
 
             <input
                 *ngIf="!loginWithEmail"

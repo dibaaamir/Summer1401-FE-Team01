@@ -44,6 +44,15 @@ export class LoginRegisterComponent {
         };
     }
 
+    public resetFields(): void {
+        this.username = '';
+        this.password = '';
+        this.confirm = '';
+        this.email = '';
+        this.firstName = '';
+        this.lastName = '';
+    }
+
     public async formSubmitHandler(): Promise<void> {
         let success;
         if (this.isInLoginView) {
