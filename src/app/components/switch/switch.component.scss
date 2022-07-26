@@ -1,20 +1,29 @@
 .wrapper {
+    background-color: var(--color-background-lightest);
+
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    border-radius: 2rem;
     justify-content: space-evenly;
+    gap: 2rem;
+
     padding: 0.4rem;
-    background-color: var(--color-background-lightest);
+
+    border-radius: 2rem;
+
     div {
-        border-radius: 2rem;
         width: 50%;
         height: 100%;
-        text-align: center;
-        cursor: pointer;
+
         padding: 0.25rem;
+
+        border-radius: 2rem;
+
+        text-align: center;
+
+        cursor: pointer;
     }
+
     .current {
-        background-color: red;
+        background-color: hsl(0deg 100% 50%);
     }
 }
