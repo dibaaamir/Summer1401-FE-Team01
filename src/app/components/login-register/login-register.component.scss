@@ -28,12 +28,20 @@
             margin-inline: auto;
 
             input {
+                background-color: var(--color-gray-90);
+
                 width: 100%;
+
+                padding: 0.45rem 0.65rem;
+
+                border: none;
+                border-radius: 1rem;
+
+                outline: none;
             }
 
             app-shiny-button {
-                margin-right: auto;
-                margin-left: auto;
+                margin-inline: auto;
             }
 
             .button-bar {
