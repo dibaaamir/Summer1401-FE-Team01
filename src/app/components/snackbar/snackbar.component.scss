@@ -12,7 +12,7 @@
 }
 
 div {
-    background: hsl(0deg 0% 100%);
+    background: var(--color-gray-90);
 
     position: fixed;
 
@@ -27,7 +27,7 @@ div {
 
     transition: transform 300ms ease-in;
 
-    @include orientation(true, false, 1rem);
+    @include orientation(false, false, 1rem);
 
     i {
         color: hsl(0deg 73% 41%);

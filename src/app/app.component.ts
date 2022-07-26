@@ -15,6 +15,7 @@ export class AppComponent implements AfterViewInit {
 
     public ngAfterViewInit(): void {
         this.snackbarService.initComponent(this.snackbarRef);
+        // setTimeout(() => this.snackbarService.show('سلام'), 4000);
     }
 
     public async testSignup(): Promise<void> {
