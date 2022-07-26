@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {User} from '../../models/user.model';
 import {AuthService} from '../../services/auth.service';
 
 @Component({
@@ -8,11 +7,12 @@ import {AuthService} from '../../services/auth.service';
     styleUrls: ['./login-register.component.scss'],
 })
 export class LoginRegisterComponent {
-    public user: Partial<User> = {
-        username: '',
-        email: '',
-        password: '',
-    };
+    public username!: string;
+    public password!: string;
+    public confirm!: string;
+    public email!: string;
+    public firstName!: string;
+    public lastName!: string;
 
     public loginWithEmail: boolean = false;
 
@@ -28,10 +28,15 @@ export class LoginRegisterComponent {
     }
     public async formSubmitHandler(): Promise<void> {
         if (this.isInLoginView) {
-            if (this.loginWithEmail) this.user.username = '';
-            else this.user.email = '';
+            if (this.loginWithEmail) this.username = '';
+            else this.email = '';
 
-            await this.authService.login(this.user);
-        } else await this.authService.signup(this.user);
+            // await this.authService.login(this.user);
+        }
+        // else await this.authService.signup(this.user);
+    }
+
+    public onchange(event: Event): void {
+        console.log(event);
     }
 }

@@ -3,7 +3,14 @@
         <form (submit)="formSubmitHandler()">
             <app-switch [options]="['ورود', 'ثبت‌نام']" [(selectedIndex)]="selectedIndex"></app-switch>
 
-            <input *ngIf="!loginWithEmail" type="text" name="username" placeholder="نام کاربری" required />
+            <input
+                *ngIf="!loginWithEmail"
+                type="text"
+                name="username"
+                placeholder="نام کاربری"
+                required
+                (change)="onchange($event)"
+            />
             <input *ngIf="loginWithEmail || !isInLoginView" type="email" name="email" placeholder="ایمیل" required />
             <input type="password" name="password" placeholder="کلمه عبور" required />
             <input *ngIf="!isInLoginView" type="password" name="confirm" placeholder="تکرار کلمه عبور" required />
