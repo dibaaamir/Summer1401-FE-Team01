@@ -95,3 +95,15 @@ svg {
 .fade {
     color: var(--color-fade);
 }
+
+@mixin max-lines($lines) {
+    overflow: hidden;
+
+    display: inline;
+    display: -webkit-box;
+
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
