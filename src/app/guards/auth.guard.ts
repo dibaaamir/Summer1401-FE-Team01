@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
         const isLoggedIn = await this.authService.isLoggedIn();
         const goingToAuth = !!route.routeConfig?.path?.startsWith('auth');
 
-        let isAllowed = isLoggedIn == goingToAuth;
+        let isAllowed = isLoggedIn != goingToAuth;
 
         if (!isAllowed) {
             if (goingToAuth) await this.router.navigateByUrl('/profile');
