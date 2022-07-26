@@ -38,9 +38,11 @@ export class AuthService {
     }
 
     public async isLoggedIn(): Promise<boolean> {
-        const response = await this.apiService.post<TokenObject>(API_USER_AUTH, {
-            token: localStorage.getItem('token'),
-        });
+        const response = await this.apiService.post<TokenObject>(
+            API_USER_AUTH,
+            {token: localStorage.getItem('token')},
+            false
+        );
 
         return !!response;
     }
