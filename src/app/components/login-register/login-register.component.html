@@ -9,24 +9,36 @@
                 name="username"
                 placeholder="نام کاربری"
                 required
-                (change)="onchange($event)"
+                [(ngModel)]="username"
             />
-            <input *ngIf="loginWithEmail || !isInLoginView" type="email" name="email" placeholder="ایمیل" required />
-            <input type="password" name="password" placeholder="کلمه عبور" required />
-            <input *ngIf="!isInLoginView" type="password" name="confirm" placeholder="تکرار کلمه عبور" required />
+            <input
+                *ngIf="loginWithEmail || !isInLoginView"
+                type="email"
+                name="email"
+                placeholder="ایمیل"
+                required
+                [(ngModel)]="email"
+            />
+            <input type="password" name="password" placeholder="کلمه عبور" required [(ngModel)]="password" />
+            <input
+                *ngIf="!isInLoginView"
+                type="password"
+                name="confirm"
+                placeholder="تکرار کلمه عبور"
+                required
+                [(ngModel)]="confirm"
+            />
             <div *ngIf="!isInLoginView" class="first-last">
-                <input type="text" name="first-name" placeholder="نام" />
-                <input type="text" name="last-name" placeholder="نام‌خانوادگی" />
+                <input type="text" name="first-name" placeholder="نام" [(ngModel)]="firstName" />
+                <input type="text" name="last-name" placeholder="نام‌خانوادگی" [(ngModel)]="lastName" />
             </div>
-            <div class="button-bar">
-                <app-shiny-button [text]="isInLoginView ? 'ورود' : 'ثبت‌نام'"> </app-shiny-button>
-                <app-shiny-button
-                    *ngIf="isInLoginView"
-                    [text]="secondaryLoginButtonText"
-                    (click)="loginWithEmail = !loginWithEmail"
-                >
-                </app-shiny-button>
-            </div>
+            <app-shiny-button id="primary-button" [text]="isInLoginView ? 'ورود' : 'ثبت‌نام'"> </app-shiny-button>
+            <app-shiny-button
+                *ngIf="isInLoginView"
+                [text]="secondaryLoginButtonText"
+                (click)="loginWithEmail = !loginWithEmail"
+            >
+            </app-shiny-button>
         </form>
         <img src="assets/images/auth-bg.webp" alt="تصویر کنار فرم ورود ثبت نام" />
     </div>

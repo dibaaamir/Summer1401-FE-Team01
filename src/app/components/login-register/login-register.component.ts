@@ -1,5 +1,8 @@
 import {Component} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
+import {User} from '../../models/user.model';
+import {Router} from '@angular/router';
+import {SnackbarService} from '../../services/snackbar.service';
 
 @Component({
     selector: 'app-login-register',
@@ -21,22 +24,42 @@ export class LoginRegisterComponent {
         return this.selectedIndex == 0;
     }
 
-    public constructor(private authService: AuthService) {}
+    public constructor(
+        private router: Router,
+        private authService: AuthService,
+        private snackbarService: SnackbarService
+    ) {}
 
     public get secondaryLoginButtonText(): string {
         return this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل';
     }
+
+    public get user(): Partial<User> {
+        return {
+            password: this.password,
+            ...(!this.isInLoginView && !!this.firstName && {firstName: this.firstName}),
+            ...(!this.isInLoginView && !!this.lastName && {lastName: this.lastName}),
+            ...((!this.isInLoginView || this.loginWithEmail) && {email: this.email}),
+            ...((!this.isInLoginView || !this.loginWithEmail) && {username: this.username}),
+        };
+    }
+
     public async formSubmitHandler(): Promise<void> {
+        let success;
         if (this.isInLoginView) {
             if (this.loginWithEmail) this.username = '';
             else this.email = '';
 
-            // await this.authService.login(this.user);
+            success = await this.authService.login(this.user);
+        } else {
+            if (this.password !== this.confirm) {
+                this.snackbarService.show('پسورد و تکرار آن باهم همخوانی ندارند');
+                this.password = '';
+                this.confirm = '';
+                return;
+            }
+            success = await this.authService.signup(this.user);
         }
-        // else await this.authService.signup(this.user);
-    }
-
-    public onchange(event: Event): void {
-        console.log(event);
+        if (success) await this.router.navigateByUrl('/profile');
     }
 }

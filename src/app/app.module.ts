@@ -11,10 +11,19 @@ import {HomeModule} from './pages/home/home.module';
 import {SnackbarComponent} from './components/snackbar/snackbar.component';
 
 import {LoginRegisterModule} from './components/login-register/login-register.module';
+import {ProfileModule} from './components/profile/profile.module';
 
 @NgModule({
     declarations: [AppComponent, SnackbarComponent],
-    imports: [BrowserModule, CarouselModule, AppRoutingModule, HeaderModule, HomeModule, LoginRegisterModule],
+    imports: [
+        BrowserModule,
+        CarouselModule,
+        AppRoutingModule,
+        HeaderModule,
+        HomeModule,
+        LoginRegisterModule,
+        ProfileModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })
