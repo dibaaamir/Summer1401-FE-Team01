@@ -20,15 +20,16 @@ export class LoginRegisterComponent {
     public loginWithEmail: boolean = false;
 
     public selectedIndex: number = 0;
-    public get isInLoginView(): boolean {
-        return this.selectedIndex == 0;
-    }
 
     public constructor(
         private router: Router,
         private authService: AuthService,
         private snackbarService: SnackbarService
     ) {}
+
+    public get isInLoginView(): boolean {
+        return this.selectedIndex == 0;
+    }
 
     public get secondaryLoginButtonText(): string {
         return this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل';
