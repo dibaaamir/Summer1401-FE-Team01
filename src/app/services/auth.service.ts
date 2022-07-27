@@ -13,7 +13,7 @@ export class AuthService {
     public async signup(user: Partial<User>): Promise<boolean> {
         const response = await this.apiService.post<TokenObject>(API_USER_REGISTER, user);
 
-        if (response != null) {
+        if (response !== null) {
             localStorage.setItem('token', response.token);
         }
 
@@ -23,7 +23,7 @@ export class AuthService {
     public async login(user: Partial<User>): Promise<boolean> {
         const response = await this.apiService.post<TokenObject>(API_USER_LOGIN, user);
 
-        if (response != null) {
+        if (response !== null) {
             localStorage.setItem('token', response.token);
         }
 
