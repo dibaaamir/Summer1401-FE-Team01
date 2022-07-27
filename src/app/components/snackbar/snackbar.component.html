@@ -1,4 +1,4 @@
-<div [ngClass]="{hidden: !shown}" (mouseenter)="stopCloseTimer()" (mouseleave)="startCloseTimer()">
+<div [ngClass]="{hidden: !shown}" (mouseenter)="stopHideTimer()" (mouseleave)="startHideTimer()">
     <p>{{ text }}</p>
-    <i class="far fa-xmark" (click)="close()"></i>
+    <i class="far fa-xmark" (click)="hide()"></i>
 </div>

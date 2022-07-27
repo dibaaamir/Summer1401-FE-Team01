@@ -9,25 +9,25 @@ export class SnackbarComponent {
     public text!: string;
     public shown: boolean = false;
 
-    private AUTO_CLOSE_TIMEOUT: number = 5000;
+    private AUTO_HIDE_TIMEOUT: number = 5000;
     public timeoutId: number | null = null;
 
     public show(text: string): void {
         this.text = text;
         this.shown = true;
-        this.startCloseTimer();
+        this.startHideTimer();
     }
 
-    public close(): void {
+    public hide(): void {
         this.shown = false;
-        this.stopCloseTimer();
+        this.stopHideTimer();
     }
 
-    public startCloseTimer(): void {
-        this.timeoutId = setTimeout(() => this.close(), this.AUTO_CLOSE_TIMEOUT);
+    public startHideTimer(): void {
+        this.timeoutId = setTimeout(() => this.hide(), this.AUTO_HIDE_TIMEOUT);
     }
 
-    public stopCloseTimer(): void {
+    public stopHideTimer(): void {
         if (!!this.timeoutId) {
             clearTimeout(this.timeoutId);
             this.timeoutId = null;
