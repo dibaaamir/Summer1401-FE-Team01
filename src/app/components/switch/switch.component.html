@@ -1,9 +1,9 @@
 <div class="wrapper">
-    <div
+    <button
         *ngFor="let option of options; index as index"
         [ngClass]="{active: index === selectedIndex}"
         (click)="selectedIndexChange.emit(index)"
     >
         {{ option }}
-    </div>
+    </button>
 </div>
