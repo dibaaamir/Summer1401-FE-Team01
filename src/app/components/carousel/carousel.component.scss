@@ -6,7 +6,7 @@
 
     gap: 1rem;
 
-    padding-inline-start: calc(2 * var(--universal-margin-right));
+    padding-inline-start: calc(2 * var(--universal-margin-inline-start));
 
     .slides {
         overflow: hidden;
