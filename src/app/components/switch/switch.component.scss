@@ -27,10 +27,10 @@
         &:not(.active):hover {
             background-color: hsl(16deg 100% 80%);
         }
-    }
 
-    .active {
-        background-color: hsl(16deg 100% 61%);
-        color: hsl(0deg 0% 93%);
+        &.active {
+            background-color: hsl(16deg 100% 61%);
+            color: hsl(0deg 0% 93%);
+        }
     }
 }
