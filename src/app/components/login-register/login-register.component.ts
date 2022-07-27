@@ -54,22 +54,24 @@ export class LoginRegisterComponent {
     }
 
     public async formSubmitHandler(): Promise<void> {
-        let success;
+        if (await this.operationSuccess()) await this.router.navigateByUrl('/profile');
+    }
+
+    private async operationSuccess(): Promise<boolean> {
         if (this.isInLoginView) {
             if (this.loginWithEmail) this.username = '';
             else this.email = '';
 
-            success = await this.authService.login(this.user);
+            return await this.authService.login(this.user);
         } else {
             if (this.password !== this.confirm) {
                 this.snackbarService.show('پسورد و تکرار آن باهم همخوانی ندارند');
                 this.password = '';
                 this.confirm = '';
-                return;
+                return false;
             }
-            success = await this.authService.signup(this.user);
+            return await this.authService.signup(this.user);
         }
-        if (success) await this.router.navigateByUrl('/profile');
     }
 
     public toggleLoginEmail(): void {
