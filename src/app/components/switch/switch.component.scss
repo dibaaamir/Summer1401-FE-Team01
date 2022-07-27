@@ -24,12 +24,12 @@
 
         cursor: pointer;
 
-        &:not(.current):hover {
+        &:not(.active):hover {
             background-color: hsl(16deg 100% 80%);
         }
     }
 
-    .current {
+    .active {
         background-color: hsl(16deg 100% 61%);
         color: hsl(0deg 0% 93%);
     }
