@@ -71,4 +71,8 @@ export class LoginRegisterComponent {
         }
         if (success) await this.router.navigateByUrl('/profile');
     }
+
+    public toggleLoginEmail(): void {
+        this.loginWithEmail = !this.loginWithEmail;
+    }
 }

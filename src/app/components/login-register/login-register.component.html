@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div class="auth">
-        <form (submit)="formSubmitHandler()">
+        <form>
             <app-switch
                 [options]="['ورود', 'ثبت‌نام']"
                 [(selectedIndex)]="selectedIndex"
@@ -36,13 +36,17 @@
                 <input type="text" name="first-name" placeholder="نام" [(ngModel)]="firstName" />
                 <input type="text" name="last-name" placeholder="نام‌خانوادگی" [(ngModel)]="lastName" />
             </div>
-            <app-shiny-button id="primary-button" [text]="isInLoginView ? 'ورود' : 'ثبت‌نام'"> </app-shiny-button>
+            <app-shiny-button
+                id="primary-button"
+                (click)="formSubmitHandler()"
+                [text]="isInLoginView ? 'ورود' : 'ثبت‌نام'"
+            >
+            </app-shiny-button>
             <app-shiny-button
                 *ngIf="isInLoginView"
                 [text]="secondaryLoginButtonText"
-                (click)="loginWithEmail = !loginWithEmail"
-            >
-            </app-shiny-button>
+                (click)="toggleLoginEmail()"
+            ></app-shiny-button>
         </form>
         <img src="assets/images/auth-bg.webp" alt="تصویر کنار فرم ورود ثبت نام" />
     </div>
