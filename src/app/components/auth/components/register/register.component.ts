@@ -7,7 +7,7 @@ import {User} from '../../../../models/user.model';
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
-    styleUrls: ['./register.component.scss'],
+    styleUrls: ['../../auth-form.scss'],
 })
 export class RegisterComponent {
     public username!: string;

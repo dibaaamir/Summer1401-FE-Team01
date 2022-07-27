@@ -6,7 +6,7 @@ import {User} from '../../../../models/user.model';
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss'],
+    styleUrls: ['../../auth-form.scss'],
 })
 export class LoginComponent {
     public username!: string;
