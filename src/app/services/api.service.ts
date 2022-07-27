@@ -21,7 +21,7 @@ export class ApiService {
 
         if (response.ok) return data as T;
 
-        if (response.status < 600 && response.status >= 500) {
+        if (response.status > 500) {
             this.snackbarService.show('خطا در ارتباط با سرور :(');
             await this.router.navigateByUrl('/');
         }
