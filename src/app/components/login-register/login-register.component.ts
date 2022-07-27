@@ -31,10 +31,6 @@ export class LoginRegisterComponent {
         return this.selectedIndex == 0;
     }
 
-    public get secondaryLoginButtonText(): string {
-        return this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل';
-    }
-
     public get user(): Partial<User> {
         return {
             password: this.password,

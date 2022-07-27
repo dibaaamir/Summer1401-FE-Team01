@@ -49,7 +49,7 @@
 
             <app-shiny-button
                 *ngIf="isInLoginView"
-                [text]="secondaryLoginButtonText"
+                [text]="this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل'"
                 (click)="toggleLoginEmail()"
             ></app-shiny-button>
         </form>
