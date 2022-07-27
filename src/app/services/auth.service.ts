@@ -21,10 +21,7 @@ export class AuthService {
     }
 
     public async login(user: Partial<User>): Promise<boolean> {
-        const response = await this.apiService.post<TokenObject>(API_USER_LOGIN, {
-            ...user,
-            token: localStorage.getItem('token'),
-        });
+        const response = await this.apiService.post<TokenObject>(API_USER_LOGIN, user);
 
         if (response != null) {
             localStorage.setItem('token', response.token);
