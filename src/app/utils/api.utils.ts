@@ -8,8 +8,3 @@ export const POST_REQUEST_INIT: RequestInit = {
     method: 'post',
     headers: {'Content-Type': 'application/json'},
 };
-
-export const GET_REQUEST_INIT: RequestInit = {
-    method: 'get',
-    headers: {'Content-Type': 'application/json'},
-};
