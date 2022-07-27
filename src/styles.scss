@@ -72,15 +72,16 @@ optgroup {
 
         padding: 1rem 0.5rem;
 
-        border: none;
         border-radius: 0.5rem;
 
         font-weight: bold;
     }
+}
 
-    input:focus {
-        outline: none;
-    }
+input {
+    border: none;
+
+    outline: none;
 }
 
 ul,
