@@ -1,11 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 
 @Component({
     selector: 'app-snackbar',
     templateUrl: './snackbar.component.html',
     styleUrls: ['./snackbar.component.scss'],
 })
-export class SnackbarComponent {
+export class SnackbarComponent implements OnDestroy {
     public text!: string;
     public shown: boolean = false;
 
@@ -32,5 +32,9 @@ export class SnackbarComponent {
             clearTimeout(this.timeoutId);
             this.timeoutId = null;
         }
+    }
+
+    public ngOnDestroy(): void {
+        this.stopHideTimer();
     }
 }
