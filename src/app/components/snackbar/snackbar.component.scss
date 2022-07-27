@@ -1,22 +1,13 @@
-@mixin orientation($top, $right, $margin) {
-    @if $top {
-        inset-block-start: $margin;
-    } @else {
-        inset-block-end: $margin;
-    }
-    @if $right {
-        inset-inline-start: $margin + var(--universal-margin-right);
-    } @else {
-        inset-inline-end: $margin;
-    }
-}
-
 div {
     --margin: 1rem;
 
     background: var(--color-gray-90);
 
     position: fixed;
+
+    inset-block-end: var(--margin);
+
+    inset-inline-end: var(--margin);
 
     display: flex;
     align-items: center;
@@ -27,8 +18,6 @@ div {
     border-radius: 0.5rem;
 
     transition: transform 300ms ease-in;
-
-    @include orientation(false, false, var(--margin));
 
     i {
         color: hsl(0deg 73% 41%);
