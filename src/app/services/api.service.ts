@@ -21,11 +21,6 @@ export class ApiService {
 
         if (response.ok) return data as T;
 
-        if (response.status > 500) {
-            this.snackbarService.show('خطا در ارتباط با سرور :(');
-            await this.router.navigateByUrl('/');
-        }
-
         if (showSnackbar) this.snackbarService.show((data as ApiError).message);
 
         return null;
