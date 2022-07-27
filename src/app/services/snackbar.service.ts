@@ -11,7 +11,7 @@ export class SnackbarService {
         this.snackbarComponent = snackbarComponent;
     }
 
-    public show(text: string, color: string | null = null): void {
-        this.snackbarComponent.show(text, color);
+    public show(text: string): void {
+        this.snackbarComponent.show(text);
     }
 }

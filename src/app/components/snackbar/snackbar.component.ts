@@ -7,14 +7,12 @@ import {Component} from '@angular/core';
 })
 export class SnackbarComponent {
     public text!: string;
-    public borderColor: string | null = null;
     public shown: boolean = false;
 
     public timeoutId: number | null = null;
 
-    public show(text: string, color: string | null = null): void {
+    public show(text: string): void {
         this.text = text;
-        this.borderColor = color;
         this.shown = true;
         this.startCloseTimer();
     }
