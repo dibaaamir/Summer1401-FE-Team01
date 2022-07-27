@@ -5,11 +5,11 @@ import {Router} from '@angular/router';
 import {SnackbarService} from '../../services/snackbar.service';
 
 @Component({
-    selector: 'app-login-register',
-    templateUrl: './login-register.component.html',
-    styleUrls: ['./login-register.component.scss'],
+    selector: 'app-auth',
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.scss'],
 })
-export class LoginRegisterComponent {
+export class AuthComponent {
     public username!: string;
     public password!: string;
     public confirm!: string;
