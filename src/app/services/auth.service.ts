@@ -10,7 +10,7 @@ import {TokenObject} from '../models/token-object.model';
 export class AuthService {
     public constructor(private apiService: ApiService) {}
 
-    public async signup(user: Partial<User>): Promise<boolean> {
+    public async register(user: Partial<User>): Promise<boolean> {
         const response = await this.apiService.post<TokenObject>(API_USER_REGISTER, user);
 
         if (response !== null) {

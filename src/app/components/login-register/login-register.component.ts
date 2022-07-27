@@ -71,7 +71,7 @@ export class LoginRegisterComponent {
                 this.confirm = '';
                 return false;
             }
-            return await this.authService.signup(this.user);
+            return await this.authService.register(this.user);
         }
     }
 
