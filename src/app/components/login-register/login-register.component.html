@@ -15,6 +15,7 @@
                 required
                 [(ngModel)]="username"
             />
+
             <input
                 *ngIf="loginWithEmail || !isInLoginView"
                 type="email"
@@ -23,7 +24,9 @@
                 required
                 [(ngModel)]="email"
             />
+
             <input type="password" name="password" placeholder="کلمه عبور" required [(ngModel)]="password" />
+
             <input
                 *ngIf="!isInLoginView"
                 type="password"
@@ -32,22 +35,25 @@
                 required
                 [(ngModel)]="confirm"
             />
+
             <div *ngIf="!isInLoginView" class="first-last">
-                <input type="text" name="first-name" placeholder="نام" [(ngModel)]="firstName" />
-                <input type="text" name="last-name" placeholder="نام‌خانوادگی" [(ngModel)]="lastName" />
+                <input type="text" name="firstName" placeholder="نام" [(ngModel)]="firstName" />
+                <input type="text" name="lastName" placeholder="نام‌خانوادگی" [(ngModel)]="lastName" />
             </div>
+
             <app-shiny-button
                 id="primary-button"
                 (click)="formSubmitHandler()"
                 [text]="isInLoginView ? 'ورود' : 'ثبت‌نام'"
-            >
-            </app-shiny-button>
+            ></app-shiny-button>
+
             <app-shiny-button
                 *ngIf="isInLoginView"
                 [text]="secondaryLoginButtonText"
                 (click)="toggleLoginEmail()"
             ></app-shiny-button>
         </form>
-        <img src="assets/images/auth-bg.webp" alt="تصویر کنار فرم ورود ثبت نام" />
+
+        <img src="assets/images/auth-bg.webp" />
     </div>
 </div>
