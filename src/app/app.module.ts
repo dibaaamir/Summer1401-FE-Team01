@@ -24,7 +24,6 @@ import {ProfileModule} from './components/profile/profile.module';
         LoginRegisterModule,
         ProfileModule,
     ],
-    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
