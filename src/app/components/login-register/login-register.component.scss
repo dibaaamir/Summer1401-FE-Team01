@@ -14,7 +14,6 @@
         overflow: hidden;
 
         display: flex;
-        flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
 
@@ -48,7 +47,6 @@
 
             .first-last {
                 display: flex;
-                flex-direction: row;
                 gap: 0.5rem;
             }
 
