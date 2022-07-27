@@ -7,19 +7,19 @@ import {Component, OnDestroy} from '@angular/core';
 })
 export class SnackbarComponent implements OnDestroy {
     public text!: string;
-    public shown: boolean = false;
+    public hidden: boolean = true;
 
     private AUTO_HIDE_TIMEOUT: number = 5000;
     public timeoutId: number | null = null;
 
     public show(text: string): void {
         this.text = text;
-        this.shown = true;
+        this.hidden = false;
         this.startHideTimer();
     }
 
     public hide(): void {
-        this.shown = false;
+        this.hidden = true;
         this.stopHideTimer();
     }
 

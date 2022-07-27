@@ -14,5 +14,6 @@ export class AppComponent implements AfterViewInit {
 
     public ngAfterViewInit(): void {
         this.snackbarService.initComponent(this.snackbarRef);
+        setInterval(() => this.snackbarService.show('سلامممممم'), 3000);
     }
 }
