@@ -17,7 +17,11 @@
         align-items: flex-start;
         justify-content: space-between;
 
+        min-block-size: 25rem;
+
         block-size: 70%;
+
+        min-inline-size: 50rem;
 
         inline-size: 70%;
 
