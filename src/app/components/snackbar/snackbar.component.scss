@@ -5,7 +5,7 @@
         inset-block-end: $margin;
     }
     @if $right {
-        inset-inline-start: $margin + 4.25rem;
+        inset-inline-start: $margin + var(--universal-margin-right);
     } @else {
         inset-inline-end: $margin;
     }
