@@ -9,6 +9,7 @@ export class SnackbarComponent {
     public text!: string;
     public shown: boolean = false;
 
+    private AUTO_CLOSE_TIMEOUT: number = 5000;
     public timeoutId: number | null = null;
 
     public show(text: string): void {
@@ -23,7 +24,7 @@ export class SnackbarComponent {
     }
 
     public startCloseTimer(): void {
-        this.timeoutId = setTimeout(() => this.close(), 5000);
+        this.timeoutId = setTimeout(() => this.close(), this.AUTO_CLOSE_TIMEOUT);
     }
 
     public stopCloseTimer(): void {
