@@ -20,7 +20,7 @@ div {
     transition: transform 300ms ease-in;
 
     i {
-        color: hsl(0deg 73% 41%);
+        color: var(--color-error);
 
         font-size: 2rem;
         font-weight: 800;

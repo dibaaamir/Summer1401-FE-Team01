@@ -1,5 +1,6 @@
 .wrapper {
     background-color: var(--color-background-lightest);
+    color: var(--color-default-text);
 
     display: flex;
     justify-content: space-evenly;
@@ -11,7 +12,7 @@
 
     button {
         background-color: transparent;
-        color: hsl(16deg 100% 61%);
+        color: var(--color-default-text);
 
         block-size: 100%;
         inline-size: 50%;
@@ -29,12 +30,13 @@
         cursor: pointer;
 
         &:not(.active):hover {
-            background-color: hsl(16deg 100% 80%);
+            background-color: var(--color-background-hover);
         }
 
         &.active {
-            background-color: hsl(16deg 100% 61%);
-            color: hsl(0deg 0% 93%);
+            background-color: var(--color-default-text);
+            color: var(--color-gray-98);
         }
     }
 }
+

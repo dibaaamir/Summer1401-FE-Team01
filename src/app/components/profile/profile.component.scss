@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
 
-    width: 20%;
+    inline-size: 20%;
 
     :nth-child(1n) {
         color: var(--color-gray-90);

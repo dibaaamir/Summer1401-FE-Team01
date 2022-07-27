@@ -1,12 +1,10 @@
 .wrapper {
-    color: hsl(16deg 100% 61%);
+    color: var(--color-default-text);
 
     display: grid;
     place-items: center;
 
     block-size: 100%;
-
-    inline-size: 100%;
 
     .auth {
         background-color: var(--color-background-lighter);
@@ -25,7 +23,7 @@
 
         inline-size: 70%;
 
-        border-radius: 2rem;
+        border-radius: var(--border-radius-more);
 
         form {
             display: flex;
@@ -36,7 +34,6 @@
 
             inline-size: 40%;
 
-            margin-inline: auto;
             padding: 1rem;
 
             input {
@@ -46,7 +43,7 @@
 
                 padding: 0.45rem 0.65rem;
 
-                border-radius: 1rem;
+                border-radius: var(--border-radius-more);
             }
 
             .first-last {
@@ -65,7 +62,7 @@
 
         img {
             block-size: 100%;
-            aspect-ratio: 4/3.25;
+            aspect-ratio: 16/13;
             object-fit: cover;
             object-position: 50%;
 
