@@ -2,9 +2,10 @@
     <div class="auth">
         <form>
             <app-switch
-                [options]="['ورود', 'ثبت‌نام']"
-                [(selectedIndex)]="selectedIndex"
-                (selectedIndexChange)="resetFields()"
+                trueOptionTitle="ورود"
+                falseOptionTitle="ثبت‌نام"
+                [(value)]="isInLoginView"
+                (valueChange)="resetFields()"
             ></app-switch>
 
             <input

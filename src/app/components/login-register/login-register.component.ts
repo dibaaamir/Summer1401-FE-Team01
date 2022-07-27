@@ -19,17 +19,13 @@ export class LoginRegisterComponent {
 
     public loginWithEmail: boolean = false;
 
-    public selectedIndex: number = 0;
+    public isInLoginView: boolean = true;
 
     public constructor(
         private router: Router,
         private authService: AuthService,
         private snackbarService: SnackbarService
     ) {}
-
-    public get isInLoginView(): boolean {
-        return this.selectedIndex == 0;
-    }
 
     public get user(): Partial<User> {
         return {

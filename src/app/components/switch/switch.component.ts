@@ -6,8 +6,9 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
     styleUrls: ['./switch.component.scss'],
 })
 export class SwitchComponent {
-    @Input() public options!: Array<string>;
-    @Input() public selectedIndex!: number;
+    @Input() public trueOptionTitle!: string;
+    @Input() public falseOptionTitle!: string;
+    @Input() public value!: boolean;
 
-    @Output() public selectedIndexChange = new EventEmitter<number>();
+    @Output() public valueChange = new EventEmitter<boolean>();
 }
