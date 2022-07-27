@@ -12,6 +12,8 @@
 }
 
 div {
+    --margin: 1rem;
+
     background: var(--color-gray-90);
 
     position: fixed;
@@ -26,7 +28,7 @@ div {
 
     transition: transform 300ms ease-in;
 
-    @include orientation(false, false, 1rem);
+    @include orientation(false, false, var(--margin));
 
     i {
         color: hsl(0deg 73% 41%);
@@ -42,6 +44,6 @@ div {
     }
 
     &.hidden {
-        transform: translateX(calc(-100% - 1rem));
+        transform: translateX(calc(-100% - var(--margin)));
     }
 }
