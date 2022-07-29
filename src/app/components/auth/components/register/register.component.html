@@ -1,0 +1,13 @@
+<form>
+    <input type="text" name="username" placeholder="نام کاربری" required [(ngModel)]="username" />
+    <input type="email" name="email" placeholder="ایمیل" required [(ngModel)]="email" />
+    <input type="password" name="password" placeholder="کلمه عبور" required [(ngModel)]="password" />
+    <input type="password" name="confirm" placeholder="تکرار کلمه عبور" required [(ngModel)]="confirm" />
+
+    <div class="first-last-name">
+        <input type="text" name="firstName" placeholder="نام" [(ngModel)]="firstName" />
+        <input type="text" name="lastName" placeholder="نام‌خانوادگی" [(ngModel)]="lastName" />
+    </div>
+
+    <app-shiny-button id="primary-button" text="ثبت‌نام" (click)="formSubmitHandler()"></app-shiny-button>
+</form>

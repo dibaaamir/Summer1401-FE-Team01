@@ -8,11 +8,14 @@ import {CarouselModule} from './components/carousel/carousel.module';
 import {HeaderModule} from './components/header/header.module';
 
 import {HomeModule} from './pages/home/home.module';
+import {SnackbarComponent} from './components/snackbar/snackbar.component';
+
+import {AuthModule} from './components/auth/auth.module';
+import {ProfileModule} from './components/profile/profile.module';
 
 @NgModule({
-    declarations: [AppComponent],
-    imports: [BrowserModule, CarouselModule, AppRoutingModule, HeaderModule, HomeModule],
-    providers: [],
+    declarations: [AppComponent, SnackbarComponent],
+    imports: [BrowserModule, CarouselModule, AppRoutingModule, HeaderModule, HomeModule, AuthModule, ProfileModule],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,37 @@
+div {
+    --margin: 1rem;
+
+    background: var(--color-gray-90);
+
+    position: fixed;
+
+    inset-block-end: var(--margin);
+
+    inset-inline-end: var(--margin);
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 0.5rem;
+
+    transition: transform 100ms ease-in;
+
+    i {
+        color: var(--color-error);
+
+        opacity: 0.75;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.hidden {
+        transform: translateX(calc(-100% - var(--margin)));
+    }
+}

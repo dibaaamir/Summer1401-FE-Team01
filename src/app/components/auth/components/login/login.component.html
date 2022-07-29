@@ -1,0 +1,19 @@
+<form>
+    <input
+        *ngIf="!loginWithEmail"
+        type="text"
+        name="username"
+        placeholder="نام کاربری"
+        required
+        [(ngModel)]="username"
+    />
+    <input *ngIf="loginWithEmail" type="email" name="email" placeholder="ایمیل" required [(ngModel)]="email" />
+    <input type="password" name="password" placeholder="کلمه عبور" required [(ngModel)]="password" />
+
+    <app-shiny-button id="primary-button" text="ورود" (click)="formSubmitHandler()"></app-shiny-button>
+
+    <app-shiny-button
+        [text]="this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل'"
+        (click)="toggleLoginEmail()"
+    ></app-shiny-button>
+</form>

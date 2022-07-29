@@ -1,0 +1,8 @@
+<div class="wrapper">
+    <button [ngClass]="{active: value}" (click)="valueChange.emit(true)">
+        {{ trueOptionTitle }}
+    </button>
+    <button [ngClass]="{active: !value}" (click)="valueChange.emit(false)">
+        {{ falseOptionTitle }}
+    </button>
+</div>

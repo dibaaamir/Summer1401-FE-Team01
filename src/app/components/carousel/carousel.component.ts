@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, Input, OnDestroy} from '@angular/core';
-import {Game} from '../../models/game';
+import {Game} from '../../models/game.model';
 
 @Component({
     selector: 'app-carousel',
@@ -28,7 +28,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     }
 
     public clearInterval(): void {
-        if (this.autoNextInterval !== null) {
+        if (!!this.autoNextInterval) {
             clearInterval(this.autoNextInterval);
             this.autoNextInterval = null;
         }

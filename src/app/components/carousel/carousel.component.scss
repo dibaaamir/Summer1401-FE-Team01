@@ -6,13 +6,12 @@
 
     gap: 1rem;
 
-    padding-inline-start: 8.5rem;
+    padding-inline-start: calc(2 * var(--universal-margin-inline-start));
 
     .slides {
         overflow: hidden;
 
         display: flex;
-        flex-direction: row;
         gap: 6vw;
 
         inline-size: 100%;

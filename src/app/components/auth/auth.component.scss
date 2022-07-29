@@ -1,0 +1,51 @@
+.wrapper {
+    color: var(--color-default-text);
+
+    display: grid;
+    place-items: center;
+
+    block-size: 100%;
+
+    .auth {
+        background-color: var(--color-background-lighter);
+
+        overflow: hidden;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        min-block-size: 25rem;
+
+        block-size: 70%;
+
+        min-inline-size: 50rem;
+
+        inline-size: 70%;
+
+        border-radius: var(--border-radius-more);
+
+        .form-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            block-size: 100%;
+            inline-size: 40%;
+
+            padding: 1rem;
+        }
+
+        app-register,
+        app-login {
+            block-size: 100%;
+        }
+
+        img {
+            block-size: 100%;
+            max-inline-size: 60%;
+            aspect-ratio: 16/13;
+            object-fit: cover;
+            object-position: 50%;
+        }
+    }
+}

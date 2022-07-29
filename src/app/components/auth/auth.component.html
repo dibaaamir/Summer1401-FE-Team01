@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="auth">
+        <div class="form-wrapper">
+            <app-switch trueOptionTitle="ورود" falseOptionTitle="ثبت‌نام" [(value)]="isInLoginView"></app-switch>
+
+            <ng-container *ngIf="isInLoginView; else register">
+                <app-login></app-login>
+            </ng-container>
+
+            <ng-template #register>
+                <app-register></app-register>
+            </ng-template>
+        </div>
+
+        <img src="assets/images/auth-bg.webp" />
+    </div>
+</div>

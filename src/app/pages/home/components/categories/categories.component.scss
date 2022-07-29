@@ -8,7 +8,7 @@
 
     padding-block: calc(var(--padding-left) / 2);
 
-    padding-inline-start: calc(4.25rem + var(--padding-left));
+    padding-inline-start: calc(var(--universal-margin-right) + var(--padding-left));
     padding-inline-end: var(--padding-left);
 
     text-align: center;
