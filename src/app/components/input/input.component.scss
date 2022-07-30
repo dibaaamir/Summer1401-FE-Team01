@@ -1,0 +1,15 @@
+input {
+  background-color: var(--color-gray-90);
+
+  inline-size: 100%;
+
+  padding: 0.45rem 0.65rem;
+
+  border-radius: var(--border-radius);
+}
+
+label {
+  color: var(--color-gray-80);
+
+  font-size: .75rem;
+}

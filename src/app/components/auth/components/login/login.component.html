@@ -1,14 +1,21 @@
 <form>
-    <input
+    <app-input
         *ngIf="!loginWithEmail"
         type="text"
         name="username"
-        placeholder="نام کاربری"
-        required
+        label="نام کاربری"
+        [required]="true"
         [(ngModel)]="username"
-    />
-    <input *ngIf="loginWithEmail" type="email" name="email" placeholder="ایمیل" required [(ngModel)]="email" />
-    <input type="password" name="password" placeholder="کلمه عبور" required [(ngModel)]="password" />
+    ></app-input>
+    <app-input
+        *ngIf="loginWithEmail"
+        type="email"
+        name="email"
+        label="ایمیل"
+        [required]="true"
+        [(ngModel)]="email"
+    ></app-input>
+    <app-input type="password" name="password" label="رمزعبور" [required]="true" [(ngModel)]="password"></app-input>
 
     <div class="button-bar">
         <app-shiny-button text="ورود" (click)="formSubmitHandler()"></app-shiny-button>

@@ -10,7 +10,7 @@
         background-color: var(--color-background-lighter);
 
         block-size: fit-content;
-        min-inline-size: 20rem;
+        min-inline-size: 22rem;
         inline-size: 30%;
 
         border-radius: var(--border-radius);
@@ -46,6 +46,10 @@
             gap: 0.25rem;
 
             font-size: 0.8rem;
+
+            h1 {
+                font-size: 1.5rem;
+            }
 
             button {
                 background-color: transparent;

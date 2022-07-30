@@ -1,12 +1,18 @@
 <form>
-    <input type="text" name="username" placeholder="نام کاربری" required [(ngModel)]="username" />
-    <input type="email" name="email" placeholder="ایمیل" required [(ngModel)]="email" />
-    <input type="password" name="password" placeholder="کلمه عبور" required [(ngModel)]="password" />
-    <input type="password" name="confirm" placeholder="تکرار کلمه عبور" required [(ngModel)]="confirm" />
+    <app-input type="text" name="username" label="نام کاربری" [required]="true" [(ngModel)]="username"></app-input>
+    <app-input type="email" name="email" label="ایمیل" [required]="true" [(ngModel)]="email"></app-input>
+    <app-input type="password" name="password" label="کلمه عبور" [required]="true" [(ngModel)]="password"></app-input>
+    <app-input
+        type="password"
+        name="confirm"
+        label="تکرار کلمه عبور"
+        [required]="true"
+        [(ngModel)]="confirm"
+    ></app-input>
 
     <div class="first-last-name">
-        <input type="text" name="firstName" placeholder="نام" [(ngModel)]="firstName" />
-        <input type="text" name="lastName" placeholder="نام‌خانوادگی" [(ngModel)]="lastName" />
+        <app-input type="text" name="giver-name" label="نام" [(ngModel)]="firstName"></app-input>
+        <app-input type="text" name="family-name" label="نام‌خانوادگی" [(ngModel)]="lastName"></app-input>
     </div>
 
     <div class="button-bar">

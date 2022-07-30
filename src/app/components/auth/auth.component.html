@@ -1,7 +1,6 @@
 <div class="wrapper">
     <div class="auth">
         <div class="form-wrapper">
-            <app-logo></app-logo>
             <h1>{{ isInLoginView ? 'ورود' : 'ثبت‌نام' }}</h1>
 
             <ng-container *ngIf="isInLoginView; else register">
