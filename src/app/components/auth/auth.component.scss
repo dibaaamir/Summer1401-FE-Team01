@@ -9,15 +9,17 @@
     .auth {
         background-color: var(--color-background-lighter);
 
-        min-block-size: 25rem;
-
-        block-size: 70%;
-
+        block-size: fit-content;
         min-inline-size: 20rem;
-
         inline-size: 30%;
 
-        border-radius: var(--border-radius-more);
+        border-radius: var(--border-radius);
+
+        app-logo {
+            inline-size: 9rem;
+
+            margin-inline: auto;
+        }
 
         .form-wrapper {
             display: flex;
@@ -34,5 +36,27 @@
             block-size: 100%;
         }
 
+        .auth-switcher {
+            color: var(--color-gray-98);
+            opacity: 0.8;
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 0.25rem;
+
+            font-size: 0.8rem;
+
+            button {
+                background-color: transparent;
+                color: var(--color-default-text);
+
+                border: none;
+
+                font-size: 0.8rem;
+
+                cursor: pointer;
+            }
+        }
     }
 }

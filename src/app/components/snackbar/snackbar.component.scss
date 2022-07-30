@@ -4,9 +4,7 @@ div {
     background: var(--color-gray-90);
 
     position: fixed;
-
     inset-block-end: var(--margin);
-
     inset-inline-end: var(--margin);
 
     display: flex;
@@ -21,7 +19,6 @@ div {
 
     i {
         color: var(--color-error);
-
         opacity: 0.75;
 
         cursor: pointer;

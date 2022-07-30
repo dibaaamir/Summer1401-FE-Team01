@@ -1,6 +1,6 @@
 .content-wrapper {
     background-color: hsl(240deg 75% 11%);
-    color: hsl(14deg 69% 58%);
+    color: var(--color-default-text);
 
     display: flex;
     flex-direction: column;

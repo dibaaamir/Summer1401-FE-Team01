@@ -8,9 +8,7 @@
     position: relative;
 
     max-block-size: 55vh;
-
     inline-size: var(--width);
-
     aspect-ratio: 16 / 9;
 
     transform: translateX(calc(var(--current-index) * (var(--width) + 6vw)));
@@ -21,7 +19,6 @@
         position: absolute;
 
         block-size: 100%;
-
         inline-size: 100%;
         object-fit: cover;
         object-position: 50% 15%;
@@ -81,7 +78,6 @@
         place-items: center;
 
         block-size: 10rem;
-
         inline-size: 10rem;
 
         padding-block-start: 2.5%;
@@ -91,7 +87,6 @@
         transform: translate(-30%, -30%);
 
         font-size: 5rem;
-
         font-weight: bold;
     }
 

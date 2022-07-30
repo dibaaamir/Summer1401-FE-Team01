@@ -48,7 +48,6 @@ optgroup {
 .input-box {
     display: flex;
     align-items: center;
-
     gap: 0.5rem;
 
     cursor: text;
@@ -63,7 +62,6 @@ optgroup {
         background-color: hsl(0deg 0% 100%);
 
         block-size: 1.5rem;
-
         inline-size: 25rem;
 
         padding: 1rem 0.5rem;
@@ -90,12 +88,12 @@ img {
 }
 
 svg {
+    fill: currentcolor;
+
     display: block;
 
     block-size: 1em;
-
     inline-size: 1em;
-    fill: currentcolor;
 }
 
 .fade {

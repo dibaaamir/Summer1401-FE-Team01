@@ -1,7 +1,8 @@
 <div class="wrapper">
     <div class="auth">
         <div class="form-wrapper">
-            <app-switch trueOptionTitle="ورود" falseOptionTitle="ثبت‌نام" [(value)]="isInLoginView"></app-switch>
+            <app-logo></app-logo>
+            <h1>{{ isInLoginView ? 'ورود' : 'ثبت‌نام' }}</h1>
 
             <ng-container *ngIf="isInLoginView; else register">
                 <app-login></app-login>
@@ -10,6 +11,11 @@
             <ng-template #register>
                 <app-register></app-register>
             </ng-template>
+
+            <div class="auth-switcher">
+                {{ isInLoginView ? 'حساب کاربری ندارید؟' : 'حساب کاربری دارید؟' }}
+                <button (click)="toggleIsInLoginView()">{{ isInLoginView ? 'ثبت‌نام کنید!' : 'وارد شوید!' }}</button>
+            </div>
         </div>
     </div>
 </div>

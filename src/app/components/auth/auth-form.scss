@@ -15,7 +15,7 @@ form {
 
         padding: 0.45rem 0.65rem;
 
-        border-radius: var(--border-radius-more);
+        border-radius: var(--border-radius);
     }
 
     .first-last-name {
@@ -23,17 +23,15 @@ form {
         gap: 0.5rem;
     }
 
-
-    .button-bar{
+    .button-bar {
         display: flex;
         flex-direction: row;
         justify-content: center;
 
-        margin-block-start: auto;
+        margin-block-start: 1rem;
 
         app-shiny-button {
             margin-inline: auto;
         }
     }
-
 }

@@ -7,18 +7,17 @@
     gap: var(--spacing);
 
     padding-block: calc(var(--padding-left) / 2);
-
     padding-inline-start: calc(var(--universal-margin-right) + var(--padding-left));
     padding-inline-end: var(--padding-left);
 
     text-align: center;
 
     h2 {
-        color: hsl(16deg 100% 66%);
+        color: var(--color-default-text);
 
         padding-block-end: 1rem;
 
-        border-bottom: hsl(16deg 100% 66%) solid;
+        border-bottom: var(--color-default-text) solid;
     }
 
     ul {
@@ -41,7 +40,7 @@
             }
 
             a {
-                color: hsl(16deg 100% 66%);
+                color: var(--color-default-text);
 
                 display: flex;
                 flex-direction: column;
