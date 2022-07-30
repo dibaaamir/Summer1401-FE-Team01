@@ -9,5 +9,7 @@
         <input type="text" name="lastName" placeholder="نام‌خانوادگی" [(ngModel)]="lastName" />
     </div>
 
-    <app-shiny-button id="primary-button" text="ثبت‌نام" (click)="formSubmitHandler()"></app-shiny-button>
+    <div class="button-bar">
+        <app-shiny-button text="ثبت‌نام" (click)="formSubmitHandler()"></app-shiny-button>
+    </div>
 </form>

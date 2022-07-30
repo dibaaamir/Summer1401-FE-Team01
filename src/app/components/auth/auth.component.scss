@@ -9,19 +9,13 @@
     .auth {
         background-color: var(--color-background-lighter);
 
-        overflow: hidden;
-
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-
         min-block-size: 25rem;
 
         block-size: 70%;
 
-        min-inline-size: 50rem;
+        min-inline-size: 20rem;
 
-        inline-size: 70%;
+        inline-size: 30%;
 
         border-radius: var(--border-radius-more);
 
@@ -30,7 +24,7 @@
             flex-direction: column;
 
             block-size: 100%;
-            inline-size: 40%;
+            inline-size: 100%;
 
             padding: 1rem;
         }
@@ -40,12 +34,5 @@
             block-size: 100%;
         }
 
-        img {
-            block-size: 100%;
-            max-inline-size: 60%;
-            aspect-ratio: 16/13;
-            object-fit: cover;
-            object-position: 50%;
-        }
     }
 }

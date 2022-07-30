@@ -23,11 +23,17 @@ form {
         gap: 0.5rem;
     }
 
-    app-shiny-button {
-        margin-inline: auto;
+
+    .button-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-block-start: auto;
+
+        app-shiny-button {
+            margin-inline: auto;
+        }
     }
 
-    #primary-button {
-        margin-block-start: auto;
-    }
 }
