@@ -23,7 +23,7 @@
         object-fit: cover;
         object-position: 50% 15%;
 
-        border-radius: 3em;
+        border-radius: var(--border-radius-more);
     }
 
     .details {
@@ -43,7 +43,7 @@
 
         padding: 1.5rem 2rem;
 
-        border-radius: 0 0 3em 3em;
+        border-radius: 0 0 var(--border-radius-more) var(--border-radius-more);
 
         font-size: 1em;
 
