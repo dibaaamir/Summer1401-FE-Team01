@@ -6,10 +6,7 @@
         <app-search-box></app-search-box>
 
         <ng-container *ngIf="isLoggedIn; else auth">
-            <div class="profile-anchor icon-button">
-                <i class="far fa-user"></i>
-                <i class="far fa-caret-down"></i>
-            </div>
+            <app-profile-button></app-profile-button>
         </ng-container>
 
         <ng-template #auth>

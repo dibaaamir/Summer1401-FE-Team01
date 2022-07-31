@@ -7,10 +7,19 @@ import {SearchBoxComponent} from './components/search-box/search-box.component';
 import {LogoModule} from '../logo/logo.module';
 import {CarouselItemModule} from '../carousel-item/carousel-item.module';
 import {NgxPopperjsModule} from 'ngx-popperjs';
+import {ProfileButtonModule} from '../profile-button/profile-button.module';
 
 @NgModule({
     declarations: [HeaderComponent, SearchBoxComponent],
     exports: [HeaderComponent],
-    imports: [CommonModule, RouterModule, FormsModule, LogoModule, CarouselItemModule, NgxPopperjsModule],
+    imports: [
+        CommonModule,
+        RouterModule,
+        FormsModule,
+        LogoModule,
+        CarouselItemModule,
+        NgxPopperjsModule,
+        ProfileButtonModule,
+    ],
 })
 export class HeaderModule {}
