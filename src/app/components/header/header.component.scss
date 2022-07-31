@@ -51,7 +51,10 @@ header {
         }
 
         app-search-box {
-            margin-inline: auto;
+            min-inline-size: 5rem;
+            inline-size: 40%;
+
+            margin-inline-start: auto;
         }
 
         app-logo {

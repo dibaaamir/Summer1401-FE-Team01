@@ -45,33 +45,6 @@ optgroup {
     font-family: inherit;
 }
 
-.input-box {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    cursor: text;
-
-    i {
-        color: hsl(16deg 100% 66%);
-
-        font-size: 1.5rem;
-    }
-
-    input {
-        background-color: hsl(0deg 0% 100%);
-
-        block-size: 1.5rem;
-        inline-size: 25rem;
-
-        padding: 1rem 0.5rem;
-
-        border-radius: 0.5rem;
-
-        font-weight: bold;
-    }
-}
-
 input {
     border: none;
 
