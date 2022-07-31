@@ -17,11 +17,12 @@ form {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        gap: 2rem;
 
         margin-block-start: 1rem;
 
         app-shiny-button {
-            margin-inline: auto;
+            width: 100%;
         }
     }
 }
