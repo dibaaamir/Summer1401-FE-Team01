@@ -18,12 +18,12 @@
     <app-input type="password" name="password" label="رمزعبور" [required]="true" [(value)]="password"></app-input>
 
     <div class="button-bar">
-        <app-shiny-button text="ورود" (click)="formSubmitHandler()"></app-shiny-button>
+        <app-button text="ورود" (click)="formSubmitHandler()"></app-button>
 
-        <app-shiny-button
+        <app-button
             [text]="this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل'"
             type="outline"
             (click)="toggleLoginEmail()"
-        ></app-shiny-button>
+        ></app-button>
     </div>
 </form>

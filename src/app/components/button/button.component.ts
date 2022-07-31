@@ -1,11 +1,11 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-    selector: 'app-shiny-button',
-    templateUrl: './shiny-button.component.html',
-    styleUrls: ['./shiny-button.component.scss'],
+    selector: 'app-button',
+    templateUrl: './button.component.html',
+    styleUrls: ['./button.component.scss'],
 })
-export class ShinyButtonComponent {
+export class ButtonComponent {
     @Input() public text!: string;
     @Input() public iconClasses?: string;
     @Input() public type: 'text' | 'outline' | 'contained' = 'contained';
