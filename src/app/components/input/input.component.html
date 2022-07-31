@@ -1,4 +1,12 @@
 <div class="input-wrapper">
     <label [for]="name">{{ label }}</label>
-    <input [type]="type" [name]="name" [autocomplete]="name" [required]="required" />
+    <input
+        [type]="type"
+        [id]="name"
+        [name]="name"
+        [autocomplete]="name"
+        [required]="required"
+        [(ngModel)]="value"
+        (ngModelChange)="valueChange.emit($event)"
+    />
 </div>
