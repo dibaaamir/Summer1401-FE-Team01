@@ -69,6 +69,10 @@ svg {
     inline-size: 1em;
 }
 
+button {
+    white-space: nowrap;
+}
+
 .fade {
     color: var(--color-fade);
 }
