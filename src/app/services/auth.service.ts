@@ -1,67 +1,75 @@
 import {Injectable} from '@angular/core';
-import {User} from '../models/user.model';
+import {API_USER_AUTH, API_USER_LOGIN, API_USER_ONE, API_USER_REGISTER} from '../utils/api.utils';
 import {ApiService} from './api.service';
-import {API_USER_AUTH, API_USER_LOGIN, API_USER_REGISTER} from '../utils/api.utils';
 import {TokenObject} from '../models/token-object.model';
-import {IdObject} from '../models/id-object.model';
+import {User} from '../models/user.model';
+import {Router} from '@angular/router';
 
 @Injectable({
     providedIn: 'root',
 })
 export class AuthService {
-    public cachedIsLoggedIn?: boolean;
+    public cachedIsLoggedIn: boolean | null = null;
     public cachedUserId: number | null = null;
+    public cachedUser: User | null = null;
 
-    public constructor(private apiService: ApiService) {
-        this.isLoggedIn().then();
+    public constructor(private router: Router, private apiService: ApiService) {
+        this.auth().then();
     }
 
-    public async register(user: Partial<User>): Promise<boolean> {
-        const response = await this.apiService.post<TokenObject>(API_USER_REGISTER, user);
-
-        if (response !== null) {
-            localStorage.setItem('token', response.token);
-            this.saveCache(!!response, response!.id);
-        }
-
-        return !!response;
-    }
-
-    public async login(user: Partial<User>): Promise<boolean> {
-        const response = await this.apiService.post<TokenObject>(API_USER_LOGIN, user);
-
-        if (response !== null) {
-            localStorage.setItem('token', response.token);
-            this.saveCache(!!response, response!.id);
-        }
-
-        return !!response;
-    }
-
-    public logout(): void {
-        localStorage.removeItem('token');
-        this.saveCache();
+    public get token(): string {
+        return localStorage.getItem('token') || '';
     }
 
     public async isLoggedIn(): Promise<boolean> {
-        if (!!this.cachedUserId) {
-            return this.cachedIsLoggedIn!;
-        }
-        const response = await this.apiService.post<IdObject>(
-            API_USER_AUTH,
-            {token: localStorage.getItem('token')},
-            false
-        );
+        if (this.cachedIsLoggedIn !== null) return this.cachedIsLoggedIn;
+        return await this.auth();
+    }
 
+    public async login(user: Partial<User>): Promise<boolean> {
+        const response = await this.apiService.postRequest<TokenObject>({url: API_USER_LOGIN, body: user});
         if (!response) return false;
 
-        this.saveCache(!!response, response.id);
-
+        await this.saveCache(response.token, true, response.id ?? null);
         return true;
     }
 
-    private saveCache(isLoggedIn: boolean = false, userId: number | null = null): void {
+    public async register(user: Partial<User>): Promise<boolean> {
+        const response = await this.apiService.postRequest<TokenObject>({url: API_USER_REGISTER, body: user});
+        if (!response) return false;
+
+        await this.saveCache(response.token, true, response.id ?? null);
+        return true;
+    }
+
+    public async fetchLoggedInUserInfo(): Promise<User | null> {
+        const response = await this.apiService.getRequest<{user: User}>({url: `${API_USER_ONE}/${this.cachedUserId}`});
+        return response?.user || null;
+    }
+
+    public async logout(): Promise<void> {
+        await this.saveCache(null, false, null);
+        await this.router.navigateByUrl('/');
+    }
+
+    private async auth(): Promise<boolean> {
+        const response = await this.apiService.postRequest<TokenObject>({
+            url: API_USER_AUTH,
+            body: {token: this.token},
+            showSnackbar: false,
+        });
+
+        await this.saveCache(this.token, !!response, response?.id ?? null);
+        return !!this.cachedIsLoggedIn;
+    }
+
+    private async saveCache(token: string | null, isLoggedIn: boolean, userId: number | null): Promise<void> {
+        if (!!token) localStorage.setItem('token', token);
+        else localStorage.removeItem('token');
+
         this.cachedIsLoggedIn = isLoggedIn;
         this.cachedUserId = userId;
+
+        if (this.cachedUserId) this.cachedUser = await this.fetchLoggedInUserInfo();
     }
 }
