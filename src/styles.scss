@@ -23,14 +23,6 @@ body {
     block-size: 100%;
 }
 
-.stack {
-    position: relative;
-
-    > .item {
-        position: absolute;
-    }
-}
-
 input,
 label,
 select,
