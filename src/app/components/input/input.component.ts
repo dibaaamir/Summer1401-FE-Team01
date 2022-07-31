@@ -13,4 +13,16 @@ export class InputComponent {
 
     @Input() public value!: string;
     @Output() public valueChange = new EventEmitter<string>();
+
+    public get dir(): 'rtl' | 'ltr' {
+        switch (this.name) {
+            case 'username':
+            case 'email':
+            case 'password':
+            case 'confirm':
+                return 'ltr';
+            default:
+                return 'rtl';
+        }
+    }
 }
