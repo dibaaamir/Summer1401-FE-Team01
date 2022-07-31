@@ -24,43 +24,47 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         align-content: space-around;
-        gap: 0.75rem;
+        gap: 1.5rem;
 
         li {
-            background-color: var(--color-background-15);
-
-            border-radius: 1rem;
-
             transition: transform 300ms;
 
-            p {
-                padding-block-end: 1rem;
-
-                font-size: 1rem;
-            }
-
             a {
-                color: var(--color-default-text);
-
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
+                gap: 0.5rem;
 
                 text-decoration: none;
 
                 img {
-                    inline-size: 12rem;
+                    inline-size: 100%;
+                    aspect-ratio: 2 / 3;
                     object-fit: cover;
 
-                    padding: 1rem;
+                    padding-block: 0.25rem;
 
-                    border-radius: 1.5rem;
+                    border-radius: var(--border-radius-medium);
+                }
+
+                p {
+                    color: var(--color-background-85);
+
+                    overflow: hidden;
+
+                    width: 100%;
+
+                    font-size: 1rem;
+
+                    text-align: start;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
             }
 
             &:hover {
-                transform: scale(105%);
+                transform: translateY(-2.5%);
             }
         }
     }
