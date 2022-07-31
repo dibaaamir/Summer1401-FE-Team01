@@ -25,6 +25,7 @@
     --color-body-background: var(--color-default-background);
     --color-body-foreground: var(--color-default-foreground);
 
+    --color-background-5: hsl(226deg 60% 5%);
     --color-background-8: hsl(226deg 60% 8%);
     --color-background-10: hsl(226deg 60% 10%);
     --color-background-15: hsl(226deg 60% 15%);
@@ -46,6 +47,4 @@
     --animation-duration-fast: 0.2s;
     --animation-duration-normal: 0.5s;
     --animation-duration-slow: 1s;
-
-    --universal-margin-inline-start: 4.25rem;
 }

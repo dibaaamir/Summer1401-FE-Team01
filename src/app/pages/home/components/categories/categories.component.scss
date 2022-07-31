@@ -1,14 +1,11 @@
 .content-wrapper {
     --spacing: 2.5rem;
-    --padding: var(--universal-margin-inline-start);
 
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
 
-    padding-block: var(--padding);
-    padding-inline-start: calc(var(--universal-margin-inline-start) + var(--padding));
-    padding-inline-end: var(--padding);
+    padding-block: 4rem;
 
     text-align: center;
 

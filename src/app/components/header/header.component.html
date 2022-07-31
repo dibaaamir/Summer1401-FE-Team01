@@ -1,10 +1,29 @@
 <header>
-    <app-side-nav></app-side-nav>
     <nav>
         <app-logo></app-logo>
-        <a href="#">کشف کن!</a>
-        <a href="#">مخصوص تو</a>
+        <a routerLink="/">خانه</a>
+        <a routerLink="/browse">دسته‌بندی‌ها</a>
         <app-search-box></app-search-box>
-        <a href="#"> <i class="far fa-user-group-crown" title="دوستان"></i></a>
+
+        <ng-container *ngIf="isLoggedIn; else auth">
+            <div class="profile-anchor icon-button">
+                <i class="far fa-user"></i>
+                <i class="far fa-caret-down"></i>
+            </div>
+        </ng-container>
+
+        <ng-template #auth>
+            <a href="/auth">
+                <app-button
+                    type="outline"
+                    text="ورود | ثبت‌نام"
+                    iconClasses="far fa-arrow-right-to-bracket"
+                ></app-button>
+            </a>
+        </ng-template>
+
+        <a href="/cart" class="icon-button">
+            <i *ngIf="isLoggedIn" class="far fa-cart-shopping"></i>
+        </a>
     </nav>
 </header>
