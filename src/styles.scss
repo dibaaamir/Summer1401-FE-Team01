@@ -73,6 +73,34 @@ svg {
     color: var(--color-fade);
 }
 
+popper-content {
+    /* stylelint-disable selector-class-pattern */
+    .ngxp__container {
+        background-color: var(--color-background-20);
+        color: var(--color-gray-98);
+
+        z-index: 1;
+
+        padding: 0;
+
+        border: 0;
+        border-radius: 2rem;
+
+        > .ngxp__arrow {
+            &::before {
+                background-color: var(--color-background-20);
+            }
+        }
+    }
+
+    &.no-arrow {
+        .ngxp__container > .ngxp__arrow {
+            display: none;
+        }
+    }
+    /* stylelint-enable selector-class-pattern */
+}
+
 @mixin max-lines($lines) {
     overflow: hidden;
 

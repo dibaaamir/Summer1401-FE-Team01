@@ -16,3 +16,69 @@
         cursor: pointer;
     }
 }
+
+popper-content {
+    z-index: 2;
+
+    .rows {
+        --padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+
+        min-width: 17rem;
+        width: max-content;
+
+        font-size: 1rem;
+
+        > :not(app-devider) {
+            background-color: var(--color-background-20);
+            color: inherit;
+
+            display: grid;
+            grid-template-columns: 1.5em 1fr auto;
+            align-items: center;
+            gap: 0.5rem;
+
+            padding: var(--padding);
+
+            border: none;
+
+            text-align: start;
+            text-decoration: none;
+
+            > :first-child {
+                justify-self: center;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+
+                border-radius: 999rem;
+            }
+
+            .suffix {
+                display: flex;
+                align-items: center;
+                gap: 1ch;
+
+                font-size: 0.7em;
+
+                .number {
+                    font-size: 1.2em;
+                }
+            }
+
+            &:hover {
+                background-color: var(--color-background-15);
+
+                cursor: pointer;
+            }
+        }
+
+        app-divider {
+            --divider-padding: var(--padding);
+        }
+    }
+}
