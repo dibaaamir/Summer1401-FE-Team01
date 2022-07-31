@@ -1,15 +1,28 @@
-input {
-  background-color: var(--color-gray-90);
+.input-wrapper {
+    position: relative;
 
-  inline-size: 100%;
+    input {
+        background-color: transparent;
+        color: var(--color-background-lightest);
 
-  padding: 0.45rem 0.65rem;
+        inline-size: 100%;
 
-  border-radius: var(--border-radius);
-}
+        padding: 0.65rem;
 
-label {
-  color: var(--color-gray-80);
+        border: solid 1px var(--color-background-lightest);
+        border-radius: var(--border-radius);
+    }
 
-  font-size: .75rem;
+    label {
+        background-color: var(--color-background-lighter);
+        color: var(--color-background-lightest);
+
+        position: absolute;
+        top: -0.6rem;
+        right: 0.5rem;
+
+        padding-inline: 0.25rem;
+
+        font-size: 0.75rem;
+    }
 }
