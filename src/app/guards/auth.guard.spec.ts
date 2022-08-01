@@ -1,3 +1,52 @@
-import {AuthGuard} from './auth.guard';
+import {TestBed} from '@angular/core/testing';
 
-describe('AuthGuard', () => {});
+import {AuthGuard} from './auth.guard';
+import {RouterTestingModule} from '@angular/router/testing';
+import {ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+
+describe('AuthGuard', () => {
+    let guard: AuthGuard;
+
+    let dummyRoute = {} as ActivatedRouteSnapshot;
+
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [RouterTestingModule],
+        });
+        guard = TestBed.inject(AuthGuard);
+    });
+
+    it('tests create', () => {
+        expect(guard).toBeTruthy();
+    });
+
+    describe('when loggedIn=true', () => {
+        beforeEach(() => setupIsLoggedInSpy(true));
+
+        for (let path of ['/auth', '/profile']) {
+            it(`tests ${path == '/profile' ? 'accept' : 'reject'} if navigating to ${path}`, async () => {
+                expect(await guard.canActivate(dummyRoute, fakeRouterState(path))).toBe(path == '/profile');
+            });
+        }
+    });
+
+    describe('when loggedIn=false', () => {
+        beforeEach(() => setupIsLoggedInSpy(true));
+
+        for (let path of ['/auth', '/profile']) {
+            it(`tests ${path == '/auth' ? 'accept' : 'reject'} if navigating to ${path}`, async () => {
+                expect(await guard.canActivate(dummyRoute, fakeRouterState(path))).toBe(path == '/auth');
+            });
+        }
+    });
+
+    // [SECTION] Utility Functions
+
+    const setupIsLoggedInSpy = (isLoggedIn: boolean): void => {
+        spyOn(guard.authService, 'isLoggedIn').and.returnValue(new Promise((resolve) => resolve(isLoggedIn)));
+    };
+
+    const fakeRouterState = (url: string): RouterStateSnapshot => {
+        return {url} as RouterStateSnapshot;
+    };
+});

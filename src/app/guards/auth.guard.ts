@@ -6,11 +6,11 @@ import {AuthService} from '../services/auth.service';
     providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-    public constructor(private router: Router, private authService: AuthService) {}
+    public constructor(private router: Router, public authService: AuthService) {}
 
     public async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> {
         const isLoggedIn = await this.authService.isLoggedIn();
-        const goingToAuth = !!route.routeConfig?.path?.startsWith('auth');
+        const goingToAuth = state.url === '/auth';
 
         let isAllowed = isLoggedIn != goingToAuth;
 
