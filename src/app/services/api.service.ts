@@ -3,6 +3,7 @@ import {DEFAULT_POST_REQUEST_INIT} from '../utils/api.utils';
 import {SnackbarService} from './snackbar.service';
 import {ApiError} from '../models/api-error.model';
 import {GetRequestOptions, PostRequestOptions, RequestOptions} from '../models/request-options.model';
+import {SnackbarTheme} from '../enums/snackbar-theme.enum';
 
 @Injectable({
     providedIn: 'root',
@@ -35,7 +36,7 @@ export class ApiService {
 
         if (response.ok) return data as T;
 
-        if (showSnackbar) this.snackbarService.show((data as ApiError).message);
+        if (showSnackbar) this.snackbarService.show({text: (data as ApiError).message, theme: SnackbarTheme.DANGER});
 
         return null;
     }
