@@ -44,7 +44,7 @@ describe('AuthGuard', () => {
 
         for (let path of ['/auth', '/profile']) {
             it(`tests ${path == '/auth' ? 'accept' : 'reject'} if navigating to ${path}`, async () => {
-                expect(await guard.canActivate(dummyRoute, fakeRouterState(path))).toBe(path == '/auth');
+                expect(await guard.canActivate(dummyRoute, fakeRouterState(path))).toBe(path == '/profile');
             });
         }
     });
