@@ -11,7 +11,6 @@ describe('CarouselComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [],
             imports: [CommonModule, CarouselItemModule],
         }).compileComponents();
     });

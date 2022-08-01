@@ -14,7 +14,6 @@ describe('RegisterComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [],
             imports: [RouterTestingModule],
             providers: [{provide: SnackbarService, useValue: new SnackbarServiceMock()}],
         }).compileComponents();

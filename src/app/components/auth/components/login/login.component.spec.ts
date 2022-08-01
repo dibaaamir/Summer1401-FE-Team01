@@ -17,7 +17,6 @@ describe('LoginComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [],
             imports: [
                 RouterTestingModule.withRoutes([
                     {path: 'auth', component: AuthComponent},

@@ -26,8 +26,8 @@ popper-content {
         display: flex;
         flex-direction: column;
 
-        min-width: 17rem;
-        width: max-content;
+        min-inline-size: 17rem;
+        inline-size: max-content;
 
         font-size: 1rem;
 
@@ -54,7 +54,7 @@ popper-content {
             }
 
             img {
-                width: 100%;
+                inline-size: 100%;
                 object-fit: cover;
 
                 border-radius: 999rem;
