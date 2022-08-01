@@ -62,7 +62,11 @@ svg {
 }
 
 button {
+    border: none;
+
     white-space: nowrap;
+
+    cursor: pointer;
 }
 
 .fade {
