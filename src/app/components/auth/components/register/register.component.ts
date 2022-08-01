@@ -37,7 +37,7 @@ export class RegisterComponent {
         if (await this.isSubmitSuccessful()) await this.router.navigateByUrl('/profile');
     }
 
-    private async isSubmitSuccessful(): Promise<boolean> {
+    public async isSubmitSuccessful(): Promise<boolean> {
         if (this.password !== this.confirm) {
             this.snackbarService.show({text: 'پسورد و تکرار آن باهم همخوانی ندارند', theme: SnackbarTheme.DANGER});
             this.password = '';

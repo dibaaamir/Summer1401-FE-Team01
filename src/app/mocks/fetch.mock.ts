@@ -47,7 +47,8 @@ export class FetchMock {
     }
 
     private static isEqual(a: any, b: any): boolean {
-        return JSON.stringify(a) === JSON.stringify(b);
+        const keys = [...Object.keys(a), ...Object.keys(b)];
+        return keys.every((key) => a[key] === b[key] && b[key] === a[key]);
     }
 
     public async fetch(url: RequestInfo, init?: RequestInit): Promise<Response> {
