@@ -14,7 +14,7 @@
     cursor: text;
 
     i {
-        color: hsl(16deg 100% 66%);
+        color: var(--color-default-text);
 
         font-size: 1.1rem;
     }

@@ -27,8 +27,8 @@
     }
 
     .details {
-        background: hsl(0deg 0% 0% / 50%);
-        color: hsl(0deg 0% 100%);
+        background: var(--color-gray-0);
+        color: var(--color-gray-98);
         opacity: 0;
 
         position: absolute;
@@ -65,7 +65,7 @@
 
     .rating {
         background-color: var(--color-background-15);
-        color: hsl(0deg 0% 100%);
+        color: var(--color-gray-98);
 
         box-sizing: border-box;
 
