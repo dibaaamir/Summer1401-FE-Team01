@@ -30,20 +30,4 @@ describe('FooterComponent', () => {
         const p = host.querySelector('p');
         expect(p).toBeTruthy();
     });
-    //
-    // it('should click Set button', fakeAsync(() => {
-    //     spyOn(component, 'backToTopButtonClickHandler');
-    //     fixture2 = TestBed.createComponent(ButtonComponent);
-    //     buttonComponent = fixture2.componentInstance;
-    //     fixture2.detectChanges();
-    //     const compiled = fixture2.debugElement.nativeElement;
-    //     host.querySelector('app-button').;
-    //     tick();
-    //     fixture.detectChanges();
-    //     fixture2.detectChanges();
-    //     console.log(component);
-    //     console.log(compiled);
-    //     console.log(component.backToTopButtonClickHandler());
-    //     expect(component.backToTopButtonClickHandler()).toHaveBeenCalled();
-    // }));
 });
