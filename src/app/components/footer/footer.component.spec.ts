@@ -4,9 +4,7 @@ import {ButtonComponent} from '../button/button.component';
 
 describe('FooterComponent', () => {
     let fixture: ComponentFixture<FooterComponent>;
-    //let fixture2: ComponentFixture<ButtonComponent>;
     let component: FooterComponent;
-    //let buttonComponent: ButtonComponent;
     let host: HTMLElement;
 
     beforeEach(async () => {
