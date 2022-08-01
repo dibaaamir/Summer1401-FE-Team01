@@ -7,7 +7,7 @@ import {Game} from '../../models/game.model';
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-    public suggestionGames = [
+    public static suggestionGamesStatic = [
         new Game(
             0,
             'Forspoken',
@@ -49,4 +49,8 @@ export class HomeComponent {
             9.3
         ),
     ];
+
+    public get suggestionGames(): Array<Game> {
+        return HomeComponent.suggestionGamesStatic;
+    }
 }

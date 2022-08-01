@@ -6,10 +6,12 @@
     gap: 1rem;
 
     .slides {
+        --slides-gap: 6vw;
+
         overflow: hidden;
 
         display: flex;
-        gap: 6vw;
+        gap: var(--slides-gap);
 
         inline-size: 100%;
 

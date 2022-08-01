@@ -11,7 +11,7 @@ export class SnackbarComponent implements OnDestroy {
     public text!: string;
     public theme: SnackbarTheme = SnackbarTheme.DEFAULT;
 
-    public readonly AUTO_HIDE_TIMEOUT: number = 5000;
+    public readonly AUTO_HIDE_TIMEOUT: number = 5_000;
     public timeoutId: number | null = null;
 
     public get hidden(): boolean {

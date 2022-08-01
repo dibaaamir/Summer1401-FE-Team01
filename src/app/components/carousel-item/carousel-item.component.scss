@@ -11,7 +11,7 @@
     inline-size: var(--width);
     aspect-ratio: 16 / 9;
 
-    transform: translateX(calc(var(--current-index) * (var(--width) + 6vw)));
+    transform: translateX(calc(var(--current-index) * (var(--width) + var(--slides-gap))));
 
     transition: transform ease-in 300ms;
 

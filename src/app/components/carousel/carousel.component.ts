@@ -9,14 +9,14 @@ import {Game} from '../../models/game.model';
 export class CarouselComponent implements AfterViewInit, OnDestroy {
     @Input() public games: Array<Game> = [];
 
-    public slideTimeout: number = 4000;
-    public currentIndex = 0;
+    public readonly SLIDE_TIMEOUT: number = 4_000;
+    public currentIndex!: number;
 
     private autoNextInterval!: number | null;
 
     public ngAfterViewInit(): void {
         this.setupInterval();
-        this.setIndex(this.currentIndex);
+        this.setIndex(0);
     }
 
     public ngOnDestroy(): void {
@@ -24,7 +24,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     }
 
     public setupInterval(): void {
-        this.autoNextInterval = setInterval(() => this.nextSlide(), this.slideTimeout);
+        this.autoNextInterval = setInterval(() => this.intervalNextSlide(), this.SLIDE_TIMEOUT);
     }
 
     public clearInterval(): void {
@@ -40,7 +40,11 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         this.setupInterval();
     }
 
-    private nextSlide(): void {
+    public nextButtonClickHandler(): void {
+        this.setIndexByClick(this.currentIndex + 1);
+    }
+
+    public intervalNextSlide(): void {
         this.setIndex(this.currentIndex + 1);
     }
 
@@ -51,26 +55,26 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         else if (newI >= this.games.length) this.currentIndex = newI % this.games.length;
         else this.currentIndex = newI;
 
-        CarouselComponent.doBulletAnimation(oldIndex, false);
-        CarouselComponent.doBulletAnimation(this.currentIndex, true);
+        this.doBulletAnimation(oldIndex, false);
+        this.doBulletAnimation(this.currentIndex, true);
     }
 
-    private static doBulletAnimation(index: number, addClass: boolean): void {
-        const bullet = document.querySelectorAll('.bullets i').item(index);
-
-        const first = bullet.getBoundingClientRect();
-
-        if (addClass) bullet.classList.add('current');
-        else bullet.classList.remove('current');
-
-        const last = bullet.getBoundingClientRect();
-
-        const deltaX = first.left - last.left;
-        const deltaW = first.width / last.width;
-
-        bullet.animate(
-            [{transform: `translateX(${deltaX}px) scaleX(${deltaW})`}, {transform: `translateX(0) scaleX(1)`}],
-            {duration: 300, easing: 'ease-in'}
-        );
+    private doBulletAnimation(index: number, addClass: boolean): void {
+        // const bullet = document.querySelectorAll('.bullets i').item(index);
+        //
+        // const first = bullet.getBoundingClientRect();
+        //
+        // if (addClass) bullet.classList.add('current');
+        // else bullet.classList.remove('current');
+        //
+        // const last = bullet.getBoundingClientRect();
+        //
+        // const deltaX = first.left - last.left;
+        // const deltaW = first.width / last.width;
+        //
+        // bullet.animate(
+        //     [{transform: `translateX(${deltaX}px) scaleX(${deltaW})`}, {transform: `translateX(0) scaleX(1)`}],
+        //     {duration: 300, easing: 'ease-in'}
+        // );
     }
 }
