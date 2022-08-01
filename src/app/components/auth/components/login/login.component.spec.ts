@@ -5,6 +5,8 @@ import {User} from '../../../../models/user.model';
 import {SnackbarService} from '../../../../services/snackbar.service';
 import {SnackbarServiceMock} from '../../../../mocks/snackbar-service.mock';
 import {FetchMock} from '../../../../mocks/fetch.mock';
+import {AuthComponent} from '../../auth.component';
+import {ProfileComponent} from '../../../profile/profile.component';
 
 describe('LoginComponent', () => {
     let fixture: ComponentFixture<LoginComponent>;
@@ -16,7 +18,12 @@ describe('LoginComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [],
-            imports: [RouterTestingModule],
+            imports: [
+                RouterTestingModule.withRoutes([
+                    {path: 'auth', component: AuthComponent},
+                    {path: 'profile', component: ProfileComponent},
+                ]),
+            ],
             providers: [{provide: SnackbarService, useValue: new SnackbarServiceMock()}],
         }).compileComponents();
 
