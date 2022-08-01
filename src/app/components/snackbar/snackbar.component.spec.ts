@@ -35,7 +35,7 @@ describe('SnackbarComponent', () => {
         testDom(options);
     });
 
-    it('should snackbar render - message and theme', () => {
+    it('tests snackbar render - message and theme', () => {
         const options: SnackbarOptions = {text: 'This is a message.', theme: SnackbarTheme.WARNING};
         show(options);
         testDom(options);

@@ -12,7 +12,7 @@ describe('SnackbarService', () => {
         snackbarComponentSpy = jasmine.createSpyObj<SnackbarComponent>('SnackbarComponent', ['show']);
     });
 
-    it('should be created', () => {
+    it('tests create', () => {
         expect(service).toBeTruthy();
     });
 
