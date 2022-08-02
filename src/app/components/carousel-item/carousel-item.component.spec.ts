@@ -1,5 +1,6 @@
 import {CarouselItemComponent} from './carousel-item.component';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {HomeComponent} from '../../pages/home/home.component';
 
 describe('CarouselItemComponent', () => {
     let fixture: ComponentFixture<CarouselItemComponent>;
@@ -17,6 +18,9 @@ describe('CarouselItemComponent', () => {
         component = fixture.componentInstance;
         fixture.detectChanges();
         host = fixture.nativeElement as HTMLElement;
+
+        component.game = HomeComponent.suggestionGamesStatic[0];
+        fixture.detectChanges();
     });
 
     it('tests create', () => {
