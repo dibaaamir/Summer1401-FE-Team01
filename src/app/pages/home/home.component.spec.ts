@@ -1,19 +1,19 @@
-import {CarouselItemComponent} from './carousel-item.component';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {HomeComponent} from './home.component';
 
-describe('CarouselItemComponent', () => {
-    let fixture: ComponentFixture<CarouselItemComponent>;
-    let component: CarouselItemComponent;
+describe('HomeComponent', () => {
+    let fixture: ComponentFixture<HomeComponent>;
+    let component: HomeComponent;
     let host: HTMLElement;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [CarouselItemComponent],
+            declarations: [HomeComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(CarouselItemComponent);
+        fixture = TestBed.createComponent(HomeComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
         host = fixture.nativeElement as HTMLElement;
