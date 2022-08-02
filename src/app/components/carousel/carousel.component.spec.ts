@@ -33,7 +33,7 @@ describe('CarouselComponent', () => {
         component.ngAfterViewInit();
         fixture.detectChanges();
 
-        testCurrentClassNames();
+        testCurrentClassNames(0);
     });
 
     it('tests css classes being set by index properly - manual', () => {
@@ -48,7 +48,7 @@ describe('CarouselComponent', () => {
         fixture.detectChanges();
         discardPeriodicTasks();
 
-        testCurrentClassNames();
+        testCurrentClassNames(0);
 
         tick(component.SLIDE_TIMEOUT);
         testCurrentClassNames(1);
@@ -72,7 +72,7 @@ describe('CarouselComponent', () => {
 
     // [SECTION] Utility Functions
 
-    const testCurrentClassNames = (index: number = 0): void => {
+    const testCurrentClassNames = (index: number): void => {
         fixture.detectChanges();
 
         expect(component.currentIndex).toEqual(index);
@@ -98,7 +98,7 @@ describe('CarouselComponent', () => {
         component.ngAfterViewInit();
         fixture.detectChanges();
 
-        testCurrentClassNames();
+        testCurrentClassNames(0);
 
         if (!!index) component.setIndexByClick(index);
         else component.nextButtonClickHandler();
@@ -116,7 +116,7 @@ describe('CarouselComponent', () => {
         discardPeriodicTasks();
 
         // initial index (0)
-        testCurrentClassNames();
+        testCurrentClassNames(0);
 
         // click "next slide" or "bullet" button after half interval
         tick(component.SLIDE_TIMEOUT / 2);
