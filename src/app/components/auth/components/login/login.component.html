@@ -7,6 +7,7 @@
         [required]="true"
         [(value)]="username"
     ></app-input>
+
     <app-input
         *ngIf="loginWithEmail"
         type="email"
@@ -15,6 +16,7 @@
         [required]="true"
         [(value)]="email"
     ></app-input>
+
     <app-input type="password" name="password" label="رمزعبور" [required]="true" [(value)]="password"></app-input>
 
     <div class="button-bar">

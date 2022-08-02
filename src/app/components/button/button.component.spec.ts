@@ -45,6 +45,7 @@ describe('ButtonComponent', () => {
             component.type = type;
             fixture.detectChanges();
         }
+
         expect(button?.className).toEqual(type || 'contained');
     };
 });
