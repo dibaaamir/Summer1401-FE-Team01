@@ -62,7 +62,7 @@ describe('LoginComponent', () => {
         testLoginWithEmail(false);
     });
 
-    for (let loginWithEmail of [false, true]) {
+    for (const loginWithEmail of [false, true]) {
         it(`tests isSubmitSuccessful - loginWithEmail=${loginWithEmail}`, async () => {
             component.loginWithEmail = loginWithEmail;
             fixture.detectChanges();

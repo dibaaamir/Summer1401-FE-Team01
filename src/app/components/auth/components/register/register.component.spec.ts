@@ -34,7 +34,7 @@ describe('RegisterComponent', () => {
     });
 
     const firstLastNameStatuses = ['none', 'only first', 'only last', 'both'];
-    for (let status of firstLastNameStatuses) {
+    for (const status of firstLastNameStatuses) {
         it(`tests user getter - ${status}`, () => {
             component.username = 'BijanProgrammer';
             component.password = '1234';

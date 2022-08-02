@@ -32,7 +32,7 @@ describe('AuthGuard', () => {
     describe('when loggedIn=true', () => {
         beforeEach(() => setupIsLoggedInSpy(true));
 
-        for (let path of ['/auth', '/profile']) {
+        for (const path of ['/auth', '/profile']) {
             it(`tests ${path === '/profile' ? 'accept' : 'reject'} if navigating to ${path}`, async () => {
                 expect(await guard.canActivate(dummyRoute, fakeRouterState(path))).toBe(path == '/profile');
             });
@@ -42,7 +42,7 @@ describe('AuthGuard', () => {
     describe('when loggedIn=false', () => {
         beforeEach(() => setupIsLoggedInSpy(true));
 
-        for (let path of ['/auth', '/profile']) {
+        for (const path of ['/auth', '/profile']) {
             it(`tests ${path == '/auth' ? 'accept' : 'reject'} if navigating to ${path}`, async () => {
                 expect(await guard.canActivate(dummyRoute, fakeRouterState(path))).toBe(path == '/profile');
             });
