@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="auth">
         <div class="form-wrapper">
-            <h1>{{ isInLoginView ? 'ورود' : 'ثبت‌نام' }}</h1>
+            <h1>{{ isInLoginView ? 'ورود' : 'ثبت نام' }}</h1>
 
             <ng-container *ngIf="isInLoginView; else register">
                 <app-login></app-login>
@@ -14,7 +14,7 @@
             <div class="auth-switcher">
                 <p>{{ isInLoginView ? 'حساب کاربری ندارید؟' : 'حساب کاربری دارید؟' }}</p>
                 <button (click)="toggleIsInLoginView()">
-                    {{ isInLoginView ? 'ثبت‌نام کنید!' : 'وارد شوید!' }}
+                    {{ isInLoginView ? 'ثبت نام کنید!' : 'وارد شوید!' }}
                 </button>
                 <a routerLink="/"> بازگشت </a>
             </div>
