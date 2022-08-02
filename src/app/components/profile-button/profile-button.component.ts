@@ -12,7 +12,7 @@ export class ProfileButtonComponent {
 
     public constructor(public authService: AuthService) {}
 
-    public logout(): void {
-        this.authService.logout().then();
+    public async logout(): Promise<void> {
+        await this.authService.logout();
     }
 }
