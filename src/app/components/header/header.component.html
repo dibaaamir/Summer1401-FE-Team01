@@ -10,7 +10,7 @@
         </ng-container>
 
         <ng-template #auth>
-            <a href="/auth">
+            <a routerLink="/auth">
                 <app-button
                     type="outline"
                     text="ورود | ثبت‌نام"
@@ -19,7 +19,7 @@
             </a>
         </ng-template>
 
-        <a href="/cart" class="icon-button">
+        <a routerLink="/cart" class="icon-button">
             <i *ngIf="isLoggedIn" class="far fa-cart-shopping"></i>
         </a>
     </nav>
