@@ -15,8 +15,8 @@
         <i
             *ngFor="let _ of games; index as i"
             [ngClass]="{current: i === currentIndex}"
-            (click)="setIndexByClick(i)"
             [title]="'انتخاب اسلاید ' + i"
+            (click)="setIndexByClick(i)"
         ></i>
     </div>
 </div>

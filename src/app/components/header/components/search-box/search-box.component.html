@@ -5,8 +5,8 @@
         #input
         type="search"
         placeholder="جستجو"
-        (keydown.enter)="submitSearch(input)"
         [(ngModel)]="searchPhrase"
+        (keydown.enter)="submitSearch(input)"
         (ngModelChange)="searchPhraseChange.emit($event)"
     />
 </div>

@@ -33,7 +33,7 @@ describe('AuthGuard', () => {
         beforeEach(() => setupIsLoggedInSpy(true));
 
         for (let path of ['/auth', '/profile']) {
-            it(`tests ${path == '/profile' ? 'accept' : 'reject'} if navigating to ${path}`, async () => {
+            it(`tests ${path === '/profile' ? 'accept' : 'reject'} if navigating to ${path}`, async () => {
                 expect(await guard.canActivate(dummyRoute, fakeRouterState(path))).toBe(path == '/profile');
             });
         }

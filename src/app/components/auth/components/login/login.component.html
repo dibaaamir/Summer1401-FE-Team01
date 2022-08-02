@@ -21,8 +21,8 @@
         <app-button text="ورود" (click)="formSubmitHandler()"></app-button>
 
         <app-button
-            [text]="this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل'"
             type="outline"
+            [text]="this.loginWithEmail ? 'ورود با نام کاربری' : 'ورود با ایمیل'"
             (click)="toggleLoginEmail()"
         ></app-button>
     </div>
