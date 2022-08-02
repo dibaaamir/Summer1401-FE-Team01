@@ -49,8 +49,34 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     }
 
     private setIndex(newI: number): void {
+        const oldIndex = this.currentIndex;
+
         if (newI < 0) this.currentIndex = this.games.length;
         else if (newI >= this.games.length) this.currentIndex = newI % this.games.length;
         else this.currentIndex = newI;
+
+        this.doBulletAnimation(oldIndex, false);
+        this.doBulletAnimation(this.currentIndex, true);
+    }
+
+    private doBulletAnimation(index: number, addClass: boolean): void {
+        const bullet = document.querySelectorAll('.bullets > i').item(index);
+
+        if (!!bullet) {
+            const first = bullet.getBoundingClientRect();
+
+            if (addClass) bullet.classList.add('current');
+            else bullet.classList.remove('current');
+
+            const last = bullet.getBoundingClientRect();
+
+            const deltaX = first.left - last.left;
+            const deltaW = first.width / last.width;
+
+            bullet.animate(
+                [{transform: `translateX(${deltaX}px) scaleX(${deltaW})`}, {transform: `translateX(0) scaleX(1)`}],
+                {duration: 300, easing: 'ease-in'}
+            );
+        }
     }
 }
