@@ -16,7 +16,9 @@
         "prettier:check": "prettier .",
         "prettier:fix": "prettier . --write",
         "stylelint:check": "npx stylelint \"**/*.scss\"",
-        "stylelint:fix": "npx stylelint \"**/*.scss\" --fix"
+        "stylelint:fix": "npx stylelint \"**/*.scss\" --fix",
+        "all:check": "npm run eslint:check & npm run prettier:check & npm run stylelint:check",
+        "all:fix": "npm run eslint:fix & npm run prettier:fix & npm run stylelint:fix"
     },
     "private": true,
     "dependencies": {
