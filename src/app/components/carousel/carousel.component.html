@@ -13,6 +13,7 @@
     <i class="far fa-angle-left next-slide-button" title="اسلاید بعد" (click)="nextButtonClickHandler()"></i>
     <div class="bullets">
         <i
+            #bullet
             *ngFor="let _ of games; index as i"
             [ngClass]="{current: i === currentIndex}"
             [title]="'انتخاب اسلاید ' + i"

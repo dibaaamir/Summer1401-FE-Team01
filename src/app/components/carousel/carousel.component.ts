@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnDestroy} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnDestroy, QueryList, ViewChildren} from '@angular/core';
 import {Game} from '../../models/game.model';
 
 @Component({
@@ -8,6 +8,8 @@ import {Game} from '../../models/game.model';
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {
     @Input() public games: Array<Game> = [];
+
+    @ViewChildren('bullet') public bullets!: QueryList<ElementRef>;
 
     public readonly SLIDE_TIMEOUT: number = 4_000;
     public currentIndex!: number;
@@ -60,7 +62,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     }
 
     private doBulletAnimation(index: number, addClass: boolean): void {
-        const bullet = document.querySelectorAll('.bullets > i').item(index);
+        const bullet = this.bullets.get(index)?.nativeElement;
 
         if (!!bullet) {
             const first = bullet.getBoundingClientRect();
