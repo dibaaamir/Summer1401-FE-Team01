@@ -7,9 +7,10 @@ import {LoginComponent} from './components/login/login.component';
 import {RegisterComponent} from './components/register/register.component';
 import {LogoModule} from '../logo/logo.module';
 import {InputModule} from '../input/input.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
     declarations: [AuthComponent, LoginComponent, RegisterComponent],
-    imports: [CommonModule, FormsModule, CarouselItemModule, LogoModule, InputModule],
+    imports: [CommonModule, FormsModule, CarouselItemModule, LogoModule, InputModule, RouterModule],
 })
 export class AuthModule {}

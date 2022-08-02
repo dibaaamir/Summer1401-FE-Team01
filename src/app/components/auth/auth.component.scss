@@ -38,25 +38,38 @@
 
         .auth-switcher {
             color: var(--color-gray-98);
-            opacity: 0.8;
-
+            
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             gap: 0.25rem;
 
             font-size: 0.8rem;
-
-            h1 {
-                font-size: 1.5rem;
+            
+           * {
+                opacity: 0.8;
             }
 
-            button {
+            p {
+                font-size: 0.9rem;
+            }
+
+            button,a {
                 background-color: transparent;
                 color: var(--color-default-text);
 
                 font-size: 0.8rem;
 
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            
+            a {
+                margin-inline-start: auto;
+                padding-inline-end: 1rem;
+
+                text-decoration: none;
             }
         }
     }

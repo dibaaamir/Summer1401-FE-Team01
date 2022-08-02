@@ -12,8 +12,11 @@
             </ng-template>
 
             <div class="auth-switcher">
-                {{ isInLoginView ? 'حساب کاربری ندارید؟' : 'حساب کاربری دارید؟' }}
-                <button (click)="toggleIsInLoginView()">{{ isInLoginView ? 'ثبت‌نام کنید!' : 'وارد شوید!' }}</button>
+                <p>{{ isInLoginView ? 'حساب کاربری ندارید؟' : 'حساب کاربری دارید؟' }}</p>
+                <button (click)="toggleIsInLoginView()">
+                    {{ isInLoginView ? 'ثبت‌نام کنید!' : 'وارد شوید!' }}
+                </button>
+                <a routerLink="/"> بازگشت </a>
             </div>
         </div>
     </div>
