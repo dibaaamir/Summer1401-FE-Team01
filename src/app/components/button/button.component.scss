@@ -1,9 +1,10 @@
 button {
+    --primary-color-button: var(--primary-color);
+
     background-color: var(--button-color);
     color: var(--text-color);
 
     position: relative;
-    z-index: 0;
 
     min-inline-size: 7.5rem;
     inline-size: 100%;
@@ -19,24 +20,25 @@ button {
     cursor: pointer;
 
     &.contained {
-        --button-color: var(--color-default-text);
+        --button-color: var(--primary-color-button);
         --text-color: var(--color-gray-98);
     }
 
     &.outline {
-        --border-color: var(--color-background-85);
-        --text-color: var(--color-default-text);
+        // --border-color: var(--color-background-85);
+        --border-color: var(--primary-color-super-lighter);
+        --text-color: var(--primary-color-button);
     }
 
     &.text {
-        --text-color: var(--color-default-text);
+        --text-color: var(--primary-color-button);
     }
 
     &:hover {
-        opacity: 0.8;
+        --primary-color-button: var(--primary-color-lighter);
     }
 
     &:active {
-        opacity: 0.5;
+        --primary-color-button: var(--primary-color-darker);
     }
 }

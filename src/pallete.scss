@@ -47,9 +47,12 @@
     --color-background-15: hsl(226deg 60% 15%);
     --color-background-20: hsl(226deg 60% 20%);
     --color-background-85: hsl(226deg 60% 85%);
-    --color-background-hover: hsl(16deg 100% 80%);
 
-    --color-default-text: hsl(16deg 100% 61%);
+    --primary-color: hsl(16deg 90% 55%);
+    --primary-color-darker: hsl(16deg 90% 50%);
+    --primary-color-lighter: hsl(16deg 90% 60%);
+    --primary-color-super-lighter: hsl(16deg 90% 70%);
+    --primary-color-oposite: var(--color-gray-80);
 
     --color-box-shadow-subtle: hsl(0deg 90% 10% / 12%);
     --box-shadow-subtle: 0 0.2rem 1rem 0 var(--color-box-shadow-subtle);

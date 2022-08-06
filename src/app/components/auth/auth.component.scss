@@ -1,5 +1,5 @@
 .wrapper {
-    color: var(--color-default-text);
+    color: var(--primary-color);
 
     display: grid;
     place-items: center;
@@ -58,7 +58,7 @@
             button,
             a {
                 background-color: transparent;
-                color: var(--color-default-text);
+                color: var(--primary-color);
 
                 font-size: 0.8rem;
 
