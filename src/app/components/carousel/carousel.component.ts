@@ -41,7 +41,9 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         clearInterval(this.autoNextInterval!);
         this.setupInterval();
     }
-
+    public bulletClickHandler(index: number): void {
+        this.setIndexByClick(index);
+    }
     public nextButtonClickHandler(): void {
         this.setIndexByClick(this.currentIndex + 1);
     }
