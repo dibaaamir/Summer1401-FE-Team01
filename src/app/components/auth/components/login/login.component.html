@@ -4,6 +4,7 @@
         type="text"
         name="username"
         label="نام کاربری"
+        direction="ltr"
         [required]="true"
         [(value)]="username"
     ></app-input>
@@ -13,11 +14,19 @@
         type="email"
         name="email"
         label="ایمیل"
+        direction="ltr"
         [required]="true"
         [(value)]="email"
     ></app-input>
 
-    <app-input type="password" name="password" label="رمزعبور" [required]="true" [(value)]="password"></app-input>
+    <app-input
+        type="password"
+        name="password"
+        label="رمزعبور"
+        direction="ltr"
+        [required]="true"
+        [(value)]="password"
+    ></app-input>
 
     <div class="button-bar">
         <app-button text="ورود" (click)="formSubmitHandler()"></app-button>
