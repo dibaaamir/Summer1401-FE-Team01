@@ -9,6 +9,7 @@
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "test:ci": "ng test --browsers=ChromeHeadless --watch=false",
+        "test:ci:with-coverage": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
         "code-coverage": "ng test --code-coverage",
         "code-coverage:ci": "ng test --browsers=ChromeHeadless --no-watch --code-coverage",
         "eslint:check": "ng lint",
