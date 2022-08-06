@@ -1,4 +1,4 @@
-<form>
+<form (submit)="formSubmitHandler()">
     <app-input
         *ngIf="!loginWithEmail"
         type="text"
@@ -29,7 +29,7 @@
     ></app-input>
 
     <div class="button-bar">
-        <app-button text="ورود" (click)="formSubmitHandler()"></app-button>
+        <app-button text="ورود" buttonType="submit"></app-button>
 
         <app-button
             theme="outline"
