@@ -11,6 +11,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
 
     @ViewChildren('bullet') public bullets!: QueryList<ElementRef>;
 
+    private readonly BULLET_DURATION: number = 300;
     public readonly SLIDE_TIMEOUT: number = 4_000;
     public currentIndex!: number;
 
@@ -79,7 +80,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
 
             bullet.animate(
                 [{transform: `translateX(${deltaX}px) scaleX(${deltaW})`}, {transform: `translateX(0) scaleX(1)`}],
-                {duration: 300, easing: 'ease-in'}
+                {duration: this.BULLET_DURATION, easing: 'ease-in'}
             );
         }
     }
