@@ -57,11 +57,11 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         else if (newI >= this.games.length) this.currentIndex = newI % this.games.length;
         else this.currentIndex = newI;
 
-        this.doBulletAnimation(oldIndex, false);
-        this.doBulletAnimation(this.currentIndex, true);
+        this.playBulletAnimation(oldIndex, false);
+        this.playBulletAnimation(this.currentIndex, true);
     }
 
-    private doBulletAnimation(index: number, addClass: boolean): void {
+    private playBulletAnimation(index: number, addClass: boolean): void {
         const bullet = this.bullets.get(index)?.nativeElement;
 
         if (!!bullet) {
