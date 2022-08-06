@@ -27,7 +27,7 @@ describe('ButtonComponent', () => {
         const button = host.querySelector('button');
 
         expect(button).toBeTruthy();
-        expect(component.type).toEqual('contained');
+        expect(component.theme).toEqual('contained');
         testType();
     });
 
@@ -39,13 +39,13 @@ describe('ButtonComponent', () => {
     }
 
     // [SECTION] Utility Functions
-    const testType = (type?: 'text' | 'outline' | 'contained'): void => {
+    const testType = (theme?: 'text' | 'outline' | 'contained'): void => {
         const button = host.querySelector('button');
-        if (!!type) {
-            component.type = type;
+        if (!!theme) {
+            component.theme = theme;
             fixture.detectChanges();
         }
 
-        expect(button?.className).toEqual(type || 'contained');
+        expect(button?.className).toEqual(theme || 'contained');
     };
 });

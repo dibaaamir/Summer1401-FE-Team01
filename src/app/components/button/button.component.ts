@@ -8,5 +8,5 @@ import {Component, Input} from '@angular/core';
 export class ButtonComponent {
     @Input() public text!: string;
     @Input() public iconClasses?: string;
-    @Input() public type: 'text' | 'outline' | 'contained' = 'contained';
+    @Input() public theme: 'text' | 'outline' | 'contained' = 'contained';
 }
