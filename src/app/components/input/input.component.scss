@@ -1,21 +1,36 @@
 .input-wrapper {
+    --background-color: var(--color-background-20);
+    --border-color: var(--color-background-85);
+
     position: relative;
 
     input {
-        background-color: transparent;
-        color: var(--color-background-85);
+        background-color: var(--background-color);
+        color: var(--border-color);
 
         inline-size: 100%;
 
         padding: 0.65rem;
 
-        border: solid 1px var(--color-background-85);
+        border: solid 1px var(--border-color);
         border-radius: var(--border-radius-small);
+
+        &:-webkit-autofill {
+            &,
+            &:hover,
+            &:focus {
+                -webkit-text-fill-color: var(--border-color);
+
+                /* stylelint-disable property-no-vendor-prefix */
+                -webkit-box-shadow: 0 0 0 100rem var(--background-color) inset;
+                /* stylelint-enable property-no-vendor-prefix */
+            }
+        }
     }
 
     label {
-        background-color: var(--color-background-20);
-        color: var(--color-background-85);
+        background-color: var(--background-color);
+        color: var(--border-color);
 
         position: absolute;
         inset-block-start: -0.6rem;
