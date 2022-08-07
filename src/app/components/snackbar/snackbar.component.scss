@@ -1,12 +1,11 @@
 div {
     --margin: 1rem;
 
-    background: var(--color-gray-90);
+    background-color: var(--snackbar-background-color, var(--color-body-background));
+    color: var(--snackbar-color, var(--color-body-foreground));
 
     position: fixed;
-
     inset-block-end: var(--margin);
-
     inset-inline-end: var(--margin);
 
     display: flex;
@@ -15,13 +14,12 @@ div {
 
     padding: 0.5rem 1rem;
 
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-small);
 
     transition: transform 100ms ease-in;
 
     i {
         color: var(--color-error);
-
         opacity: 0.75;
 
         cursor: pointer;
@@ -33,5 +31,30 @@ div {
 
     &.hidden {
         transform: translateX(calc(-100% - var(--margin)));
+    }
+
+    &.primary {
+        --snackbar-background-color: var(--color-primary-opposite);
+        --snackbar-color: var(--color-primary);
+    }
+
+    &.info {
+        --snackbar-background-color: var(--color-info-opposite);
+        --snackbar-color: var(--color-info);
+    }
+
+    &.success {
+        --snackbar-background-color: var(--color-success-opposite);
+        --snackbar-color: var(--color-success);
+    }
+
+    &.warning {
+        --snackbar-background-color: var(--color-warning-opposite);
+        --snackbar-color: var(--color-warning);
+    }
+
+    &.danger {
+        --snackbar-background-color: var(--color-danger-opposite);
+        --snackbar-color: var(--color-danger);
     }
 }

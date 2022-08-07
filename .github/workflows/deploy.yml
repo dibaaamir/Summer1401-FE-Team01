@@ -31,7 +31,7 @@ jobs:
 
             - name: Run Tests
               if: success()
-              run: npm run test:ci
+              run: npm run test:ci:with-coverage
 
     build:
         name: Build
@@ -60,7 +60,6 @@ jobs:
 
     deploy:
         name: Deploy
-        if: ${{ github.ref == 'refs/heads/main' }}
         runs-on: ubuntu-latest
         needs:
             - test
@@ -74,38 +73,13 @@ jobs:
               with:
                   name: deploy_dist
 
-            - name: Log GitRef
-              run: echo
+            - name: 404.html Hack
+              if: success()
+              run: cp deploy_dist/Summer1401-FE-Team01/index.html deploy_dist/Summer1401-FE-Team01/404.html
 
-            - name: Deploy to "Release" GitHub Pages
+            - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@releases/v3
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   BRANCH: gh-pages
-                  FOLDER: deploy_dist/Summer1401-FE-Team01
-
-    deploy-dev:
-        name: Deploy - Dev
-        if: ${{ github.ref != 'refs/heads/main' }}
-        runs-on: ubuntu-latest
-        needs:
-            - test
-            - build
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v1
-
-            - name: Download Build
-              uses: actions/download-artifact@v1
-              with:
-                  name: deploy_dist
-
-            - name: Log GitRef
-              run: echo
-
-            - name: Deploy to "Release" GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@releases/v3
-              with:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  BRANCH: gh-pages-dev
                   FOLDER: deploy_dist/Summer1401-FE-Team01

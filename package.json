@@ -9,12 +9,17 @@
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "test:ci": "ng test --browsers=ChromeHeadless --watch=false",
+        "test:ci:with-coverage": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
+        "code-coverage": "ng test --code-coverage",
+        "code-coverage:ci": "ng test --browsers=ChromeHeadless --no-watch --code-coverage",
         "eslint:check": "ng lint",
         "eslint:fix": "ng lint --fix",
         "prettier:check": "prettier .",
         "prettier:fix": "prettier . --write",
         "stylelint:check": "npx stylelint \"**/*.scss\"",
-        "stylelint:fix": "npx stylelint \"**/*.scss\" --fix"
+        "stylelint:fix": "npx stylelint \"**/*.scss\" --fix",
+        "all:check": "npm run eslint:check & npm run prettier:check & npm run stylelint:check",
+        "all:fix": "npm run eslint:fix & npm run prettier:fix & npm run stylelint:fix"
     },
     "private": true,
     "dependencies": {
@@ -27,6 +32,8 @@
         "@angular/platform-browser": "~12.2.0",
         "@angular/platform-browser-dynamic": "~12.2.0",
         "@angular/router": "~12.2.0",
+        "@popperjs/core": "^2.11.5",
+        "ngx-popperjs": "^12.2.1",
         "rxjs": "~6.6.0",
         "tslib": "^2.3.0",
         "zone.js": "~0.11.4"

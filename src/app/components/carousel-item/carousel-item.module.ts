@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CarouselItemComponent} from './carousel-item.component';
 import {FormsModule} from '@angular/forms';
-import {ShinyButtonComponent} from '../shiny-button/shiny-button.component';
+import {ButtonComponent} from '../button/button.component';
 
 @NgModule({
-    declarations: [CarouselItemComponent, ShinyButtonComponent],
-    exports: [CarouselItemComponent, ShinyButtonComponent],
+    declarations: [CarouselItemComponent, ButtonComponent],
+    exports: [CarouselItemComponent, ButtonComponent],
     imports: [CommonModule, FormsModule],
 })
 export class CarouselItemModule {}

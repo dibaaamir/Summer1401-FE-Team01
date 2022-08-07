@@ -1,0 +1,30 @@
+.search-box {
+    background-color: var(--color-gray-98);
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    padding: 0.5rem;
+
+    border-radius: 0.5rem;
+
+    cursor: text;
+
+    i {
+        color: var(--primary-color);
+
+        font-size: 1.1rem;
+    }
+
+    input {
+        background-color: var(--color-gray-98);
+
+        block-size: 1.5rem;
+        inline-size: 100%;
+
+        font-weight: bold;
+    }
+}

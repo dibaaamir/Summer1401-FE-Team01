@@ -1,14 +1,15 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {FooterComponent} from './footer.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ButtonComponent} from '../button/button.component';
 
 describe('FooterComponent', () => {
-    let component: FooterComponent;
     let fixture: ComponentFixture<FooterComponent>;
+    let component: FooterComponent;
+    let host: HTMLElement;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [FooterComponent],
+            declarations: [FooterComponent, ButtonComponent],
         }).compileComponents();
     });
 
@@ -16,9 +17,15 @@ describe('FooterComponent', () => {
         fixture = TestBed.createComponent(FooterComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
+        host = fixture.nativeElement as HTMLElement;
     });
 
-    it('should create', () => {
+    it('tests create', () => {
         expect(component).toBeTruthy();
+    });
+
+    it('tests create p', () => {
+        const p = host.querySelector('p');
+        expect(p).toBeTruthy();
     });
 });

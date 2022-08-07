@@ -1,0 +1,86 @@
+.anchor {
+    color: var(--color-gray-98);
+
+    display: flex;
+    gap: 0.25rem;
+
+    padding: 0.5rem;
+
+    border-radius: var(--border-radius-small);
+
+    text-decoration: none;
+
+    &:hover {
+        background-color: var(--color-background-20);
+
+        cursor: pointer;
+    }
+}
+
+popper-content {
+    z-index: 2;
+
+    .rows {
+        --padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+
+        min-inline-size: 17rem;
+        inline-size: max-content;
+
+        font-size: 1rem;
+
+        > :not(app-devider) {
+            background-color: var(--color-background-20);
+            color: inherit;
+
+            display: grid;
+            grid-template-columns: 1.5em 1fr auto;
+            align-items: center;
+            gap: 0.5rem;
+
+            padding: var(--padding);
+
+            border: none;
+
+            font-size: inherit;
+
+            text-align: start;
+            text-decoration: none;
+
+            > :first-child {
+                justify-self: center;
+            }
+
+            img {
+                inline-size: 100%;
+                object-fit: cover;
+
+                border-radius: 999rem;
+            }
+
+            .suffix {
+                display: flex;
+                align-items: center;
+                gap: 1ch;
+
+                font-size: 0.7em;
+
+                .number {
+                    font-size: 1.2em;
+                }
+            }
+
+            &:hover {
+                background-color: var(--color-background-15);
+
+                cursor: pointer;
+            }
+        }
+
+        app-divider {
+            --divider-padding: var(--padding);
+        }
+    }
+}

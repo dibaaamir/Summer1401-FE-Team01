@@ -3,6 +3,7 @@ import {SnackbarService} from '../../../../services/snackbar.service';
 import {Router} from '@angular/router';
 import {AuthService} from '../../../../services/auth.service';
 import {User} from '../../../../models/user.model';
+import {SnackbarTheme} from '../../../../enums/snackbar-theme.enum';
 
 @Component({
     selector: 'app-register',
@@ -36,9 +37,9 @@ export class RegisterComponent {
         if (await this.isSubmitSuccessful()) await this.router.navigateByUrl('/profile');
     }
 
-    private async isSubmitSuccessful(): Promise<boolean> {
+    public async isSubmitSuccessful(): Promise<boolean> {
         if (this.password !== this.confirm) {
-            this.snackbarService.show('پسورد و تکرار آن باهم همخوانی ندارند');
+            this.snackbarService.show({text: 'پسورد و تکرار آن باهم همخوانی ندارند', theme: SnackbarTheme.DANGER});
             this.password = '';
             this.confirm = '';
             return false;

@@ -1,4 +1,4 @@
-<div class="input-box" (click)="input.focus()">
+<div class="search-box" (click)="input.focus()">
     <i class="far fa-magnifying-glass" title="جستجو"></i>
 
     <input
@@ -6,6 +6,7 @@
         type="search"
         placeholder="جستجو"
         [(ngModel)]="searchPhrase"
+        (keydown.enter)="submitSearch(input)"
         (ngModelChange)="searchPhraseChange.emit($event)"
     />
 </div>

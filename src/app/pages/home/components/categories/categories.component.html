@@ -4,8 +4,20 @@
     <ul>
         <li *ngFor="let category of categories">
             <a [routerLink]="category.link">
-                <img [src]="category.image" alt="تصویر بازی" />
-                <p>{{ category.title }}</p>
+                <div class="image-stack">
+                    <img [src]="category.image" [alt]="category.title" />
+                    <div class="overlay">
+                        <p class="price">
+                            <span>{{ category.price.toLocaleString() }}</span>
+                            <span>تومان</span>
+                        </p>
+                        <p class="rating">
+                            {{ category.rating }}
+                            <i class="far fa-stars"></i>
+                        </p>
+                    </div>
+                </div>
+                <p dir="ltr">{{ category.title }}</p>
             </a>
         </li>
     </ul>

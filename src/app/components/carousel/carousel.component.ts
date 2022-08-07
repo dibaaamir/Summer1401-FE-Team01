@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnDestroy} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnDestroy, QueryList, ViewChildren} from '@angular/core';
 import {Game} from '../../models/game.model';
 
 @Component({
@@ -9,14 +9,17 @@ import {Game} from '../../models/game.model';
 export class CarouselComponent implements AfterViewInit, OnDestroy {
     @Input() public games: Array<Game> = [];
 
-    public slideTimeout: number = 4000;
-    public currentIndex = 0;
+    @ViewChildren('bullet') public bullets!: QueryList<ElementRef>;
+
+    private readonly BULLET_DURATION: number = 300;
+    public readonly SLIDE_TIMEOUT: number = 4_000;
+    public currentIndex!: number;
 
     private autoNextInterval!: number | null;
 
     public ngAfterViewInit(): void {
         this.setupInterval();
-        this.setIndex(this.currentIndex);
+        this.setIndex(0);
     }
 
     public ngOnDestroy(): void {
@@ -24,7 +27,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     }
 
     public setupInterval(): void {
-        this.autoNextInterval = setInterval(() => this.nextSlide(), this.slideTimeout);
+        this.autoNextInterval = setInterval(() => this.intervalNextSlide(), this.SLIDE_TIMEOUT);
     }
 
     public clearInterval(): void {
@@ -39,8 +42,14 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         clearInterval(this.autoNextInterval!);
         this.setupInterval();
     }
+    public bulletClickHandler(index: number): void {
+        this.setIndexByClick(index);
+    }
+    public nextButtonClickHandler(): void {
+        this.setIndexByClick(this.currentIndex + 1);
+    }
 
-    private nextSlide(): void {
+    public intervalNextSlide(): void {
         this.setIndex(this.currentIndex + 1);
     }
 
@@ -51,26 +60,28 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
         else if (newI >= this.games.length) this.currentIndex = newI % this.games.length;
         else this.currentIndex = newI;
 
-        CarouselComponent.doBulletAnimation(oldIndex, false);
-        CarouselComponent.doBulletAnimation(this.currentIndex, true);
+        this.playBulletAnimation(oldIndex, false);
+        this.playBulletAnimation(this.currentIndex, true);
     }
 
-    private static doBulletAnimation(index: number, addClass: boolean): void {
-        const bullet = document.querySelectorAll('.bullets i').item(index);
+    private playBulletAnimation(index: number, addClass: boolean): void {
+        const bullet = this.bullets.get(index)?.nativeElement;
 
-        const first = bullet.getBoundingClientRect();
+        if (!!bullet) {
+            const first = bullet.getBoundingClientRect();
 
-        if (addClass) bullet.classList.add('current');
-        else bullet.classList.remove('current');
+            if (addClass) bullet.classList.add('current');
+            else bullet.classList.remove('current');
 
-        const last = bullet.getBoundingClientRect();
+            const last = bullet.getBoundingClientRect();
 
-        const deltaX = first.left - last.left;
-        const deltaW = first.width / last.width;
+            const deltaX = first.left - last.left;
+            const deltaW = first.width / last.width;
 
-        bullet.animate(
-            [{transform: `translateX(${deltaX}px) scaleX(${deltaW})`}, {transform: `translateX(0) scaleX(1)`}],
-            {duration: 300, easing: 'ease-in'}
-        );
+            bullet.animate(
+                [{transform: `translateX(${deltaX}px) scaleX(${deltaW})`}, {transform: `translateX(0) scaleX(1)`}],
+                {duration: this.BULLET_DURATION, easing: 'ease-in'}
+            );
+        }
     }
 }

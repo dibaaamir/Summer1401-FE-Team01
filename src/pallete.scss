@@ -11,13 +11,29 @@
     --color-gray-20: hsl(0deg 0% 20%);
     --color-gray-15: hsl(0deg 0% 15%);
     --color-gray-10: hsl(0deg 0% 10%);
+    --color-gray-4: hsl(0deg 0% 4%);
+    --color-gray-2: hsl(0deg 0% 2%);
+    --color-gray-0: hsl(0deg 0% 0%/ 50%);
 
     --color-primary: hsl(353deg 84% 58%);
-    --color-error: hsl(0deg 73% 41%);
+    --color-primary-darker: hsl(353deg 84% 50%);
     --color-primary-opposite: var(--color-gray-98);
 
-    --color-fade: var(--color-gray-50);
-    --color-fader: var(--color-gray-70);
+    --color-info: hsl(200deg 84% 58%);
+    --color-info-darker: hsl(200deg 84% 50%);
+    --color-info-opposite: var(--color-gray-98);
+
+    --color-success: hsl(130deg 60% 58%);
+    --color-success-darker: hsl(130deg 60% 50%);
+    --color-success-opposite: var(--color-gray-98);
+
+    --color-warning: hsl(30deg 90% 58%);
+    --color-warning-darker: hsl(30deg 90% 50%);
+    --color-warning-opposite: var(--color-gray-98);
+
+    --color-danger: hsl(0deg 100% 58%);
+    --color-danger-darker: hsl(0deg 100% 50%);
+    --color-danger-opposite: var(--color-gray-98);
 
     --color-default-background: var(--color-gray-98);
     --color-default-foreground: var(--color-gray-10);
@@ -25,24 +41,29 @@
     --color-body-background: var(--color-default-background);
     --color-body-foreground: var(--color-default-foreground);
 
-    --color-background: hsl(238deg 59% 40%);
-    --color-background-lighter: hsl(238deg 59% 60%);
-    --color-background-lightest: hsl(238deg 59% 85%);
-    --color-background-hover: hsl(16deg 100% 80%);
+    --color-background-5: hsl(226deg 60% 5%);
+    --color-background-8: hsl(226deg 60% 8%);
+    --color-background-10: hsl(226deg 60% 10%);
+    --color-background-15: hsl(226deg 60% 15%);
+    --color-background-20: hsl(226deg 60% 20%);
+    --color-background-85: hsl(226deg 60% 85%);
 
-    --color-default-text: hsl(16deg 100% 61%);
+    --primary-color: hsl(16deg 90% 55%);
+    --primary-color-darker: hsl(16deg 90% 50%);
+    --primary-color-lighter: hsl(16deg 90% 60%);
+    --primary-color-super-lighter: hsl(16deg 90% 70%);
+    --primary-color-oposite: var(--color-gray-80);
 
     --color-box-shadow-subtle: hsl(0deg 90% 10% / 12%);
     --box-shadow-subtle: 0 0.2rem 1rem 0 var(--color-box-shadow-subtle);
 
     --minimum-inline-padding: 4rem;
 
-    --border-radius: 0.5rem;
-    --border-radius-more: 1rem;
+    --border-radius-small: 0.25rem;
+    --border-radius-medium: 0.5rem;
+    --border-radius-big: 1rem;
 
     --animation-duration-fast: 0.2s;
     --animation-duration-normal: 0.5s;
     --animation-duration-slow: 1s;
-
-    --universal-margin-inline-start: 4.25rem;
 }

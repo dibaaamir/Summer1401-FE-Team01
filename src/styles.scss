@@ -10,7 +10,7 @@
 }
 
 html {
-    background-color: var(--color-background);
+    background-color: var(--color-background-8);
 
     block-size: 100%;
 
@@ -21,14 +21,6 @@ html {
 
 body {
     block-size: 100%;
-}
-
-.stack {
-    position: relative;
-
-    > .item {
-        position: absolute;
-    }
 }
 
 input,
@@ -43,35 +35,6 @@ output,
 option,
 optgroup {
     font-family: inherit;
-}
-
-.input-box {
-    display: flex;
-    align-items: center;
-
-    gap: 0.5rem;
-
-    cursor: text;
-
-    i {
-        color: hsl(16deg 100% 66%);
-
-        font-size: 1.5rem;
-    }
-
-    input {
-        background-color: hsl(0deg 0% 100%);
-
-        block-size: 1.5rem;
-
-        inline-size: 25rem;
-
-        padding: 1rem 0.5rem;
-
-        border-radius: 0.5rem;
-
-        font-weight: bold;
-    }
 }
 
 input {
@@ -90,23 +53,62 @@ img {
 }
 
 svg {
+    fill: currentcolor;
+
     display: block;
 
     block-size: 1em;
-
     inline-size: 1em;
-    fill: currentcolor;
+}
+
+button {
+    border: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
 }
 
 .fade {
     color: var(--color-fade);
 }
 
+popper-content {
+    /* stylelint-disable selector-class-pattern */
+    .ngxp__container {
+        background-color: var(--color-background-20);
+        color: var(--color-gray-98);
+
+        overflow: hidden;
+        z-index: 1;
+
+        padding: 0;
+
+        border: 0;
+        border-radius: var(--border-radius-small);
+
+        > .ngxp__arrow {
+            &::before {
+                background-color: var(--color-background-20);
+            }
+        }
+    }
+
+    &.no-arrow {
+        .ngxp__container > .ngxp__arrow {
+            display: none;
+        }
+    }
+    /* stylelint-enable selector-class-pattern */
+}
+
 @mixin max-lines($lines) {
     overflow: hidden;
 
     display: inline;
+    /* stylelint-disable value-no-vendor-prefix */
     display: -webkit-box;
+    /* stylelint-enable value-no-vendor-prefix */
 
     text-overflow: ellipsis;
     word-wrap: break-word;

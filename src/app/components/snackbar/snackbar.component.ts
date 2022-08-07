@@ -1,4 +1,6 @@
 import {Component, OnDestroy} from '@angular/core';
+import {SnackbarTheme} from '../../enums/snackbar-theme.enum';
+import {SnackbarOptions} from '../../models/snackbar-options.model';
 
 @Component({
     selector: 'app-snackbar',
@@ -7,20 +9,24 @@ import {Component, OnDestroy} from '@angular/core';
 })
 export class SnackbarComponent implements OnDestroy {
     public text!: string;
-    public hidden: boolean = true;
+    public theme: SnackbarTheme = SnackbarTheme.DEFAULT;
 
-    private AUTO_HIDE_TIMEOUT: number = 5000;
+    public readonly AUTO_HIDE_TIMEOUT: number = 5_000;
     public timeoutId: number | null = null;
 
-    public show(text: string): void {
-        this.text = text;
-        this.hidden = false;
+    public get hidden(): boolean {
+        return !this.text;
+    }
+
+    public show(options: SnackbarOptions): void {
+        this.text = options.text;
+        this.theme = options.theme || SnackbarTheme.DEFAULT;
         this.startHideTimer();
     }
 
     public hide(): void {
-        this.hidden = true;
         this.stopHideTimer();
+        this.text = '';
     }
 
     public startHideTimer(): void {

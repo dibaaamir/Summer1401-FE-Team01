@@ -1,7 +1,9 @@
-<app-header></app-header>
-<main>
-    <app-carousel [games]="suggestionGames"></app-carousel>
-    <app-categories></app-categories>
-    <router-outlet></router-outlet>
-</main>
+<div class="wrapper">
+    <app-header></app-header>
+    <main>
+        <app-carousel [games]="suggestionGames"></app-carousel>
+        <app-categories></app-categories>
+        <router-outlet></router-outlet>
+    </main>
+</div>
 <app-footer></app-footer>

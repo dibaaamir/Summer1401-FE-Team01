@@ -7,4 +7,8 @@ import {Component} from '@angular/core';
 })
 export class AuthComponent {
     public isInLoginView: boolean = true;
+
+    public toggleIsInLoginView(): void {
+        this.isInLoginView = !this.isInLoginView;
+    }
 }

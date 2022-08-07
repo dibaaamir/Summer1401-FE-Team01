@@ -1,5 +1,5 @@
 .wrapper {
-    color: var(--color-default-text);
+    color: var(--primary-color);
 
     display: grid;
     place-items: center;
@@ -7,30 +7,26 @@
     block-size: 100%;
 
     .auth {
-        background-color: var(--color-background-lighter);
+        background-color: var(--color-background-20);
 
-        overflow: hidden;
+        block-size: fit-content;
+        min-inline-size: 22rem;
+        inline-size: 30%;
 
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        border-radius: var(--border-radius-small);
 
-        min-block-size: 25rem;
+        app-logo {
+            inline-size: 9rem;
 
-        block-size: 70%;
-
-        min-inline-size: 50rem;
-
-        inline-size: 70%;
-
-        border-radius: var(--border-radius-more);
+            margin-inline: auto;
+        }
 
         .form-wrapper {
             display: flex;
             flex-direction: column;
 
             block-size: 100%;
-            inline-size: 40%;
+            inline-size: 100%;
 
             padding: 1rem;
         }
@@ -40,12 +36,43 @@
             block-size: 100%;
         }
 
-        img {
-            block-size: 100%;
-            max-inline-size: 60%;
-            aspect-ratio: 16/13;
-            object-fit: cover;
-            object-position: 50%;
+        .auth-switcher {
+            color: var(--color-gray-98);
+
+            display: flex;
+            align-items: flex-end;
+            gap: 0.25rem;
+
+            font-size: 0.8rem;
+
+            button,
+            a,
+            p {
+                opacity: 0.8;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            button,
+            a {
+                background-color: transparent;
+                color: var(--primary-color);
+
+                font-size: 0.8rem;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            a {
+                margin-inline-start: auto;
+                padding-inline-end: 1rem;
+
+                text-decoration: none;
+            }
         }
     }
 }

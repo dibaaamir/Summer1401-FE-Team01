@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="auth">
         <div class="form-wrapper">
-            <app-switch trueOptionTitle="ورود" falseOptionTitle="ثبت‌نام" [(value)]="isInLoginView"></app-switch>
+            <h1>{{ isInLoginView ? 'ورود' : 'ثبت نام' }}</h1>
 
             <ng-container *ngIf="isInLoginView; else register">
                 <app-login></app-login>
@@ -10,8 +10,14 @@
             <ng-template #register>
                 <app-register></app-register>
             </ng-template>
-        </div>
 
-        <img src="assets/images/auth-bg.webp" />
+            <div class="auth-switcher">
+                <p>{{ isInLoginView ? 'حساب کاربری ندارید؟' : 'حساب کاربری دارید؟' }}</p>
+                <button (click)="toggleIsInLoginView()">
+                    {{ isInLoginView ? 'ثبت نام کنید!' : 'وارد شوید!' }}
+                </button>
+                <a routerLink="/"> بازگشت </a>
+            </div>
+        </div>
     </div>
 </div>

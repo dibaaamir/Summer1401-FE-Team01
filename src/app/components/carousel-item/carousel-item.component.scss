@@ -8,12 +8,10 @@
     position: relative;
 
     max-block-size: 55vh;
-
     inline-size: var(--width);
-
     aspect-ratio: 16 / 9;
 
-    transform: translateX(calc(var(--current-index) * (var(--width) + 6vw)));
+    transform: translateX(calc(var(--current-index) * (var(--width) + var(--slides-gap))));
 
     transition: transform ease-in 300ms;
 
@@ -21,17 +19,16 @@
         position: absolute;
 
         block-size: 100%;
-
         inline-size: 100%;
         object-fit: cover;
         object-position: 50% 15%;
 
-        border-radius: 3em;
+        border-radius: var(--border-radius-big);
     }
 
     .details {
-        background: hsl(0deg 0% 0% / 50%);
-        color: hsl(0deg 0% 100%);
+        background: var(--color-gray-0);
+        color: var(--color-gray-98);
         opacity: 0;
 
         position: absolute;
@@ -46,7 +43,7 @@
 
         padding: 1.5rem 2rem;
 
-        border-radius: 0 0 3em 3em;
+        border-radius: 0 0 var(--border-radius-big) var(--border-radius-big);
 
         font-size: 1em;
 
@@ -61,16 +58,14 @@
             }
         }
 
-        app-shiny-button {
+        app-button {
             align-self: end;
         }
     }
 
     .rating {
-        background-color: hsl(235deg 35% 14%);
-        color: hsl(0deg 0% 100%);
-
-        box-sizing: border-box;
+        background-color: var(--color-background-15);
+        color: var(--color-gray-98);
 
         position: absolute;
         inset-block-start: 0;
@@ -81,7 +76,6 @@
         place-items: center;
 
         block-size: 10rem;
-
         inline-size: 10rem;
 
         padding-block-start: 2.5%;
@@ -91,7 +85,6 @@
         transform: translate(-30%, -30%);
 
         font-size: 5rem;
-
         font-weight: bold;
     }
 

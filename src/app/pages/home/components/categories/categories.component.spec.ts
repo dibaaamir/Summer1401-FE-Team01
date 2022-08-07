@@ -1,10 +1,10 @@
+import {CategoriesComponent} from './categories.component';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CategoriesComponent} from './categories.component';
-
 describe('CategoriesComponent', () => {
-    let component: CategoriesComponent;
     let fixture: ComponentFixture<CategoriesComponent>;
+    let component: CategoriesComponent;
+    let host: HTMLElement;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
@@ -16,9 +16,10 @@ describe('CategoriesComponent', () => {
         fixture = TestBed.createComponent(CategoriesComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
+        host = fixture.nativeElement as HTMLElement;
     });
 
-    it('should create', () => {
+    it('tests create', () => {
         expect(component).toBeTruthy();
     });
 });
