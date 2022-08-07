@@ -15,14 +15,23 @@
         border: solid 1px var(--border-color);
         border-radius: var(--border-radius-small);
 
-        &:-webkit-autofill {
+        &:autofill {
             &,
             &:hover,
             &:focus {
                 -webkit-text-fill-color: var(--border-color);
 
+                box-shadow: 0 0 0 100rem var(--background-color) inset;
+            }
+        }
+
+        &:-webkit-autofill {
+            &,
+            &:hover,
+            &:focus {
                 /* stylelint-disable property-no-vendor-prefix */
                 -webkit-box-shadow: 0 0 0 100rem var(--background-color) inset;
+                -webkit-text-fill-color: var(--border-color);
                 /* stylelint-enable property-no-vendor-prefix */
             }
         }
